@@ -1,0 +1,36 @@
+
+<form name="aspnetForm" method="post" action="ZHZLIndex.aspx" id="aspnetForm">
+    <div>
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="ZTyOOwgQ9o" />
+    </div>
+
+    <div>
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWIQKMwKnwDwL1yOG9DQLI0M+DBQLO1Z2=" />
+    </div>
+    <div class="box">
+        <div class="top">
+            <div class="top_1 clear">
+                <div style="float:left"><a href="/Index.aspx" style="display:inline-block;*display:inline;*zoom:1;width:500px;height:50px;margin-top:20px;"></a></div>
+                <div class="top_a">
+                    <input type="submit" name="ctl00$btn_exit" value="Button" id="ctl00_btn_exit" class="btn_exit" style="display:none;" />
+
+                    <div class="login_next">
+
+                    </div>
+                    <script language="javascript" type="text/javascript">
+                        $(".log_out").click(function () {
+                            if (confirm("您确定要退出登录吗？")) {
+                                $(".btn_exit").click();
+                            }
+                        });
+                    </script>
+                    <div class="clear">
+                    </div>
+                    {template "content","reg"}
+                    <div class="date">今天是2016年03月09日   星期三<iframe style="color:#9b0101; filter: Chroma(Color=white);" width="140px"; height="17px;" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" src="/Themes/cdweb/htm/meather.html"></iframe></div>
+                </div>
+            </div>
+           {template "content","header_zhzl"}  
+        </div>
+        <div class="clear"></div>
+

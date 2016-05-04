@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+        <meta name="description" content="{$SEO['description']}" />
+        <meta name="keywords" content="{$SEO['keyword']}" />
+
+        {template "content","header_inclub"}
+        <link href="{CSS_PATH}new/law.css" rel="stylesheet" type="text/css"/>
+        <style type="text/css">
+            .page
+            {
+                float: left;
+            }
+            .pagenum
+            {
+                float: right;
+                margin-right: 10px;
+            }
+        </style>
+
+    </head>
+    <body>
+        {template "content","header"}
+    </div>
+
+    <div class="mid">
+        <div class="ui_layout_right list_width" >
+            <div class="site">
+                <div class="site_img"> </div>
+                <div class="site_write">
+                    您的位置：<a target="_blank" href="{$CATEGORYS[4][url]}">政策首页</a> >> {catpos($catid)}
+               </div>
+                <div class="clear"></div>
+            </div>
+            <div class="ui_list_zcfg">
+                
+                <?php
+                if($title && !$keywords) { $where = " title LIKE '%$title%'";}
+                if(!$title && $keywords) { $where = " keywords LIKE '%$keywords%'";}
+                
+                if ($fileName){$where = " ($fileName = $fileName)";}   
+                
+                if($title && $keywords) { $where = " title LIKE '%$title%' AND keywords LIKE '%$keywords%'";}
+                ?>
+                
+                {pc:content action="lists" catid="$catid" num="20" order="id DESC" page="$page" where="$where"}
+                <ul class="LIST_cont_law">
+                  {loop $data $r}
+                    <li><span>{date('Y-m-d H:i:s',$r[inputtime])}</span>
+                        <a target="_blank" href="{$r[url]}" target="_blank">
+                            <img src="{IMG_PATH}new1/icon_1_07.gif" />{$r[title]}
+                        </a>
+                    </li> 
+                  {/loop}
+                </ul>
+                <div class="link_more">
+                    {$pages}
+                </div>
+                {/pc}
+            </div>
+        </div>
+        <!--以上是列表-->
+        <div class="ui_layout_left">
+            <div class="ui_lay_zccx">
+                <div class="ui_zccx_nav">
+                </div>
+                
+               <form action="#" method="post" id="searchForm">
+                <div class="ui_lay_cont">
+                    <div class="ui_check">
+                        <label>
+                            <input value="21" name="classify" type="radio" id="ctl00_ContentPlaceHolder1_rdozcfg" class="rdozcfg" checked="checked" />政策法规</label>
+                        <label>
+                            <input value="22" name="classify" type="radio" id="ctl00_ContentPlaceHolder1_rdofczc" class="rdofczc" />扶持政策</label>
+                    </div>
+                    
+                    <div class="formcont">
+                            <div>
+                                <label for="title">
+                                    标题：</label><input name="title" type="text" id="" class="zcbt" value="{$title}" /></div>
+                            <div>  
+                                <label for="title">
+                                    文号：</label><input name="fileName" type="text" id="" class="zcwh" /></div>
+                            <div>
+                                <label for="title">
+                                    关键字：</label><input name="keywords" type="text" id="" class="gjz" value="{$keywords}"/></div>
+                            <div class="btn">
+                               <input type="submit" class="btnzccx_1" value="" onclick="beforeSubmit();"/></div>       
+                    </div>
+                </div>
+              </form>
+                  <script>
+                        function beforeSubmit(){
+                            var catid=$("input[name='classify']:checked").val();
+                            var url="./index.php?m=content&c=index&a=lists&catid="+catid;
+                            $("#searchForm").attr("action",url);
+                        }
+                      </script>
+                
+            </div>
+            <!--以上是政策查询-->
+            <div class="ui_but">
+                <a href="#" target="_blank">
+                    <img src="{IMG_PATH}new/Policy_zcfg_10.gif" alt="政策法规" />
+                </a>
+            </div>
+            <div class="ui_but">
+                <a href="#" target="_blank">
+                    <img src="{IMG_PATH}new/Policy_fczc_12.gif" alt="扶持政策" />
+                </a>
+            </div>
+            <!--以上是图片链接-->
+            <div class="ui_import">
+                <div class="ui_import_nav">
+                    重要政策法规推荐
+                </div>
+                <div class="ui_import_cont">
+                    <ul>
+                        {pc:content  action="position" posid="18" order="listorder DESC" num="7"}
+                        {loop $data $r}   
+                        <li>
+                            <img src="{IMG_PATH}new/icon_13.gif" />
+                            <a  href="{$r[url]}" target="_blank">{str_cut($r[title],54,'……')}</a>
+                        </li>
+                        {/loop}  
+                        {/pc}
+                    </ul>
+                </div>
+            </div>
+            <div class="ui_import ui_import_ie7">
+                <div class="ui_import_nav">
+                    重要扶持政策推荐</div>
+                <div class="ui_import_cont">
+                    <ul>
+                        {pc:content  action="position" posid="19" order="listorder DESC" num="7"}
+                        {loop $data $r} 
+                        <li>
+                            <img src="{IMG_PATH}new/icon_13.gif" />
+                            <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=649" target="_blank">成都市商务委员会关于组织开展2...</a>
+                        </li>
+                        {/loop}  
+                        {/pc}
+                    </ul>
+                </div>
+            </div>
+            <style>
+                .ui_import_nav{text-indent: 70px;}
+            </style>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <script type="text/javascript">
+        //先判断是否登录 再进行跳转报名
+        $(".zxxxbm").click(function () {
+            if ($(".dlyhid").val() == "-1" || $(".dlyhid").val() == "") {
+                var Button = $(this).attr("id");
+                var yhid = $(".dlyhid").attr("id");
+                window.top.createDIV(window, "/Themes/cdweb/htm/Login.aspx?Controls=" + yhid + "&Button=" + Button, "用户登录", 450, 265, window, "", "", true);
+                return false;
+            } else {
+                window.top.createDIV(window, '/ZJSB/ZJBM.aspx?ZCID=" + $(this).attr("zxxxbmid") + "&YHID=" + $(".dlyhid").val()', "资金项目申请", 700, 405);
+            }
+            return false;
+        });
+    </script>
+
+    {template "content","footer"}
+</body>
+</html>

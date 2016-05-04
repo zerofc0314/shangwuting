@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <meta name="Description" content="Power by hill">
+	<script type="text/javascript" src="js/jquery.min.js"> </script>
+    <script type="text/javascript">
+        $(function () {
+            $("#imgw").hide();
+            var today = new Date().toDateString(); //每天更新一次,避免重复更新!
+            try {
+                $.getScript("http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js", function (data) {
+                    var city = remote_ip_info.city;
+                    if (city == undefined || city == "") {
+                        // $("#wea").hide();
+                        // return;
+                        city = "深圳"; //缺省地区
+                    }
+                    var url = "http://php.weather.sina.com.cn/iframe/index/w_cl.php?day=0&city=" + encodeURI(city) + "&today=" + today;
+                    $.getScript(url, function () {
+                        if (window.SWther) {
+                            var img = "http://php.weather.sina.com.cn/images/yb3/78_78/" + window.SWther.w[city][0].f1 + "_1.png"
+                            $("#weather1").html(city + " " + window.SWther.w[city][0].t2 + "℃-" + window.SWther.w[city][0].t1 + "℃ " + window.SWther.w[city][0].s1 + "-" + window.SWther.w[city][0].s2 + " ");
+                        }
+                        else {
+                            $("#wea").hide();
+                        }
+                    });
+                });
+            }
+            catch (e) {
+                $("#wea").hide();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="wea" style="font-size: 12px;margin-top:5px;">
+        <span id="weather1"></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+        <meta name="description" content="{$SEO['description']}" />
+        <meta name="keywords" content="{$SEO['keyword']}" />
+        <link href="{CSS_PATH}new/public.css" rel="stylesheet" type="text/css" />
+        <link href="{CSS_PATH}new/wmzd_ej_index.css" rel="stylesheet" type="text/css" />
+        <script src="{JS_PATH}/jquery.min.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/WdatePicker.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/PostionHelper.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/StringHelper.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/getURLparameters.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/OpenWindow.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/CDPTPF.js" type="text/javascript"></script>    
+        <link href="{CSS_PATH}new/qwfb.css" rel="stylesheet" type="text/css" />
+        <link href="{CSS_PATH}new/sidebar.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            .page
+            {
+                float: left;
+            }
+            .pagenum
+            {
+                float: right;
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body style="background: #fff;">
+       {template "content","header2"}
+       
+       <div class="qwfb_body">
+           <!--中间主体开始-->
+           <div class="qwfb_site">
+               您的位置：<a target="_blank" href="/QWFB/IndexQWFB.aspx">频道首页</a> >
+               成都市进口企业100强排名
+           </div>
+           <div class="qwfb_sub03andsub04">
+               <div class="qwfb_sub03 clearfix">
+                   <div class="qwfb_sub03_title">
+                       <p class="qwfb_sub03_title01">
+                           排名选项列表卡</p>
+                   </div>
+                   <div class="leftbar" style="width: 334px; text-align: center; font-size: 14px;">
+                       <ul>
+                           <li style="width: 334px; text-align: center; font-size: 14px;"><a class="CKPMS" vl="100" href="/QWFB/QWFBList.aspx?PMMC=CKQY">成都市出口企业100强</a></li>
+                           <li style="width: 334px; text-align: center; font-size: 14px;"><a class="CKPMS" vl="100" href="/QWFB/QWFBList.aspx?PMMC=JKQY">成都市进口企业100强</a></li>
+                           <li style="width: 334px; text-align: center; font-size: 14px;"><a class="CKPMS" vl="100" href="/QWFB/QWFBList.aspx?PMMC=CKZFQY">成都市出口增幅最快企业100强</a></li>
+                           <li style="width: 334px; text-align: center; font-size: 14px;"><a class="CKPMS" vl="100" href="/QWFB/QWFBList.aspx?PMMC=JKZFQY">成都市进口增幅最快企业100强</a></li>
+                           <li style="width: 334px; text-align: center; font-size: 14px;"><a class="CKPMS" vl="100" href="/QWFB/QWFBList.aspx?PMMC=CKGJ">成都市出口国家或地区排名</a></li>
+                           <li style="width: 334px; text-align: center; font-size: 14px;"><a class="CKPMS" vl="100" href="/QWFB/QWFBList.aspx?PMMC=JKGJ">成都市进口国家或地区排名</a></li>
+                           <li style="width: 334px; text-align: center; font-size: 14px;"><a class="CKPMS" vl="100" href="/QWFB/QWFBList.aspx?PMMC=HYCK">成都市行业出口排名</a></li>
+                           <li style="width: 334px; text-align: center; font-size: 14px;"><a class="CKPMS" vl="100" href="/QWFB/QWFBList.aspx?PMMC=HYJK">成都市行业进口排名</a></li>
+                       </ul>
+                   </div>
+               </div>
+               <div class="qwfb_sub04 clearfix">
+                   <div class="qwfb_sub04_title">
+                       <p class="qwfb_sub04_title01">
+                           成都市进口企业100强排名     
+                       </p>
+
+                       <p class="qwfb_sub04_title02" style="width:200px;">
+                           <input name="ctl00$ContentPlaceHolder1$ymonth" type="text" id="ctl00_ContentPlaceHolder1_ymonth" class="Wdate ymonth" style="width: 100px; font-size: 16px;" readonly="readonly" onclick="showMonth()" value="2014-09" />
+                           <input id="gjss" class="gjss" type="button" value="搜 索"  style="width: 60px; height: 20px;"/>
+                       </p>
+
+                       <input type="submit" name="ctl00$ContentPlaceHolder1$btfond" value="Button" id="ctl00_ContentPlaceHolder1_btfond" class="btfond" style="display: none;" />
+                   </div>
+                   <div class="qwfb_sub04_body qwfb_list_body">
+                       <ul>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color"></font>企业名称<p style="width:100px;">累计进口(万美元)</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>英特尔产品（成都）有限公司<p style=" text-align:right;">265768.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>全球物流（成都）有限公司<p style=" text-align:right;">222053.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>鸿富锦精密电子（成都）有限公司<p style=" text-align:right;">187220.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都欣华欣化工材料有限公司<p style=" text-align:right;">111277.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川宏承海贸易有限公司<p style=" text-align:right;">81106.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都隆锦泰商贸有限公司<p style=" text-align:right;">60795.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>仁宝电脑（成都）有限公司<p style=" text-align:right;">31929.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都鑫奥通供应链管理有限公司<p style=" text-align:right;">24737.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>玮创资通（成都）有限公司<p style=" text-align:right;">21126.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都邦达吉通物流有限公司<p style=" text-align:right;">20005.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川一汽丰田汽车有限公司<p style=" text-align:right;">19447.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>中嘉汽车制造（成都）有限公司<p style=" text-align:right;">19285.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>业成科技（成都）有限公司<p style=" text-align:right;">17202.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川新希望贸易有限公司<p style=" text-align:right;">15042.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都智中电子加工制造有限公司<p style=" text-align:right;">14994.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都华川进出口有限公司<p style=" text-align:right;">13671.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川斯奈克玛航空发动机维修有限<p style=" text-align:right;">12035.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>宇芯（成都）集成电路封装测试有限公司<p style=" text-align:right;">9668.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>索尔思光电（成都）有限公司<p style=" text-align:right;">8368.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都京东方光电科技有限公司<p style=" text-align:right;">8094.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川博宇国际经贸有限公司<p style=" text-align:right;">8082.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>东方电气股份有限公司<p style=" text-align:right;">7733.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都光明派特贵金属有限公司<p style=" text-align:right;">6815.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都国航集团进出口有限公司<p style=" text-align:right;">6647.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都联想电子科技有限公司<p style=" text-align:right;">6613.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都双流新宁捷通物流有限公司<p style=" text-align:right;">6569.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川华立德科技有限公司<p style=" text-align:right;">6254.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川兴科蓉药业有限责任公司<p style=" text-align:right;">6250.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>熠晖集团有限公司<p style=" text-align:right;">6110.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都裕利机电贸易有限公司<p style=" text-align:right;">5778.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>戴尔（成都）有限公司<p style=" text-align:right;">5533.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川中钢工贸有限公司<p style=" text-align:right;">5118.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川成发航空科技股份有限公司<p style=" text-align:right;">4650.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>德州仪器半导体制造（成都）有限公司<p style=" text-align:right;">4258.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川中和进出口贸易有限公司<p style=" text-align:right;">4256.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川力诚百货有限公司<p style=" text-align:right;">4246.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都嘉里大通物流有限公司<p style=" text-align:right;">4194.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>攀钢集团国际经济贸易有限公司<p style=" text-align:right;">4143.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都天益远洋国际贸易有限公司<p style=" text-align:right;">4060.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>莫仕连接器（成都）有限公司<p style=" text-align:right;">3985.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>埃斯科姆米高（四川）化肥有限公司<p style=" text-align:right;">3525.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>崇州君健塑胶有限公司<p style=" text-align:right;">3385.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都银鹭食品有限公司<p style=" text-align:right;">3131.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都汇晨物流有限公司<p style=" text-align:right;">2930.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都旭光科技股份有限公司<p style=" text-align:right;">2841.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川中地进出口贸易有限公司<p style=" text-align:right;">2783.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都神钢工程机械(集团)有限公司<p style=" text-align:right;">2768.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都佳士实业进出口贸易有限公司<p style=" text-align:right;">2658.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都天兴山田车用部品有限公司<p style=" text-align:right;">2612.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都乐美饰家贸易有限公司<p style=" text-align:right;">2336.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都新易盛通信技术有限公司<p style=" text-align:right;">2231.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都神钢建设机械有限公司<p style=" text-align:right;">2195.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都利耀国际物流有限公司<p style=" text-align:right;">2145.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都巨新实业有限公司<p style=" text-align:right;">2123.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>台嘉成都玻纤有限公司<p style=" text-align:right;">2083.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川浩添进出口贸易有限公司<p style=" text-align:right;">2003.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川远大聚华实业有限公司<p style=" text-align:right;">1979.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都中住光纤有限公司<p style=" text-align:right;">1852.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都住电汽车线束有限公司<p style=" text-align:right;">1851.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都岚牌-辛普皮业有限公司<p style=" text-align:right;">1672.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>新井物产贸易有限公司<p style=" text-align:right;">1640.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>睿志达光电（成都）有限公司<p style=" text-align:right;">1636.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>尚志鞋业(四川)有限公司<p style=" text-align:right;">1631.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都住矿精密制造有限公司<p style=" text-align:right;">1613.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川迈克生物科技股份有限公司<p style=" text-align:right;">1562.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都顶津食品有限公司<p style=" text-align:right;">1450.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川川大实验技术开发公司<p style=" text-align:right;">1436.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都艾特航空制造有限公司<p style=" text-align:right;">1419.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川高龙机械有限公司<p style=" text-align:right;">1414.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都天天纸业有限公司<p style=" text-align:right;">1409.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>富通住电光缆（成都）有限公司<p style=" text-align:right;">1324.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>瞻航物流（成都）有限公司<p style=" text-align:right;">1229.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都南玻玻璃有限公司<p style=" text-align:right;">1198.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都欧赛医疗器械有限公司<p style=" text-align:right;">1194.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都龙信实业有限责任公司<p style=" text-align:right;">1193.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川亚大塑料制品有限公司<p style=" text-align:right;">1184.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川康润科技发展有限公司<p style=" text-align:right;">1179.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都成川进出口贸易有限公司<p style=" text-align:right;">1149.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都化工股份有限公司<p style=" text-align:right;">1136.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川盟宝实业有限公司<p style=" text-align:right;">1131.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川光恒通信技术有限公司<p style=" text-align:right;">1122.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川宏华国际科贸有限公司<p style=" text-align:right;">1109.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都先进功率半导体股份有限公司<p style=" text-align:right;">1093.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>达迩科技（成都）有限公司<p style=" text-align:right;">1078.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>巴鲁夫传感器（成都）有限公司<p style=" text-align:right;">1047.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都大角牛贸易有限公司<p style=" text-align:right;">1039.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>铁姆肯（成都）航空及精密产品有限公司<p style=" text-align:right;">1017.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>斯比泰电子（成都）有限公司<p style=" text-align:right;">981.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>精量电子（成都）有限公司<p style=" text-align:right;">954.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都盛欣隆贸易有限公司<p style=" text-align:right;">929.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都航空有限公司<p style=" text-align:right;">928.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>费希尔久安输配设备（成都）有限公司<p style=" text-align:right;">921.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都天马微电子有限公司<p style=" text-align:right;">921.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都晶华光电科技有限公司<p style=" text-align:right;">906.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>中航成飞民用飞机有限责任公司<p style=" text-align:right;">903.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都东方凯特瑞环保催化剂有限责任公司<p style=" text-align:right;">900.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>捷安特（成都）有限公司<p style=" text-align:right;">888.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都飞力供应链管理有限公司<p style=" text-align:right;">887.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都市鹰诺实业有限公司<p style=" text-align:right;">884.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川省畜科饲料有限公司<p style=" text-align:right;">881.00</p></a></li>
+                       </ul>
+                   </div>
+               </div>
+               <div class="clear">
+               </div>
+           </div>
+       </div>
+       <script type="text/javascript">
+           function showMonth() {
+               WdatePicker({ skin: 'whyGreen', dateFmt: 'yyyy-MM' });
+           }
+           //        $(".ymonth").bind("propertychange", function () {
+           //            $(".btfond").click();
+           //        });
+
+           //        if ($.browser.msie) {
+           //            $(".gjss").hide();
+           //        } else {
+           $(".gjss").show();
+           //  }
+
+           $(".gjss").click(function () {
+               $(".btfond").click();
+           });
+       </script>
+       <div class="box">
+      {template "content","footer1"}
+    </body>
+</html>

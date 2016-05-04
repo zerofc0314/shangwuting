@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+        <meta name="description" content="{$SEO['description']}"/>
+        <meta name="keywords" content="{$SEO['keyword']}"/>
+        {template "content","header1_inclub"}
+    </head>
+    <body>
+        
+        {template "content","header_gjh"}
+       <div class="ex_click clear">
+           <div class="gjh_list">
+             <div class="nav_gjh_list clear">
+               <div class="nav_gjh_l"></div>
+               <div class="nav_gjh_m">{$catname}</div>
+               <div class="nav_gjh_r"></div>
+             </div>
+               {pc:content action="lists" catid="$catid" num="20" order="id DESC" page="$page"}
+                        <ul>
+                             {loop $data $r}
+                            <li><span>{date('Y-m-d',$r[inputtime])}</span>
+                                <font class="word_red">&middot;【{$catname}】</font>
+                                <a href="{$r[url]}"  target="_blank">{$r[title]}</a>
+                            </li>
+                             {/loop}
+                        </ul>
+                 <div class="link_more">
+                     {$pages}
+                 </div>
+           </div>
+           <div class="detail_exhi_g">
+                 <div class="DT_tjjg_g">
+                   <div class="gz_list"><a target="_blank" href="#"><img src="{IMG_PATH}new1/ico_content_bg.png" />酒店预订</a></div>
+                   <div class="gz_list"><a target="_blank" href="#"><img src="{IMG_PATH}new1/ico_content_bg.png" />交通指引</a></div>
+                   <div class="gz_list"><a target="_blank" href="#"><img src="{IMG_PATH}new1/ico_content_bg.png" />特装天地</a></div>
+                   <div class="gz_list"><a target="_blank" href="#"><img src="{IMG_PATH}new1/ico_content_bg.png" />产品设计与贸易促进中心</a></div>
+                   <div class="gz_list"><a target="_blank" href="#"><img src="{IMG_PATH}new1/ico_content_bg.png" />知识产权保护和贸易纠纷解决</a></div>
+                   <div class="gz_list"><a target="_blank" href="#"><img src="{IMG_PATH}new1/ico_content_bg.png" />广交会会刊</a></div>
+                   <div class="gz_list"><a target="_blank" href="#"><img src="{IMG_PATH}new1/ico_content_bg.png" />广交会驻香港客商服务中心</a></div>
+                   <div class="gz_list"><a target="_blank" href="#"><img src="{IMG_PATH}new1/ico_content_bg.png" />境外合作伙伴</a></div>
+                 </div>
+                 <!-- 以上是组织机构 -->
+                 <div class="DT_tjjg_g_1">
+                   <div class="DT_tjjg_nav_1 clear">
+                      <div class="DT_cur DT_cur_check"><a href="#">当前天气</a></div>
+                   </div>
+                   <div class="DT_tjjg_info">
+                    <iframe style="color:#9b0101; filter: Chroma(Color=white);" width="245px"; height="100px;" frameborder="0"  marginheight="0" marginwidth="0" scrolling="no" src="{IMG_PATH}new1/ZHmeather.html"></iframe>
+                   </div>
+                 </div>
+               </div>
+         </div>
+
+       <!--以上是中间内容部分-->
+
+        {template "content","foot1"}
+    </body>
+</html>

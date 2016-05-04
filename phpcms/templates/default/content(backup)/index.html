@@ -1,0 +1,965 @@
+<!DOCTYPE html>    
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+        <meta name="description" content="{$SEO['description']}" />
+        <meta name="keywords" content="{$SEO['keyword']}" />
+        {template "content","header_inclub"}
+    </head>
+
+    <body>
+        
+        {template "content","header"}
+        {template "content","header_index"}
+        <!--main-->
+        <div class="mid">
+            <div class="rmbhl">
+                <div class="rmbhl_left">
+                </div>
+                <div class="rmbhl_mid" style="height: 35px; width: 841px; overflow: hidden;">
+
+                    <div class="zxxl11" style="height: 0px;"></div>
+                </div>
+                <div>
+                </div>
+                <script language="javascript" type="text/javascript">
+                    var timespan1 = 500; //每屏划过时间
+                    var timespan2 = 2000; //切屏间隔时间
+                    function gotop() {
+                        animtop();
+                        stopexe = setTimeout("gotop()", timespan2);
+                    }
+                    ;
+
+                    function animtop() {
+                        $(".zxxl11").animate({
+                            marginTop: "-=35"
+                        }, timespan1, function () {
+                            if ($(".zxxl11").css("margin-top") == "-0px") {
+                                $(".zxxl11").css("margin-top", "0px");
+                            }
+                        });
+                    }
+                    var stopexe;
+                    stopexe = setTimeout("gotop()", timespan2);
+                    $(".zxxl11").mouseover(function () {
+                        clearTimeout(stopexe);
+
+                    });
+                    $(".zxxl11").mouseout(function () {
+                        stopexe = setTimeout("gotop()", timespan2);
+                    });
+
+                </script>
+                <div class="rmbhl_right">
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <!--以上是人民币汇率-->
+            <div class="side_1">
+                <div class="side_1_left">
+                    <div class="zx">
+
+                        <div class="zx_top">
+                            <ul>
+                                <li><a class="xz topbtli" contentid="zx_bottom1" href="#">资讯</a></li>
+                                <li><a class="fff topbtli" contentid="zx_bottom2" href="#">政策</a></li>
+                                <li><a class="fff topbtli" contentid="zx_bottom3" href="#">培训</a></li>
+                                <li><a class="fff topbtli" contentid="zx_bottom4" href="#">数据</a></li>
+                            </ul>
+                            <script type="text/javascript" language="javascript">
+                                //控制点击更换下面列表
+                                $(".topbtli").click(function () {
+                                    var topbtli = this;
+                                    $(".topbtli").each(function () {
+                                        if (this == topbtli) {
+                                            if ($(this).hasClass("fff")) {
+                                                $(this).removeClass("fff");
+                                                $(this).addClass("xz");
+                                            }
+                                        } else {
+                                            if ($(this).hasClass("xz")) {
+                                                $(this).removeClass("xz");
+                                                $(this).addClass("fff");
+                                            }
+                                        }
+                                    });
+                                    $(".zx_bottom").hide();
+                                    $("#" + $(topbtli).attr("contentid")).show();
+                                    return false;
+                                });
+                            </script>
+                        </div>
+
+                        <div class="zx_bottom" id="zx_bottom1">
+                            <script language="javascript" type="text/javascript">
+                                //注：图片只能为长宽大于等于360*257
+                                var pic_width = 364;
+                                if ($.browser.msie) {
+                                    var pic_height = 219;
+                                    var text_height = 20;
+                                } else {
+                                    var pic_height = 236;
+                                    var text_height = 35;
+                                }
+
+                                var texts = '第十届全国消费电子行业客户服务大会即...|出口退税专题入口|出于对英国退出欧盟的担忧 英镑汇率再...|南美保持丰产预期 豆粕陷入箱体盘整僵局';
+                                var pics = '{IMG_PATH}new/v9/38297544.jpg|{IMG_PATH}new/v9/38297544.jpg|{IMG_PATH}new/v9/38297544.jpg|{IMG_PATH}new/v9/38297544.jpg';
+                                var links = '/LMNR/LMNRDetail.aspx?PKID=33895|http://www.tpsp.com.cn/WZZT/CKTSZT/Index.aspx|/LMNR/LMNRDetail.aspx?PKID=33882|/LMNR/LMNRDetail.aspx?PKID=33857';
+                            </script>
+                            <script src="{JS_PATH}new/FlashPic.js" type="text/javascript"></script>
+                        </div>
+
+                        <div class="zx_bottom" id="zx_bottom2" style="display: none;">
+                            <script language="javascript" type="text/javascript">
+                                //注：图片只能为长宽大于等于360*257
+                                var pic_width = 364;
+                                if ($.browser.msie) {
+                                    var pic_height = 219;
+                                    var text_height = 20;
+                                } else {
+                                    var pic_height = 236;
+                                    var text_height = 35;
+                                }
+                                var texts = '济复苏之路依旧曲折 亚太经济体需推动...|外贸企业呼吁政策“组合拳”|商务部 海关总署公告2015年第76...|外贸冬日：进出口再现双降 政策红利或...';
+                                var pics = '/FileUpLoad/Other/201603/55718edb-aa8a-4c3b-b64c-42c73a0c7201.jpg|/FileUpLoad/Other/201601/aa5ff065-2221-4ff1-8273-1a3b4972caea.jpg|/FileUpLoad/Other/201601/c385985b-9630-4300-bc0d-265dd1df09f1.jpg|/FileUpLoad/Other/201512/02d896fd-95a5-4b13-a509-9343e51d84cd.jpg';
+                                var links = '/LMNR/LMNRDetail.aspx?PKID=33905|/LMNR/LMNRDetail.aspx?PKID=33865|/LMNR/LMNRDetail.aspx?PKID=33727|/LMNR/LMNRDetail.aspx?PKID=33571';
+                            </script>
+                            <script src="{JS_PATH}new/FlashPic.js" type="text/javascript"></script>
+                        </div>
+
+                        <div class="zx_bottom" id="zx_bottom3" style="display: none;">
+                            <script language="javascript" type="text/javascript">
+                                //注：图片只能为长宽大于等于360*257
+                                var pic_width = 364;
+                                if ($.browser.msie) {
+                                    var pic_height = 219;
+                                    var text_height = 20;
+                                } else {
+                                    var pic_height = 236;
+                                    var text_height = 35;
+                                }
+                                var texts = '青羊区2015年度“互联网+”培训会...|金牛区2015年度“互联网+”培训会...|郫县2015年度“互联网+”及“一带...|青羊区2015年度外经贸扶持政策培训...';
+                                var pics = '/FileUpLoad/Other/201512/dd7d9f6c-b744-47a2-a943-423e7276976c.jpg|/FileUpLoad/Other/201512/4d8f6806-17e1-4718-a59d-267434d52467.jpg|/FileUpLoad/Other/201512/25af450d-9f5a-4cbd-954a-11ec95aefeea.jpg|/FileUpLoad/Other/201511/3549d4fe-dcc3-4c0d-a2d3-228a4fe388a0.jpg';
+                                var links = '/LMNR/LMNRDetail.aspx?PKID=33706|/LMNR/LMNRDetail.aspx?PKID=33670|/LMNR/LMNRDetail.aspx?PKID=33528|/LMNR/LMNRDetail.aspx?PKID=33447';
+                            </script>
+                            <script src="{JS_PATH}new/FlashPic.js" type="text/javascript"></script>
+                        </div>
+
+                        <div class="zx_bottom" id="zx_bottom4" style="display: none;">
+                            <script language="javascript" type="text/javascript">
+                                //注：图片只能为长宽大于等于360*257
+                                var pic_width = 364;
+                                if ($.browser.msie) {
+                                    var pic_height = 219;
+                                    var text_height = 20;
+                                } else {
+                                    var pic_height = 236;
+                                    var text_height = 35;
+                                }
+                                var texts = '墨西哥对南美地区龙舌兰酒出口将增长6...|美国经济衰退迹象显现，精准度81%|中国往中东首列铁路集装箱货运班列开通|亚太地区去年跨境并购额创新高';
+                                var pics = '/FileUpLoad/Other/201603/62a341d9-f7a8-4566-9c8d-f60674b6d026.jpg|/FileUpLoad/Other/201602/52a7aee0-00ea-42d4-9bfd-a027378b0817.png|/FileUpLoad/Other/201601/beaf0f5b-8d7f-49e1-956a-2d680678c998.jpg|/FileUpLoad/Other/201601/13bf0937-d7e5-4084-82f0-d731a1790ca6.jpg';
+                                var links = '/LMNR/LMNRDetail.aspx?PKID=33909|/LMNR/LMNRDetail.aspx?PKID=33886|/LMNR/LMNRDetail.aspx?PKID=33861|/LMNR/LMNRDetail.aspx?PKID=33818';
+                            </script>
+                            <script src="{JS_PATH}new/FlashPic.js" type="text/javascript"></script>
+                        </div>
+                    </div>
+
+                    <div class="tzgg">
+                        <div class="tzgg_top">
+                            <a target="_blank" href="{$CATEGORYS[25][url]}">更多>></a>
+                        </div>
+                        <div class="tzgg_bottom">
+                            <ul>
+                                <li>
+                                    <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                    <a href="/LMNR/LMNRDetail.aspx?PKID=33873&LMID=822" class="new2" style="color:Red;"target="_blank">成都外贸公共服务平台关于出口退税预审系统维护的...</a>
+                                </li>
+                                <li>
+                                    <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                    <a href="/LMNR/LMNRDetail.aspx?PKID=33872&LMID=822" class="new2" style="color:Red;"target="_blank">国家税务总局关于发布 出口退税率文库2016A...</a>
+                                </li>
+                                <li>
+                                    <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                    <a href="/LMNR/LMNRDetail.aspx?PKID=33836&LMID=822" class="new2" style="color:Red;"target="_blank">最新出口退税申报系统补丁sp2升级通知</a>
+                                </li>
+                                <li>
+                                    <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                    <a href="/LMNR/LMNRDetail.aspx?PKID=33807&LMID=822" class="new2" style="color:Red;"target="_blank">最新出口退税申报系统补丁sp1升级通知</a>
+                                </li>
+                                <li>
+                                    <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                    <a href="/LMNR/LMNRDetail.aspx?PKID=33730&LMID=822" class="new2" style="color:Red;"target="_blank">最新出口退税申报系统升级通知（生产企业出口退税...</a>
+                                </li>
+                                <li>
+                                    <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                    <a href="/LMNR/LMNRDetail.aspx?PKID=33677&LMID=822" class="new2" style="color:Red;"target="_blank">成都市国家税务局关于金税三期工程省级应用集中优...</a>
+                                </li>
+                                <li>
+                                    <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                    <a href="/LMNR/LMNRDetail.aspx?PKID=33669&LMID=822" class="new2" style="color:Red;"target="_blank">青羊区商务局关于举办互联网+培训的通知</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-----------------side_1左边的内容----------->
+                <div class="side_1_mid">
+                    <div class="hyyw">
+                        <div class="hyyw_top">
+                            <h5>
+                                行业要闻</h5>
+                            <a target="_blank" href="/SCDT/List.aspx?LMID=781">更多>></a>
+                        </div>
+                        <div class="hyyw_bottom">
+                            <div class="hyyw_bottom_img">
+                                <a  href="/SCDT/Detail.aspx?PKID=33893"target="_blank">
+                                    <img width="85" height="48" img src="{IMG_PATH}v9/ad2.jpg"/>
+                                </a> 
+                            </div>
+                            <div class="hyyw_bottom_xx"> 
+                                <ul>
+                                    <li style="text-align:center;">
+                                        <a style="font-weight:bold;color:#950124;word-spacing:0px;font-size:15px;" href="/SCDT/Detail.aspx?PKID=33893"target="_blank">服饰私人订制将亮相加博会
+                                        </a>
+                                    </li>
+                                </ul>
+                                <p>      
+                                    2016中国加工贸易产品博览会将于4月...
+                                    <a  href="/SCDT/Detail.aspx?PKID=33893"target="_blank">全文</a>
+                                </p> 
+                            </div>
+                            <div class="clear"></div>
+                            <div class="clear"></div>
+                            <div class="list">
+                                <a target="_blank"  href="/LMNR/LMNRList.aspx?LMID=784">鞋</a> &nbsp;
+                                <a target="_blank"  href="/LMNR/LMNRList.aspx?LMID=785">服装</a> &nbsp;
+                                <a target="_blank"  href="/LMNR/LMNRList.aspx?LMID=786">电子</a> &nbsp;
+                                <a target="_blank"  href="/LMNR/LMNRList.aspx?LMID=787">机械</a> &nbsp;
+                                <a target="_blank"  href="/LMNR/LMNRList.aspx?LMID=788">化工</a> &nbsp;
+                                <a target="_blank"  href="/LMNR/LMNRList.aspx?LMID=789">加工贸易</a> &nbsp;
+                                <a target="_blank"  href="/LMNR/LMNRList.aspx?LMID=862">其他</a> &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hyyw" style="margin-top: 10px;">
+                        <div class="hyyw_top">
+                            <h5>
+                                国内要闻
+                            </h5>
+                            <a target="_blank" href="/SCDT/List.aspx?LMID=782">更多>></a>
+                        </div>
+                        <div class="hyyw_bottom">
+                            <div class="hyyw_bottom_img">
+                                <a  href="/SCDT/Detail.aspx?PKID=33903"target="_blank">
+                                    <img width="85" height="48" src="{IMG_PATH}v9/ad2.jpg"/></a> 
+                            </div>
+                            <div class="hyyw_bottom_xx"> 
+                                <ul> 
+                                    <li>
+                                        <a href="/SCDT/Detail.aspx?PKID=33903"target="_blank" >TPP来了 中国如何应对</a>
+                                    </li> 
+                                    <li>
+                                        <a href="/SCDT/Detail.aspx?PKID=33864"target="_blank" >2016中国外贸猜想</a>
+                                    </li> 
+                                    <li>
+                                        <a href="/SCDT/Detail.aspx?PKID=33817"target="_blank" >亚太地区去年跨境并购额创新高</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="list">
+                                <a  href="/SCDT/Detail.aspx?PKID=33772" target="_blank">商务部：中俄贸易额下降受外部因素影响所致</a>
+                                <a  href="/SCDT/Detail.aspx?PKID=33722" target="_blank">中非经济关系至调整关键节点</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hyyw" style="margin-top: 10px;">
+                        <div class="hyyw_top">
+                            <h5>
+                                国际要闻
+                            </h5>
+                            <a target="_blank" href="/SCDT/List.aspx?LMID=783">更多>></a>
+                        </div>
+                        <div class="hyyw_bottom">
+                            <div class="hyyw_bottom_img">
+                                <a  href="/SCDT/Detail.aspx?PKID=33911"target="_blank">
+                                    <img width="85" height="48" src="{IMG_PATH}v9/ad2.jpg"/>
+                                </a> 
+                            </div>
+                            <div class="hyyw_bottom_xx"> 
+                                <ul> 
+                                    <li>
+                                        <a href="/SCDT/Detail.aspx?PKID=33911"target="_blank" >跨境物流，东盟经济增长新动力</a>
+                                    </li> 
+                                    <li>
+                                        <a href="/SCDT/Detail.aspx?PKID=33859"target="_blank" >中国高铁进东盟将助推区域经济...</a>
+                                    </li> 
+                                    <li>
+                                        <a href="/SCDT/Detail.aspx?PKID=33827"target="_blank" >海口“十三五”将打造面向东盟...</a>
+                                    </li> 
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="list">
+                                <a  href="/SCDT/Detail.aspx?PKID=33765" target="_blank">美国11月份贸易逆差424亿美元</a>
+                                <a  href="/SCDT/Detail.aspx?PKID=33715" target="_blank">外媒：美元难逃“年末厄运” 美国经济表现不...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-----------------side_1中间的内容----------->
+                <div class="side_1_right">
+                    <div class="zjzc">
+                        <div class="zjzc_title">
+                            <a target="_blank" href="{$CATEGORYS[5][url]}">资金申报</a></div>
+                        <div class="zd">
+
+                            <a href="http://125.70.14.66:8001/AppDownPage/index.html" target="_blank" style="text-decoration: NONE">
+                                <p>成都外贸公共服务平台</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;手机客户端APP正式上线</p>
+                            </a>
+                        </div>
+                        <div class="zjzc_bottom">
+                            <div class="zjzc_bottom_title">
+                                <a target="_blank" href="{$CATEGORYS[21][url]}">更多>></a>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="zjzc_bottom_cont">
+                                <ul>
+                                    
+                                    <li>
+                                        <img src="{IMG_PATH}new/tzgg_icon_15.jpg"/>
+                                        <a target="_blank" href="/ZCFG/ZCFGDetail.aspx?PKID=649" >成都市商务委员会关于组织开展20...</a>
+                                    </li>
+                                    
+                                    <li>
+                                        <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                        <a target="_blank" href="/ZCFG/ZCFGDetail.aspx?PKID=639" >成都高新区技术创新服务中心关于申...</a>
+                                    </li>
+                                    
+                                    <li>
+                                        <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                        <a target="_blank" href="/ZCFG/ZCFGDetail.aspx?PKID=634" >关于组织区内企业申报成都市201...</a>
+                                    </li>
+                                    
+                                    <li>
+                                        <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                        <a target="_blank" href="/ZCFG/ZCFGDetail.aspx?PKID=630" >四川省科学技术厅关于发布2016...</a>
+                                    </li>
+                                    
+                                    <li>
+                                        <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                        <a target="_blank" href="/ZCFG/ZCFGDetail.aspx?PKID=629" >2015年成都市中小企业示范服务...</a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-----------------以上是资金政策----------->
+                    <div class="pxjd">
+                        <div class="pxjd_title">
+                            <a target="_blank" href="/PXJD/PXJDIndex.aspx">更多>></a>
+                        </div>
+                        <div class="pxjd_cont">
+                            <ul>
+                                <li>
+                                    <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                    <a href="/PXJD/PXJDDetail.aspx?PKID=35" target="_blank">2015年度郫县“政府扶持政策”培...</a>
+                                </li>
+                                <li>
+                                    <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                    <a href="/PXJD/PXJDDetail.aspx?PKID=33" target="_blank">成都外贸公共服务平台最新出口退税实...</a>
+                                </li>
+                                <li>
+                                    <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                    <a href="/PXJD/PXJDDetail.aspx?PKID=32" target="_blank">2015年度崇州市外贸企业培训会顺...</a>
+                                </li>
+                                <li>
+                                    <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                    <a href="/PXJD/PXJDDetail.aspx?PKID=31" target="_blank">2015年度郫县企业外贸形势、政策...</a>
+                                </li>
+                                <li>
+                                    <img src="{IMG_PATH}new/tzgg_icon_15.jpg" /><a href="/PXJD/PXJDDetail.aspx?PKID=29" target="_blank">武侯区2014年对外贸易业务培训会...</a>
+                                </li>
+                                <li>
+                                    <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                    <a href="/PXJD/PXJDDetail.aspx?PKID=26" target="_blank">崇州市2014年外贸业务培训会顺利...</a>
+                                </li>
+                                <li>
+                                    <img src="{IMG_PATH}new/tzgg_icon_15.jpg" />
+                                    <a href="/PXJD/PXJDDetail.aspx?PKID=21" target="_blank">崇州市“保风险、获融资，助力外贸企...</a>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--以上是side_1-->
+            <div class="guanggao">
+                <a target="_blank" href="/Index.aspx"><img src="{IMG_PATH}new/guanggao_23.jpg" /></a>
+            </div>
+            <!--以上是广告-->
+            <div class="side_2">
+                <div class="zhanhui">
+                    <div class="zhanhui_title clear">
+
+                        <div style="float:left;line-height:33px;">
+                            <a href="#" class="dj_zhanhui newzh" zhxxid="zhdiv_count1">最新展会</a> 
+                            <a zhxxid="zhdiv_count2" class="newzh newzh1" href="#">展会资讯</a>
+                            <a zhxxid="zhdiv_count3" class="newzh newzh1" href="#">参展知识</a>
+                        </div>
+
+                        <div style="float:right;line-height:33px;"> 
+                            <a target="_blank"  class="zxc" href="/ZHZL/ZHZLList.aspx">更多>></a>
+                        </div>
+
+                        <script type="text/javascript" language="javascript">
+                                //控制点击更换下面列表
+                                $(".newzh").click(function () {
+                                    var topbtli = this;
+                                    $(".newzh").each(function () {
+                                        if (this == topbtli) {
+                                            if ($(this).hasClass("newzh1")) {
+                                                $(this).removeClass("newzh1");
+                                                $(this).addClass("dj_zhanhui");
+                                            }
+                                        } else {
+                                            if ($(this).hasClass("dj_zhanhui")) {
+                                                $(this).removeClass("dj_zhanhui");
+                                                $(this).addClass("newzh1");
+                                            }
+                                        }
+                                    });
+                                    $(".zhdiv_count").hide();
+                                    $("#" + $(topbtli).attr("zhxxid")).show();
+                                    if ($(topbtli).attr("zhxxid") == "zhdiv_count1") {
+                                        $(".zxc").attr("href", "/ZHZL/ZHZLList.aspx");
+                                    } else if ($(topbtli).attr("zhxxid") == "zhdiv_count2") {
+                                        $(".zxc").attr("href", "/ZHZL/ZHZXList.aspx?LMID=797");
+                                    } else if ($(topbtli).attr("zhxxid") == "zhdiv_count3") {
+                                        $(".zxc").attr("href", "/ZHZL/ZHZXList.aspx?LMID=798");
+                                    }
+                                    return false;
+                                });
+                        </script>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="zhanhui_cont">
+
+                        <div class="zhanhui_cont_img">
+                            <script language="javascript" type="text/javascript">
+                                //注：图片只能为长宽大于等于317*257
+                                var pic_width = 312;
+                                var pic_height = 227;
+                                var text_height = 30;
+                                var texts = '2015第21届西部制博会暨中国欧亚...|2015年德国科隆食品展暨欧洲经贸促...|2015年俄罗斯国际食品展|2015巴西食品展览会';
+                                var pics = '{IMG_PATH}new/zjzc_11.jpg|{IMG_PATH}new/zjzc_11.jpg|{IMG_PATH}new/zjzc_11.jpg|{IMG_PATH}new/zjzc_11.jpg';
+                                var links = '/ZHZL/ZHZLDetail.aspx?PKID=1090|/ZHZL/ZHZLDetail.aspx?PKID=1077|/ZHZL/ZHZLDetail.aspx?PKID=1076|/ZHZL/ZHZLDetail.aspx?PKID=1074';
+                            </script>
+                            <script src="{JS_PATH}new/FlashPic.js" type="text/javascript"></script>
+                        </div>
+                        <div class="zhdiv_count" id="zhdiv_count1">
+                            <div class="zhanhui_cont_xx">
+                                <ul>
+                                    <li><span>2015-10-22</span>
+                                        <a href="/ZHZL/ZHZLDetail.aspx?PKID=1090" style="color: #af0000;" target="_blank">2015第21届西部制博会暨中国欧亚...</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-04-15</span>
+                                        <a href="/ZHZL/GJHHIndex.aspx?ZHID=180" style="color: #af0000;" target="_blank">117届中国进出口商品交易会</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-10-10</span>
+                                        <a href="/ZHZL/ZHZLDetail.aspx?PKID=1077" style="color: #af0000;" target="_blank">2015年德国科隆食品展暨欧洲经贸促...</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-09-14</span>
+                                        <a href="/ZHZL/ZHZLDetail.aspx?PKID=1076" target="_blank">2015年俄罗斯国际食品展</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-06-09</span>
+                                        <a href="/ZHZL/ZHZLDetail.aspx?PKID=1074" target="_blank">2015巴西食品展览会</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-04-28</span>
+                                        <a href="/ZHZL/ZHZLDetail.aspx?PKID=1071" target="_blank">2015加拿大国际食品展暨北美经贸活动</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-05-12</span>
+                                        <a href="/ZHZL/ZHZLDetail.aspx?PKID=1070" target="_blank">2015韩国食品展览会</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-06-24</span>
+                                        <a href="/ZHZL/ZHZLDetail.aspx?PKID=1069" target="_blank">2015欧洲精细化工展览会</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-05-21</span>
+                                        <a href="/ZHZL/ZHZLDetail.aspx?PKID=1066" target="_blank">2015中国四川商品（印尼）展览会</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-06-04</span>
+                                        <a href="/ZHZL/ZHZLDetail.aspx?PKID=1064" target="_blank">2015中国广州有机营养健康食品展览会</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2014-12-18</span>
+                                        <a href="/ZHZL/ZHZLDetail.aspx?PKID=1063" target="_blank">关于赴印度、斯里兰卡举办2014年四...</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="zhdiv_count" id="zhdiv_count2" style="display: none;">
+                            <div class="zhanhui_cont_xx">
+                                <ul>
+                                    <li>
+                                        <span>2016-02-26</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=33879"style="color: #af0000;" target="_blank">四川省商务厅关于组团参加第四届中...</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2016-01-28</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=33848"style="color: #af0000;" target="_blank">四川省商务厅关于组织参加第四届中...</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2016-01-14</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=33806"style="color: #af0000;" target="_blank">2016中国国际酒业博览会3月1...</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2016-01-14</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=33804" target="_blank">第20届四川新春年货购物节“新”...</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2016-01-08</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=33755" target="_blank">2016广西首届汽车展览会开幕</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-12-29</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=33705" target="_blank">第22届中国国际家具展览会于20...</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-12-29</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=33704" target="_blank">自贡产品亮相2015宜宾第二届采...</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-12-29</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=33703" target="_blank">“川货全国行·武汉站”德阳食品香...</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-12-29</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=33702" target="_blank">四川省商务厅关于组织参加2016...</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-12-23</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=33668" target="_blank">2015第四届华南（广州）农资博...</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-12-23</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=33667" target="_blank">福建将举办国内首个跨境电商博览会</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="zhdiv_count" id="zhdiv_count3" style="display: none;">
+                            <div class="zhanhui_cont_xx">
+                                <ul>
+                                    <li>
+                                        <span>2015-07-24</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=32465"style="color: #af0000;" target="_blank">展台设计中传统模板与量身设计的利...</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-07-16</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=32351"style="color: #af0000;" target="_blank">企业在选择展览会时务必确定目标</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-06-16</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=31975"style="color: #af0000;" target="_blank">参展商容易忽略的四个细节</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-06-15</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=31963" target="_blank">参展的十个步骤</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-06-09</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=31884" target="_blank">维护会展知识产权 推动行业健康发展</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-06-04</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=31839" target="_blank">参展技巧攻略：如何实现最佳宣传效果</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-06-04</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=31838" target="_blank">参展企业如何赢得更多客户</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-05-06</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=31514" target="_blank">展览业地位提升发展方向明确</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-04-27</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=31408" target="_blank">参展广交会有窍门 防骗技巧全攻略</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-04-21</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=31338" target="_blank">参展商如何低成本利用广交会？</a>
+                                    </li>
+
+                                    <li>
+                                        <span>2015-04-03</span>
+                                        <a href="/ZHZL/ZHZXDetail.aspx?PKID=31168" target="_blank">展会知识产权保护四大问题</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--以上是展会-->
+                <div class="fg_yj">
+                    <div class="new_fg">
+                        <div class="new_fg_title">
+                            <div class="fg">最新法规</div>
+                            <a target="_blank" href="{$CATEGORYS[21][url]}">更多>></a>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="new_fg_cont">
+                            <ul>
+                                <li>
+                                    <a href="/ZCFG/ZCFGDetail.aspx?PKID=672" target="_blank">&middot;海关总署公告2015年第70号（关于启用...</a>
+                                </li>
+                                <li>
+                                    <a href="/ZCFG/ZCFGDetail.aspx?PKID=667" target="_blank">&middot;国家税务总局关于取消销货退回消费税退税等...</a>
+                                </li> 
+                                <li>
+                                    <a href="/ZCFG/ZCFGDetail.aspx?PKID=668" target="_blank">&middot;国家税务总局关于发布影视等出口服务编码及...</a>
+                                </li> 
+                                <li>
+                                    <a href="/ZCFG/ZCFGDetail.aspx?PKID=671" target="_blank">&middot;中国人民银行 国家外汇管理局公告〔201...</a>
+                                </li>
+                                <li>
+                                    <a href="/ZCFG/ZCFGDetail.aspx?PKID=669" target="_blank">&middot;国家税务总局关于发布《市场采购贸易方式出...</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--以上是最新法规-->
+                    <div class="hy_yj">
+                        <div class="hy_yj_title">
+                            <div class="yj">
+                                行业预警信息
+                            </div>
+                            <a target="_blank" href="/SCDT/List.aspx?LMID=773">更多>></a>
+                        </div>
+                        <div class="hy_yj_cont">
+                            <ul>
+                                <li>
+                                    <a  href="/SCDT/Detail.aspx?PKID=33907" target="_blank">&middot;<b>[国际形势]</b>北美：经济复苏拉动...</a>
+                                    <span>(03-03)</span>
+                                </li>
+                                <li>
+                                    <a  href="/SCDT/Detail.aspx?PKID=33902" target="_blank">&middot;<b>[预警快讯]</b>TPP来了 中国如...</a>
+                                    <span>(03-03)</span>
+                                </li>
+                                <li>
+                                    <a  href="/SCDT/Detail.aspx?PKID=33884" target="_blank">&middot;<b>[国际形势]</b>标普：亚太企业将迎...</a>
+                                    <span>(02-26)</span>
+                                </li>
+                                <li>
+                                    <a  href="/SCDT/Detail.aspx?PKID=33881" target="_blank">&middot;<b>[预警快讯]</b>出于对英国退出欧盟...</a>
+                                    <span>(02-26)</span>
+                                </li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <!--以上是行业预警信息-->
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--以上是side_2-->
+            <div class="side_3">
+                <div class="hy_pm">
+                    <div class="guanggao_2">
+                        <a target="_blank" href="http://www.xdlex.com"><img src="{IMG_PATH}new/guanggao_2_11.gif" /></a>
+                    </div>
+                    <div class="pm">
+                        <div class="pm_list">
+                            <ul>
+                                <li style="cursor: pointer; font-weight:bold;" class="pm_qs " >进出口排名统计</li>
+                                <li style="cursor: pointer;" class="pm_qs pm_check" conttop="hyck"><a>行业出口前十</a></li>
+                                <li style="cursor: pointer;" class="pm_qs qspm" conttop="hyjk"><a>行业进口前十</a></li>
+                                <li style="cursor: pointer;" class="pm_qs qspm" conttop="ckdq"><a>出口地区前十</a></li>
+                                <li style="cursor: pointer;" class="pm_qs qspm" conttop="jkdq"><a>进口地区前十</a></li>
+                                <li style="cursor: pointer;display:none;" class="pm_qs qspm" conttop="hycz" ><a>行业出增前十</a></li>
+                            </ul>
+                            <input type='text' style="display: none;" value="hyck" class="conttopcss" />
+                        </div>
+                        <div class="pm_bg">
+                            <div class="pm_ss" style="margin-top: 6px;">
+                                <span style="font-size: 14; color: Red; padding-right: 5px;">按月份排名查询:</span>
+                                <input name="ctl00$ContentPlaceHolder1$ymonth" type="text" id="ctl00_ContentPlaceHolder1_ymonth" style="width: 100px;" class="ymonth Wdate" readonly="readonly" onclick="showMonth()" value="2014-09" />
+
+                                <a class="gjss">
+                                    <input type="button" style="width: 60px; height: 20px;" value="搜 索" />
+                                </a>
+                            </div>
+                            <div class="pm_bg_sj">
+                                <div id='062240fd_dd23_4b17_8784_107831a4253a' align='center'></div>
+                                <script>if (!window.jQuery) {
+                                        document.write("<script src='{JS_PATH}/jquery.min.js' type='text/javascript'><\/script>");
+                                    }</script>
+                                <script src="{JS_PATH}new/FusionCharts.js" type="text/javascript"></script>
+                                <script src="{JS_PATH}new/lib.js" type="text/javascript"></script>
+                                <script src="{JS_PATH}new/prettify.js" type="text/javascript"></script>
+                                <!--[if IE 6]>
+                                <script src="/FusionCharts/chart3_2_2/common/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+                                <script>
+                                DD_belatedPNG.fix('img');
+                                </script>
+                                <![endif]-->
+                                <div id='062240fd_dd23_4b17_8784_107831a4253a' align='center'></div>
+                                <script defer type="text/javascript">
+                                    if (GALLERY_RENDERER && GALLERY_RENDERER.search(/javascript|flash/i) == 0)
+                                        FusionCharts.setCurrentRenderer(GALLERY_RENDERER);
+                                    var chart = new FusionCharts("/FusionCharts/chart3_2_2/Column3D.swf", "062240fd_dd23_4b17_8784_107831a4253a_id", "492", "300", "0", "0")
+                                    function htmlrender(xml) {
+                                        chart.setXMLData(xml);
+                                        chart.render("062240fd_dd23_4b17_8784_107831a4253a");
+                                    }
+                                </script>
+                            </div>
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <script type="text/javascript">
+                        //先判断是否登录 再进行跳转报名
+                        $(".zxxxbm").click(function () {
+                            if ($(".dlyhid").val() == "-1" || $(".dlyhid").val() == "") {
+                                var Button = $(this).attr("id");
+                                var yhid = $(".dlyhid").attr("id");
+                                window.top.createDIV(window, "/Themes/cdweb/htm/Login.aspx?Controls=" + yhid + "&Button=" + Button, "用户登录", 450, 265, window, "", "", true);
+                                return false;
+                            } else {
+                                window.location = "/LMNR/ZXBM.aspx?TableName=PX_XX&PKID=" + $(this).attr("zxxxbmid") + "&YHID=" + $(".dlyhid").val();
+                            }
+                            return false;
+                        });
+
+                        //控制点击更换下面列表
+                        $(".pm_qs").click(function () {
+                            if ($(this).attr("conttop") == undefined || $(this).attr("conttop") == "") {
+                                return;
+                            }
+                            var topbtli = this;
+                            $(".pm_qs").each(function () {
+                                if (this == topbtli) {
+                                    if ($(this).hasClass("qspm")) {
+                                        $(this).removeClass("qspm");
+                                        $(this).addClass("pm_check");
+                                    }
+                                } else {
+                                    if ($(this).hasClass("pm_check")) {
+                                        $(this).removeClass("pm_check");
+                                        $(this).addClass("qspm");
+                                    }
+                                }
+                            });
+                            $(".conttopcss").val($(topbtli).attr("conttop"));
+                            into();
+                        });
+                        $(document).ready(function () {
+                            setTimeout("into()", 500);
+                        });
+
+
+                        //                    $(document).ready(function () {
+                        //                        into(htmlrender);
+                        //                    });
+                        //alert(typeof (htmlrender))
+
+                        function showMonth() {
+                            WdatePicker({skin: 'whyGreen', dateFmt: 'yyyy-MM'});
+                        }
+
+
+                        //                    $(".ymonth").bind("propertychange", function () {
+                        //                        into();
+                        //                    });
+                        if ($.browser.msie) {
+                            $(".gjss").hide();
+                            document.getElementById($(".ymonth").attr("id")).attachEvent('onpropertychange', function (o) {
+
+                                if (o.propertyName != 'value')
+                                    return;  //不是value改变不执行下面的操作  
+                                into();
+                            });
+                        } else {
+                            $(".gjss").show();
+                        }
+                        $(".gjss").click(function () {
+                            into();
+                        });
+
+                        objFocusNote($(".txtvlaue"), "请输入你要(搜索/提问/回答)的关键字");
+
+                    </script>
+                </div>
+                <!--以上是行业排名-->
+                <div class="wmzd">
+                    <div class="wmzd_title">
+                        <span><a target="_blank" href="{$CATEGORYS[55][url]}">外贸知道</a></span> <a target="_blank" href="#">更多>></a>
+                    </div>
+                    <div class="wmzd_cont">
+                        <div class="wmzd_fl">
+                            <span><a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=01" >报检</a></span>
+                            <div class="bj_fl">
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=01&&ZJBH=0101">证书办理流程</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=01&&ZJBH=0102">检验标准</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=01&&ZJBH=0103">行业标准</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=01&&ZJBH=0104">电子报检</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=01&&ZJBH=0105">车辆/人员报检</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=01&&ZJBH=0106">进出口货物报检</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=01&&ZJBH=0107">其它</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=01" style="color: #f6b950; font-weight: bold;">>></a>
+                            </div>
+                            <div class="clear"></div>
+
+                        </div>
+                        <div class="wmzd_fl">
+                            <span><a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=02" >报关</a></span>
+                            <div class="bj_fl">
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=02&&ZJBH=0201">进口货物流程</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=02&&ZJBH=0202">出口货物流程</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=02&&ZJBH=0203">免税货物</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=02&&ZJBH=0204">保税区出口流程</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=02&&ZJBH=0205">退运货物</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=02&&ZJBH=0206">关税</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=02&&ZJBH=0207">其它</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=02" style="color: #f6b950; font-weight: bold;">>></a>
+                            </div>
+                            <div class="clear"></div>
+
+                        </div>
+                        <div class="wmzd_fl">
+                            <span><a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=03" >国税</a></span>
+                            <div class="bj_fl">
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=03&&ZJBH=0301">生产企业</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=03&&ZJBH=0302">外贸企业</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=03&&ZJBH=0303">小规模企业</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=03&&ZJBH=0304">网上申报</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=03&&ZJBH=0305">网上预审</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=03&&ZJBH=0306">其它</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=03" style="color: #f6b950; font-weight: bold;">>></a>
+                            </div>
+                            <div class="clear"></div>
+
+                        </div><div class="wmzd_fl">
+                            <span><a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=04" >信保</a></span>
+                            <div class="bj_fl">
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=04&&ZJBH=0401">投保流程</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=04&&ZJBH=0402">资信调查</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=04&&ZJBH=0403">投保种类</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=04&&ZJBH=0404">投保及赔付比例</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=04&&ZJBH=0405">收费标准</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=04&&ZJBH=0406">索赔流程</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=04&&ZJBH=0407">投保时限</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=04&&ZJBH=0408">投保范围</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=04&&ZJBH=0409">投保国家</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=04&&ZJBH=0410">其它</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=04" style="color: #f6b950; font-weight: bold;">>></a>
+                            </div>
+                            <div class="clear"></div>
+
+                        </div><div class="wmzd_fl">
+                            <span><a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=06" >外管</a></span>
+                            <div class="bj_fl">
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=06&&ZJBH=0601">企业报告</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=06&&ZJBH=0602">网上申报</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=06&&ZJBH=0603">境外开立帐户标准</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=06&&ZJBH=0604">人民币结算</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=06&&ZJBH=0605">其它</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=06" style="color: #f6b950; font-weight: bold;">>></a>
+                            </div><div class="clear">
+
+                            </div></div><div class="wmzd_fl">
+                            <span><a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=07" >银行</a></span>
+                            <div class="bj_fl">
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=07&&ZJBH=0701">国际结算</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=07&&ZJBH=0702">抵押</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=07&&ZJBH=0703">融资</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=07&&ZJBH=0704">外币帐户开立</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=07&&ZJBH=0705">其它</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=07" style="color: #f6b950; font-weight: bold;">>></a>
+                            </div>
+                            <div class="clear"></div>
+
+                        </div>
+                        <div class="wmzd_fl">
+                            <span><a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=09" >货代</a></span>
+                            <div class="bj_fl">
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=09&&ZJBH=0901">申报资料</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=09&&ZJBH=0902">流程</a>
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=09&&ZJBH=0903">其它</a> 
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=09" style="color: #f6b950; font-weight: bold;">>></a>
+                            </div>
+                            <div class="clear"></div>
+
+                        </div>
+                        <div class="wmzd_fl">
+                            <span><a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=10" >其它</a></span>
+                            <div class="bj_fl">
+                                <a target="_blank" href="/WMZD/WMZDList.aspx?LMBH=10" style="color: #f6b950; font-weight: bold;">>></a>
+                            </div>
+                            <div class="clear"></div>                          
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        
+        {template "content","footer"}
+    </body>
+</html>

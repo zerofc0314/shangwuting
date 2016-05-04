@@ -1,0 +1,94 @@
+<!DOCTYPE html>    
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+        <meta name="description" content="{$SEO['description']}" />
+        <meta name="keywords" content="{$SEO['keyword']}" />
+        {template "content","header_inclub"}
+        <link href="{CSS_PATH}search.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+        <script type="text/javascript" src="{JS_PATH}cookie.js"></script>
+        <script type="text/javascript" src="{JS_PATH}search_common.js"></script>
+        <style>
+          .sr_list .sr_logo div.l{ margin-top:20px;}
+          .sr_logo{height:auto!important; height:100px; min-height:100px;}
+          .sr_lists .l{ width:160px;}
+          .sr_lists .c ul{ margin:10px auto auto 40px;}
+          .wrap{color:black;font-size: 16px;margin-top:5px;}
+        </style>
+    </head>
+
+      <body>
+        
+        {template "content","header"}
+        
+        <div class="clr sr_body sr_list" style="width:994px;margin: auto;border:#ccc 1px solid;">
+            <div class="sr_main" style='margin-top:20px;width:990px;'>
+
+                <div class="sr_head" style="width:350px;color:#1A7DAC;padding:0px 10px;">
+                    <h3 style="display:  inline-block;font-size: 16px;">搜索: </h3> 获得约 {$totalnums} 条结果 （用时{sprintf("%01.2f", $execute_time)} 秒）
+                </div> 
+               
+                <div class="wrap sr_lists">
+                    <div class="l">
+                        <div>
+                            <span>网页结果</span>
+                            <ul>
+                                {loop $search_model $k=>$v}
+                                <li><a href="?m=search&c=index&a=init&typeid={$v['typeid']}&q={urlencode($search_q)}&siteid={$siteid}&time={$time}" {if $v['typeid']==$typeid} class="ac"{/if}>{$v['name']}</a>
+                                </li>
+                                {/loop}
+                            </ul>
+                        </div>
+                        <div>
+                            <span>按时间搜索</span>
+                            <ul>
+                                <li><a href="?m=search&c=index&a=init&typeid={$typeid}&q={urlencode($search_q)}&siteid={$siteid}&time=all" {if $time=='all' || empty($time)}class="ac"{/if}>全部时间</a></li>
+                                <li><a href="?m=search&c=index&a=init&typeid={$typeid}&q={urlencode($search_q)}&siteid={$siteid}&time=day" {if $time=='day'}class="ac"{/if}>一天内</a></li>
+                                <li><a href="?m=search&c=index&a=init&typeid={$typeid}&q={urlencode($search_q)}&siteid={$siteid}&time=week" {if $time=='week'}class="ac"{/if}>一周内</a></li>
+                                <li><a href="?m=search&c=index&a=init&typeid={$typeid}&q={urlencode($search_q)}&siteid={$siteid}&time=month" {if $time=='month'}class="ac"{/if}>一月内</a></li>
+                                <li><a href="?m=search&c=index&a=init&typeid={$typeid}&q={urlencode($search_q)}&siteid={$siteid}&time=year" {if $time=='year'}class="ac"{/if}>一年内</a></li>
+                            </ul>
+                        </div>
+                        <div class="bgno">
+                            <span>搜索历史</span>
+                            <ul id='history_ul'>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="c wrap">
+                        <ul class="wrap">
+                            {loop $data $i $r}
+                            <li class="wrap">
+                                <div>
+                                    {if $r['thumb']}<a href="{$r[url]}"><img src="{$r[thumb]}" width="60" height="60" /></a>{/if}
+                                    <h5><a href="{$r[url]}">{$r[title]}</a>{if $r['posids']}<img src="{IMG_PATH}icon/small_elite.gif">{/if}</h5>
+                                    <p>{$r[description]}</p>
+                                </div>
+                                <div class="adds">发布时间：{format::date($r[inputtime], 1)}</div>
+                            </li>
+                            {/loop}
+                            {if empty($data)}未找到结果{/if}
+                        </ul>
+                        <div id="pages" class="text-c mg_t20">{$pages}</div>
+                        {if $setting['relationenble']}
+                        <div class="wrap sgch"><strong>相关搜索：</strong>
+                            {loop $relation $k $v}
+                            <a href="?m=search&c=index&a=init&typeid={$typeid}&siteid={$siteid}&q={$v['keyword']}">{$v['keyword']}</a> 
+                            {/loop}
+                        </div>
+                        {/if}
+                    </div>
+                </div>
+            </div>
+        </div>   
+<script type="text/javascript" src="{JS_PATH}search_history.js"></script>
+{if $setting['suggestenable']}
+<script type="text/javascript" src="{JS_PATH}jquery.suggest.js"></script>
+<script type="text/javascript" src="{JS_PATH}search_suggest.js"></script>
+{/if}
+
+ {template "content","footer1"}
+ </body>

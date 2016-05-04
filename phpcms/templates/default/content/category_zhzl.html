@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+        <meta name="description" content="{$SEO['description']}"/>
+        <meta name="keywords" content="{$SEO['keyword']}"/>
+        {template "content","header1_inclub"}
+        <link href="{CSS_PATH}new/jquery-ui.css" type="text/css" rel="stylesheet" />
+        <script src="{JS_PATH}new/jquery-ui.min.js" type="text/javascript"></script>
+        <style>
+            .cont_2{margin-bottom: 30px;}    //这是自己添加的测试样式
+            .maincont{border:red 1px solid;}
+            .ZH_area_cont ul {
+                margin: 5px 0px;
+            }
+        </style>
+    </head>
+    <body>
+        {template "content","header1"}
+         <div class="maincont">
+       <div class="kong"></div>
+         <div class="cont_1">
+           <div class="LEFT_cont_1">
+             <div class="kong"></div>
+             <p class="ZH_zj" style="text-align:center">2014年平台共指导67家企业 完成补贴申报</p>
+            
+             <div class="ZH_zj_list">
+               <ul>
+                 {pc:content  action="lists" catid="92" order="updatetime DESC" num="6" return="info"}
+                 {loop $info $v}
+                 <li>{str_cut($v['title'],100)}</li>
+                 {/loop}
+                 {/pc}
+                 
+                 {pc:content  action="lists" catid="93" order="updatetime DESC" num="1" return="info"}
+                 {loop $info $v}
+                 <li><a href="{$v['url']}">>>更多<a></li>
+                 {/loop}
+                 {/pc}
+                 
+               </ul>
+             </div>
+             {pc:content  action="lists" catid="87" order="updatetime DESC" num="1" return="info"}
+            {loop $info $v}
+             <div class="ZH_but"><a href="{$v['url']}" target="_blank"><img src="{thumb($v[thumb],225,30)}" /></a></div>
+              {/loop}
+            {/pc} 
+             
+            {pc:content  action="lists" catid="88" order="updatetime DESC" num="1" return="info"}
+            {loop $info $v}
+             <div class="ZH_but"><a href="{$v['url']}" target="_blank"><img src="{thumb($v[thumb],225,30)}" /></a></div>
+            {/loop}
+            {/pc} 
+            
+           </div>
+           <div class="MID_cont_1">
+             <div class="MID_ZH_nav">
+               <div class="MID_current">最新展会</div>
+             </div>
+             <div class="MID_ZH_ul">
+                  {pc:content  action="lists" catid="94" order="updatetime DESC" thumb="1" num="1" return="info"}
+                  {loop $info $v}
+              <a href="{$v['url']}" target="_blank"><img src="{thumb($v[thumb],280,120)}" /></a>
+                  {/loop}
+                  {/pc}    
+                  
+               <ul>
+                 {pc:content  action="lists" catid="94" order="updatetime DESC" num="4" return="info"}
+                 {loop $info $v}
+                 <li><span>{date('Y-m-d',$v[inputtime])}</span><a target="_blank" href="{$v['url']}">{str_cut($v['title'],76)}</a></li>
+                  {/loop}
+                  {/pc}
+               </ul>
+               <div class="MID_more"><a href="{$CATEGORYS[52][url]}">更多>></a></div>
+               <div class="clear"></div>
+             </div>  
+           </div>
+           <div class="RIGHT_cont_1">
+             <div class="RIGHT_ct1_nav">
+               <div class="RIGHT_current zhzx RIGHT_check" contentid="zhzx1"><a href="{$CATEGORYS[91][url]}">展会资讯</a></div>
+               <div class="RIGHT_current zhzx zhzs" contentid="zhzs1"><a href="{$CATEGORYS[54][url]}">展会知识</a></div>
+             </div>
+             <script type="text/javascript" language="javascript">
+                 //控制点击更换下面列表
+                 $(".zhzx").click(function () {
+                     var zhzx = this;
+                     $(".zhzx").each(function () {
+                         if (this == zhzx) {
+                             if ($(this).hasClass("zhzs")) {
+                                 $(this).removeClass("zhzs");
+                                 $(this).addClass("RIGHT_check");
+                             }
+                         } else {
+                             if ($(this).hasClass("RIGHT_check")) {
+                                 $(this).removeClass("RIGHT_check");
+                                 $(this).addClass("zhzs");
+                             }
+                         }
+                     });
+                     $(".RIGHT_ZH_ul").hide();
+                     $("#" + $(zhzx).attr("contentid")).show();
+                     return false;
+                 });
+               </script>
+             <div class="RIGHT_ZH_ul" id="zhzx1">
+               <ul>
+                {pc:content action="hits" catid="91" num="11" order="monthviews DESC" cache="3600"}
+                {loop $data $r} 
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="{$r['url']}">{str_cut($r[title],52)}</a></li>
+                {/loop}
+                {/pc} 
+                 
+               </ul>
+               <div class="MID_more"><a href="{$CATEGORYS[91][url]}">更多>></a></div>
+               <div class="clear"></div>
+             </div>
+               
+             <div class="RIGHT_ZH_ul" style=" display:none" id="zhzs1">
+                <ul>
+                {pc:content action="hits" catid="54" num="11" order="monthviews DESC" cache="3600"}
+                {loop $data $r}  
+              
+               
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="{$r['url']}">{str_cut($r[title], 60, '……')}</a></li>
+                {/loop}
+                {/pc}
+               </ul>
+               <div class="MID_more"><a href="{$CATEGORYS[54][url]}">更多>></a></div>
+               <div class="clear"></div> 
+             </div>
+           </div>  
+           <div class="clear"></div>
+         </div>
+       
+         <div class="cont_2">
+           <div class="LEFT_ct2">
+               
+           <form action="./index.php?m=content&c=index&a=lists&catid=52" method="post" >
+             <div class="ZH_cx">
+           <div class="JZ_polling">
+                 <label>展会名称:</label><input name="title" type="text" class="zhname" onblur="need(event);"/>
+            </div>
+                 <div class="JZ_polling">
+                   <label>展会行业:</label> <div style="width:150px;float:right;margin-right:270px;margin-top:6px;*margin-top:-24px;">{menu_linkage(3390,'L_3390')}</div>
+                   <input type="hidden" value="" id="hide_area_id" name="hide_area_id" />  
+               </div>
+               <div class="MH_polling">
+                 <label>展会地区:</label>
+                   <div class="polling_2">
+                    <input type="radio" value="1" name="item" checked='true'/>中国境内
+                    <input type="radio" value="2" name="item" />亚洲其他
+                    <input type="radio" value="3" name="item" />非洲
+                    <input type="radio" value="4" name="item" />欧洲
+                    <input type="radio" value="5" name="item" />美洲
+                    <input type="radio" value="6" name="item" />大洋洲
+                   </div> 
+                   <div class="clear"></div>
+               </div>
+               <div class="MH_polling">
+                 <label>展会时间:</label>从
+                 <input name="start_time" type="text" style=" width:88px" class="datapiker" id="datepicker" />到
+                 <input name="end_time" type="text" style=" width:88px" class="datapiker"/>
+               </div>
+               <div class="polling_but">
+                   <input type="submit" value="" style="width:75px;height:27px;background:url(./statics/images/new/ct2_but_18.gif) 0 0 no-repeat;" onclick="beforeSearch();">
+                </div>
+             </div>
+           </form>
+               
+            <script>
+                 function beforeSearch(){
+                    var catid=$("#L_3390 input").val();
+                     $("#hide_area_id").val(catid);
+                     
+                     var radio_val=$("input[name='item']:checked").val();
+                     
+                     var start_time=$("input[name='start_time']").val();
+                     var end_time=$("input[name='end_time']").val();
+                 }
+            </script>
+               
+             <div class="ZH_area">
+               <div class="ZH_area_nav">
+                 <div class="nav1 jnzhq MID_current" contentid="jnzh1"><a target="_blank" href="{$CATEGORYS[94][url]}">境内展会</a></div>
+                  <div class="nav1 jnzhq jwzhcunt"  contentid="jwzh1"><a  target="_blank" href="{$CATEGORYS[95][url]}">境外展会</a></div>
+                 <div class="clear"></div>
+                 <script type="text/javascript" language="javascript">
+                     //控制点击更换下面列表
+                     $(".jnzhq").click(function () {
+                         var jnzhq = this;
+                         $(".jnzhq").each(function () {
+                             if (this == jnzhq) {
+                                 if ($(this).hasClass("jwzhcunt")) {
+                                     $(this).removeClass("jwzhcunt");
+                                     $(this).addClass("MID_current");
+                                 }
+                             } else {
+                                 if ($(this).hasClass("MID_current")) {
+                                     $(this).removeClass("MID_current");
+                                     $(this).addClass("jwzhcunt");
+                                 }
+                             }
+                         });
+                         $(".ZH_area_cont").hide();
+                         $("#" + $(jnzhq).attr("contentid")).show();
+                         return false;
+                     });
+                     
+                      $(".datapiker").datepicker();
+                        jQuery(function($){  
+                             $.datepicker.regional['zh-CN'] = {  
+                                 monthNames: ['一月','二月','三月','四月','五月','六月',  
+                                 '七月','八月','九月','十月','十一月','十二月'],  
+                                 dayNamesMin: ['日','一','二','三','四','五','六'],  
+                                 weekHeader: '周',  
+                                 dateFormat: 'yy-mm-dd',  
+                                 firstDay: 1,  
+                                 isRTL: false,  
+                                 showMonthAfterYear: true,  
+                                 yearSuffix: '年'};  
+                             $.datepicker.setDefaults($.datepicker.regional['zh-CN']);  
+                         });
+                </script>
+               </div>
+                 <div class="ZH_area_cont" id="jnzh1">
+                    {pc:content action="category" catid="94" num="25" siteid="$siteid" order="listorder ASC"}
+                     {loop $data $k $r}
+                   <div class="area_left">        
+                     <a target="_blank" href="{$r[url]}">   
+                         <h5 class="h5_title">{$r[catname]}</h5>
+                     </a>
+                   {pc:content action="lists" catid="$k" num="25" siteid="$siteid" order="listorder ASC"}
+                   {loop $data  $v}
+                   <ul>
+                       <li><a target="_blank" href="{$v[url]}">{str_cut($v['title'],50)}</a></li>
+                     </ul>
+                     {/loop}
+                     {/pc}
+                   </div>
+                   {/loop}
+                   {/pc}
+               </div> 
+                 
+                 <!--这个是境外展会的还没开始做-->
+                <div class="ZH_area_cont" id="jwzh1" style=" display:none">
+                     {pc:content action="category" catid="95" num="25" siteid="$siteid" order="listorder ASC"}
+                     {loop $data $k $r}
+                      <div class="area_left">
+                          <a target="_blank" href="{$r[url]}"><h5 class="h5_title">{$r[catname]}</h5></a>
+                          {pc:content action="lists" catid="$k" num="25" siteid="$siteid" order="listorder ASC"}
+                          {loop $data  $v}
+                          <ul>
+                              <li><a target="_blank" href="{$v[url]}">{str_cut($v['title'],50)}</a></li>
+                          </ul>
+                          {/loop}
+                          {/pc}
+                      </div>  
+                     {/loop}
+                     {/pc}
+               </div>
+                 <!--这个是境外展会的还没开始做-->
+             </div>
+               <style>
+             .area_left{
+             border-bottom:#999999 1px dashed; box-sizing:  border-box;padding-top:10px;padding-bottom:5px;
+             }
+             </style> 
+           </div>
+           <div class="RIGHT_ct2">
+             <div class="ZH_recent">
+               <div class="ZH_recent_nav">
+                 <div class="nav1 MID_current">推荐展会</div>
+                 <div class="clear"></div>
+               </div>
+               <div class="ZH_recent_cont">
+                 <ul>
+                     {pc:content  action="position" posid="22" order="listorder DESC" num="8"}
+                     {loop $data $r} 
+                     <li>
+                         <a class="tjzh_lbz" href="{$CATEGORYS[$r[catid]][url]}">[{$CATEGORYS[$r[catid]][catname]}]</a> 
+                         <span>
+                             <a  target="_blank" class="tjzh_lb" href="{$r[url]}">
+                                 <img src="{IMG_PATH}new/RIGHT_icon_13.gif" />{str_cut($r[title],54,'……')}
+                         </span>
+                         </a>
+                     </li>
+                     {/loop}  
+                     {/pc}  
+               </ul>
+                <div class="clear"></div>
+               </div>
+               
+             </div>
+             <!--以上是  ZH_recent-->
+             <div class="A_bit">
+               <div class="A_bit_nav">
+                 <div class="RIGHT_current RIGHT_check"><a href="#">展会一点通</a></div>
+               
+               </div>
+               <div class="A_bit_cont">
+                 <div class="but_bit">
+                   <a href="#"><img src="{IMG_PATH}new/BUT_1_06.gif" /></a>
+                 </div>
+                 <div class="but_bit">
+                   <a href="#"><img src="{IMG_PATH}new/BUT_2_06 (2).gif" /></a>
+                 </div>
+                 <div class="but_bit3">
+                   <a href="#"><img src="{IMG_PATH}new/BUT_3_06.gif" /></a>
+                 </div>
+                 <div class="but_bit">
+                   <a href="#"><img src="{IMG_PATH}new/BUT_4_06.gif" /></a>
+                 </div>
+                 <div class="but_bit">
+                   <a href="#"><img src="{IMG_PATH}new/but_5_06.gif"/></a>
+                 </div>
+                 <div class="but_bit3">
+                   <a href="#"><img src="{IMG_PATH}new/BUT_6_06.gif"/></a>
+                 </div>
+                 <div class="but_bit bit_bt">
+                   <a href="#"><img src="{IMG_PATH}new/BUT_7_06.gif"/></a>
+                 </div>
+                 <div class="but_bit bit_bt">
+                   <a href="#"><img src="{IMG_PATH}new/but_8_06.gif" /></a>
+                 </div>
+                 <div class="but_bit4">
+                   <a href="#"><img src="{IMG_PATH}new/but_9_06.gif" /></a>
+                 </div>
+                 <div class="clear"></div>
+               </div>
+             </div>
+             <!--以上是 A_bit-->
+             <div class="V_introduciton">
+               <div class="V_id_nav">场馆介绍</div>
+               <div class="V_id_cont">
+                 <div class="V_nav">
+                   <div class="jnwcg  RIGHT_check RIGHT_current" contentid="jncg1"><a href="{$CATEGORYS[89][url]}">境内场馆</a></div>
+                   <div class="jnwcg jw RIGHT_current" contentid="jwcg2"><a href="#">境外场馆</a></div>
+                 </div>
+                 <script type="text/javascript" language="javascript">
+                     //控制点击更换下面列表
+                     $(".jnwcg").click(function () {
+                         var jnwcg = this;
+                         $(".jnwcg").each(function () {
+                             if (this == jnwcg) {
+                                 if ($(this).hasClass("jw")) {
+                                     $(this).removeClass("jw");
+                                     $(this).addClass("RIGHT_check");
+                                 }
+                             } else {
+                                 if ($(this).hasClass("RIGHT_check")) {
+                                     $(this).removeClass("RIGHT_check");
+                                     $(this).addClass("jw");
+                                 }
+                             }
+                         });
+                         $(".V_ul").hide();
+                         $("#" + $(jnwcg).attr("contentid")).show();
+                         return false;
+                     });
+                     $(".baoming").click(function () {
+                         var ZHID = $(".baoming").attr("zhid").toString();
+                         window.top.createDIV(window, "/ZHZL/Baoming.aspx?PKID="+ZHID, "展会报名", 750, 600);
+                     });
+                        </script>
+                 <div class="V_ul" id="jncg1">
+                   <ul>
+                    {pc:content action="hits" catid="89" num="8" order="monthviews DESC" cache="3600"}
+                    {loop $data $r}
+                     <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" />
+                         <a target="_blank" href="{$r[url]}" title="{$r[title]}">{str_cut($r[title], 50, '……')}</a>
+                     </li>
+                    {/loop}
+                    {/pc}
+                   </ul>
+                   <div class="MID_more"><a href="{$CATEGORYS[89][url]}">更多>></a></div>
+                   <div class="clear"></div>
+                 </div>
+                        
+                 <div class="V_ul" id="jwcg2" style="display:none;">
+                   <ul>
+                    {pc:content action="hits" catid="90" num="8" order="monthviews DESC" cache="3600"}
+                    {loop $data $r}
+                     <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" />
+                         <a target="_blank" href="{$r[url]}">{str_cut($r[title], 50, '……')}</a>
+                     </li>
+                    {/loop}
+                    {/pc}
+                      
+                   </ul>
+                   <div class="MID_more"><a href="{$CATEGORYS[90][url]}">更多>></a></div>
+                   <div class="clear"></div>
+                 </div>
+               </div>
+             </div>
+             <!--以上是V_introduction-->
+             <div class="A_bit">
+               <div class="A_bit_nav">
+                 <div class="RIGHT_current RIGHT_check"><a href="{$CATEGORYS[18][url]}">推荐机构</a></div>
+               </div>
+                 
+               <div class="A_bit_cont">
+                 <ul>
+                    {pc:content action="hits" catid="18" num="8" order="monthviews DESC" cache="3600"}
+                    {loop $data $r} 
+                    <li>
+                        <a target="_blank" href="{$r[url]}">▪&nbsp;{str_cut($r[title], 54, '……')}</a>
+                    </li>
+                    {/loop}
+                    {/pc}
+                 </ul>
+                 <div class="MID_more"><a href="{$CATEGORYS[18][url]}">更多>></a></div>
+                 <div class="clear"></div>
+               </div>
+             </div>
+           </div>
+           <div class="clear"></div>
+         </div>
+       </div>
+       <div class="clear"></div>
+
+       <!--以上是中间内容部分-->
+      {template "content","foot1"}
+    </body>
+</html>

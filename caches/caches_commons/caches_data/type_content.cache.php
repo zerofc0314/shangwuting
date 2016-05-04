@@ -1,0 +1,88 @@
+<?php
+return array (
+  56 => 
+  array (
+    'typeid' => '56',
+    'siteid' => '1',
+    'module' => 'content',
+    'modelid' => '0',
+    'name' => '累计进口',
+    'parentid' => '0',
+    'typedir' => '',
+    'url' => '',
+    'template' => '',
+    'listorder' => '0',
+    'description' => '',
+  ),
+  57 => 
+  array (
+    'typeid' => '57',
+    'siteid' => '1',
+    'module' => 'content',
+    'modelid' => '0',
+    'name' => '累计出口',
+    'parentid' => '0',
+    'typedir' => '',
+    'url' => '',
+    'template' => '',
+    'listorder' => '0',
+    'description' => '',
+  ),
+  58 => 
+  array (
+    'typeid' => '58',
+    'siteid' => '1',
+    'module' => 'content',
+    'modelid' => '0',
+    'name' => '企业名称',
+    'parentid' => '0',
+    'typedir' => '',
+    'url' => '',
+    'template' => '',
+    'listorder' => '0',
+    'description' => '',
+  ),
+  59 => 
+  array (
+    'typeid' => '59',
+    'siteid' => '1',
+    'module' => 'content',
+    'modelid' => '0',
+    'name' => '国家名称',
+    'parentid' => '0',
+    'typedir' => '',
+    'url' => '',
+    'template' => '',
+    'listorder' => '0',
+    'description' => '',
+  ),
+  60 => 
+  array (
+    'typeid' => '60',
+    'siteid' => '1',
+    'module' => 'content',
+    'modelid' => '0',
+    'name' => '商品名称',
+    'parentid' => '0',
+    'typedir' => '',
+    'url' => '',
+    'template' => '',
+    'listorder' => '0',
+    'description' => '',
+  ),
+  66 => 
+  array (
+    'typeid' => '66',
+    'siteid' => '1',
+    'module' => 'content',
+    'modelid' => '0',
+    'name' => '待解决问题',
+    'parentid' => '0',
+    'typedir' => '',
+    'url' => '',
+    'template' => '',
+    'listorder' => '0',
+    'description' => '',
+  ),
+);
+?>

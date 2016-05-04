@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+        <meta name="description" content="{$SEO['description']}"/>
+        <meta name="keywords" content="{$SEO['keyword']}"/>
+        {template "content","header1_inclub"}
+    </head>
+    <body>
+    {template "content","header1"}
+    
+    <div class="maincont">
+        <div class="kong"></div>
+        <div class="cont_2_sj">
+            <div class="LEFT_ct2">
+
+                <!--以上是最新资讯-->
+                <div class="ZH_area">
+                    <div class="butie_nav">
+                        <span>{$catname}</span>
+                        <div class="clear"></div>
+                    </div>
+                    
+                    <div class="ZH_new_cont">
+                      {pc:content action="lists" catid="$catid" num="20" order="id DESC" page="$page"}
+                        <ul>
+                             {loop $data $r}
+                            <li><span>{date('Y-m-d',$r[inputtime])}</span>
+                                <font class="word_red">&middot;【{$catname}】</font>
+                                <a href="{$r[url]}"  target="_blank" {title_style($r[style])}>{$r[title]}</a>
+                            </li>
+                             {/loop}
+                        </ul>
+                    </div>
+                    <div>
+                         {$pages}
+                    </div>
+                     {/pc}
+                </div>
+            </div>
+            
+              <?php 
+                $where = " 1=1 "; 
+                if ($title){$where = $where."AND title LIKE '%$title%'";};
+                if ($keywords){$where = $where."AND (keywords = $keywords)";};
+                if($fileNumber && $unit) {$where = $where." AND (fileNumber = $fileNumber AND unit = $unit)";}
+                ?>     
+            <div class="RIGHT_ct2">
+                 {template "content","zhzl_search"}   <!--展会的搜索公用框部分-->
+                
+                <!--以上是  ZH_recent-->
+                <div class="A_bit">
+                    <div class="A_bit_nav">
+                        <div class="RIGHT_current RIGHT_check"><a href="#">展会一点通</a></div>
+
+                    </div>
+                    <div class="A_bit_cont">
+                        <div class="but_bit">
+                            <a href="#"><img src="{IMG_PATH}new/BUT_1_06.gif" /></a>
+                        </div>
+                        <div class="but_bit">
+                            <a href="#"><img src="{IMG_PATH}new/BUT_2_06 (2).gif" /></a>
+                        </div>
+                        <div class="but_bit3">
+                            <a href="#"><img src="{IMG_PATH}new/BUT_3_06.gif" /></a>
+                        </div>
+                        <div class="but_bit">
+                            <a href="#"><img src="{IMG_PATH}new/BUT_4_06.gif" /></a>
+                        </div>
+                        <div class="but_bit">
+                            <a href="#"><img src="{IMG_PATH}new/but_5_06.gif"/></a>
+                        </div>
+                        <div class="but_bit3">
+                            <a href="#"><img src="{IMG_PATH}new/BUT_6_06.gif"/></a>
+                        </div>
+                        <div class="but_bit bit_bt">
+                            <a href="#"><img src="{IMG_PATH}new/BUT_7_06.gif"/></a>
+                        </div>
+                        <div class="but_bit bit_bt">
+                            <a href="#"><img src="{IMG_PATH}new/but_8_06.gif" /></a>
+                        </div>
+                        <div class="but_bit4">
+                            <a href="#"><img src="{IMG_PATH}new/but_9_06.gif" /></a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <!--以上是 A_bit-->
+
+                <!--以上是V_introduction-->
+                <div class="A_bit">
+                    <div class="A_bit_nav">
+                        <div class="RIGHT_current RIGHT_check"><a href="{$CATEGORYS[18][url]}">推荐机构</a></div>
+                    </div>
+                    <div class="A_bit_cont">
+                        <ul>
+                        {pc:content action="hits" catid="18" num="8" order="monthviews DESC" cache="3600"}
+                         {loop $data $r} 
+                            <li>
+                                <a target="_blank" href="{$r[url]}">▪&nbsp;{str_cut($r[title], 54, '……')}</a>
+                            </li> 
+                         {/loop}
+                         {/pc}   
+                        </ul>
+                        <div class="MID_more"><a href="{$CATEGORYS[18][url]}" target="_blank">更多>></a></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!--以上是中间内容部分-->
+
+    
+    {template "content","foot1"}
+    </body>
+</html>

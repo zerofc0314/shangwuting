@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+        <meta name="description" content="{$SEO['description']}" />
+        <meta name="keywords" content="{$SEO['keyword']}" />
+        <link href="{CSS_PATH}new/public.css" rel="stylesheet" type="text/css" />
+        <link href="{CSS_PATH}new/wmzd_ej_index.css" rel="stylesheet" type="text/css" />
+        <script src="{JS_PATH}/jquery.min.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/WdatePicker.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/PostionHelper.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/StringHelper.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/getURLparameters.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/OpenWindow.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/CDPTPF.js" type="text/javascript"></script>    
+        <link href="{CSS_PATH}new/qwfb.css" rel="stylesheet" type="text/css" />
+        <link href="{CSS_PATH}new/sidebar.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            .page
+            {
+                float: left;
+            }
+            .pagenum
+            {
+                float: right;
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body style="background: #fff;">
+       {template "content","header2"}
+       
+       <div class="qwfb_body">
+           <!--中间主体开始-->
+           <div class="qwfb_site">
+               您的位置：<a target="_blank" href="{siteurl($siteid)}">频道首页</a> >
+                {catpos($catid)}
+           </div>
+           <div class="qwfb_sub03andsub04">
+               <div class="qwfb_sub03 clearfix">
+                   <div class="qwfb_sub03_title">
+                       <p class="qwfb_sub03_title01">
+                           排名选项列表卡</p>
+                   </div>
+                   <div class="leftbar" style="width: 334px; text-align: center; font-size: 14px;">
+                       <ul>
+                           <li style="width: 334px; text-align: center; font-size: 14px;"><a class="CKPMS" vl="100" href="/QWFB/QWFBList.aspx?PMMC=CKQY">成都市出口企业100强</a></li>
+                           <li style="width: 334px; text-align: center; font-size: 14px;"><a class="CKPMS" vl="100" href="/QWFB/QWFBList.aspx?PMMC=JKQY">成都市进口企业100强</a></li>
+                           <li style="width: 334px; text-align: center; font-size: 14px;"><a class="CKPMS" vl="100" href="/QWFB/QWFBList.aspx?PMMC=CKZFQY">成都市出口增幅最快企业100强</a></li>
+                           <li style="width: 334px; text-align: center; font-size: 14px;"><a class="CKPMS" vl="100" href="/QWFB/QWFBList.aspx?PMMC=JKZFQY">成都市进口增幅最快企业100强</a></li>
+                           <li style="width: 334px; text-align: center; font-size: 14px;"><a class="CKPMS" vl="100" href="/QWFB/QWFBList.aspx?PMMC=CKGJ">成都市出口国家或地区排名</a></li>
+                           <li style="width: 334px; text-align: center; font-size: 14px;"><a class="CKPMS" vl="100" href="/QWFB/QWFBList.aspx?PMMC=JKGJ">成都市进口国家或地区排名</a></li>
+                           <li style="width: 334px; text-align: center; font-size: 14px;"><a class="CKPMS" vl="100" href="/QWFB/QWFBList.aspx?PMMC=HYCK">成都市行业出口排名</a></li>
+                           <li style="width: 334px; text-align: center; font-size: 14px;"><a class="CKPMS" vl="100" href="/QWFB/QWFBList.aspx?PMMC=HYJK">成都市行业进口排名</a></li>
+                       </ul>
+                   </div>
+               </div>
+               <div class="qwfb_sub04 clearfix">
+                   <div class="qwfb_sub04_title">
+                       <p class="qwfb_sub04_title01">
+                           成都市进口企业100强排名     
+                       </p>
+
+                       <p class="qwfb_sub04_title02" style="width:200px;">
+                           <input name="ctl00$ContentPlaceHolder1$ymonth" type="text" id="ctl00_ContentPlaceHolder1_ymonth" class="Wdate ymonth" style="width: 100px; font-size: 16px;" readonly="readonly" onclick="showMonth()" value="2014-09" />
+                           <input id="gjss" class="gjss" type="button" value="搜 索"  style="width: 60px; height: 20px;"/>
+                       </p>
+
+                       <input type="submit" name="ctl00$ContentPlaceHolder1$btfond" value="Button" id="ctl00_ContentPlaceHolder1_btfond" class="btfond" style="display: none;" />
+                   </div>
+                   <div class="qwfb_sub04_body qwfb_list_body">
+                       <ul>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color"></font>企业名称<p style="width:100px;">累计进口(万美元)</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>英特尔产品（成都）有限公司<p style=" text-align:right;">265768.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>全球物流（成都）有限公司<p style=" text-align:right;">222053.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>鸿富锦精密电子（成都）有限公司<p style=" text-align:right;">187220.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都欣华欣化工材料有限公司<p style=" text-align:right;">111277.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川宏承海贸易有限公司<p style=" text-align:right;">81106.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都隆锦泰商贸有限公司<p style=" text-align:right;">60795.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>仁宝电脑（成都）有限公司<p style=" text-align:right;">31929.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都鑫奥通供应链管理有限公司<p style=" text-align:right;">24737.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>玮创资通（成都）有限公司<p style=" text-align:right;">21126.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都邦达吉通物流有限公司<p style=" text-align:right;">20005.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川一汽丰田汽车有限公司<p style=" text-align:right;">19447.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>鸿富锦精密电子（成都）有限公司<p style=" text-align:right;">187220.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都欣华欣化工材料有限公司<p style=" text-align:right;">111277.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>四川宏承海贸易有限公司<p style=" text-align:right;">81106.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都隆锦泰商贸有限公司<p style=" text-align:right;">60795.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>仁宝电脑（成都）有限公司<p style=" text-align:right;">31929.00</p></a></li>
+                           <li><a target="_blank"  style="text-decoration:none;" ><font class="word_color">&middot;</font>成都鑫奥通供应链管理有限公司<p style=" text-align:right;">24737.00</p></a></li>
+                        
+                       </ul>
+                   </div>
+               </div>
+               <div class="clear">
+               </div>
+           </div>
+       </div>
+       <script type="text/javascript">
+           function showMonth() {
+               WdatePicker({ skin: 'whyGreen', dateFmt: 'yyyy-MM' });
+           }
+           //        $(".ymonth").bind("propertychange", function () {
+           //            $(".btfond").click();
+           //        });
+
+           //        if ($.browser.msie) {
+           //            $(".gjss").hide();
+           //        } else {
+           $(".gjss").show();
+           //  }
+
+           $(".gjss").click(function () {
+               $(".btfond").click();
+           });
+       </script>
+     
+      {template "content","footer1"}
+    </body>
+</html>

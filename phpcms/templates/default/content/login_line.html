@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>登录</title>
+        <meta charset="utf-8"/>
+    <script src="./statics/js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">    
+        if (!window.jQuery) { document.write("<script src=\"./statics/js/jquery-1.4.2.min.js\" type=\"text/javascript\"><\/script>"); }
+            </script>
+    <script src="./statics/js/new/FormCheck.js" type="text/javascript"></script>
+    <script src="./statics/js/new/StringHelper.js" type="text/javascript"></script>
+    <script src="./statics/js/new/BaseScript.js" type="text/javascript"></script>
+    <script src="./statics/js/new/WdatePicker.js" type="text/javascript"></script>
+    <style type="text/css">
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textarea, blockquote, th, td
+        {
+            margin: 0;
+            padding: 0;
+            font-family: "宋体" , "微软雅黑" , tahoma, Arial, srial, helvetila, sans-serif;
+            word-spacing: 0;
+        }
+        body, button, input, select, textarea
+        {
+            font-size: 13px;
+            font-family: "宋体";
+            color: #4c4c4c;
+        }
+        img
+        {
+            border: 0;
+        }
+        em, strong
+        {
+            font-style: normal;
+            font-weight: normal;
+        }
+        ul, li, ol
+        {
+            list-style: none;
+        }
+        h1
+        {
+            font-size: 18px;
+        }
+        h2
+        {
+            font-size: 16px;
+            color: #F00;
+            text-align: center;
+            line-height: 25px;
+        }
+        h3
+        {
+            font-size: 15px;
+        }
+        h1, h2, h3, h4
+        {
+            font-weight: bold;
+        }
+        h6
+        {
+            font-weight: 100;
+        }
+        h4, h5, h6
+        {
+            font-size: 100%;
+        }
+        address, cite, dfn, em, var
+        {
+            font-style: normal;
+        }
+        button
+        {
+            cursor: pointer;
+            outline: 0;
+        }
+        q:before, q:after
+        {
+            content: '';
+        }
+        a
+        {
+            text-decoration: none;
+            color: #4c4c4c;
+            cursor: pointer;
+            outline: 0;
+        }
+        a:hover
+        {
+            text-decoration: underline;
+            color: #F00;
+        }
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .clear
+        {
+            clear: both;
+        }
+        /*以上是样式初始化*/
+        .tc_dl
+        {
+            width: 446px;
+            height: 230px;
+            background: url(./statics/images/new1/dl_03.jpg) 0px 0px no-repeat;   
+        }
+        .dl_input
+        {
+            float: left;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+        .dl_input ul li
+        {
+            height: 40px;
+            line-height: 40px;
+        }
+        .dl_input ul li span
+        {
+            font: 700 14px/30px "\5B8B\4F53";
+            margin-right: 10px;
+        }
+        .dl_input ul li input
+        {
+            width: 150px;
+            height: 20px;
+            border: 1px solid #d7d7d7;
+        }
+        .but_dl
+        {
+            width: 103px;
+            height: 32px;
+            background: url(./statics/images/new1/dl_icon_06.jpg) 0px 0px no-repeat;
+            border: none;
+            margin-left: 100px;
+            cursor: pointer;
+        }
+        .zc
+        {
+            float: left;
+            margin-left: 60px;
+            margin-top: 40px;
+            white-space: nowrap;
+            line-height: 22px;
+        }
+        .zc a
+        {
+            color: #F30;
+        }
+    </style>
+
+    </head>
+    <body>
+        <form name="form1" method="post" action="Login.aspx?Controls=dlyhid&amp;Button=ZJDL&amp;sn=&amp;iswzlm=&amp;isbd=" id="form1">
+            <div>
+                <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTExMzY0MzIwNjFkZOIgVX4zf9CqcgL8GNfh6imJruXTtN8C5sROfMJpmnPJ" />
+            </div>
+
+            <div>
+
+                <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCAKc6K6IDQKQufyABQLD77bvDAKQubSBBQKG8qLhAQLCmfHmBQKc1qC+BwK1m70CdTMvWjxuZ+pql2oePqm0G5vHNOm4ybeU4W9s1aNb2LI=" />
+            </div>
+            <div class="tc_dl clear">
+                <div class="dl_input">
+                    <ul>
+                        <li><span>用户名：</span><input name="yhm" type="text" id="yhm" class="yhm" /></li>
+                        <li><span>密&nbsp;&nbsp;码：</span><input name="mm" type="password" id="mm" class="mm" /></li>
+                        <li><span>验证码：</span><input name="yzm" type="text" id="yzm" style="width: 80px;" class="yzm" />
+                            <a style="margin-left:px;"> <img src="/Manage/Login/CheckCode/CheckCode.aspx" onclick="this.src='/Manage/Login/CheckCode/CheckCode.aspx?'+Math.random();" /></a></li>
+                        <input name="dlyhid" type="text" id="dlyhid" style="display: none;" class="dlyhid" />
+                        <input type="submit" name="tcdl" value="" id="tcdl" class="tcdl" style="display: none;" />
+                    </ul>
+                    <input type="button" class="but_dl" />
+                    <input name="hdControls" type="text" value="dlyhid" id="hdControls" style="display: none;" />
+                    <input name="hdButton" type="text" value="ZJDL" id="hdButton" style="display: none;" />
+                </div>
+                <div class="zc">
+                    如果你还没有注册<br />
+                    请立即注册!<br />
+                    <a target="_blank" href="/Register/UserType.aspx">立即注册</a></div>
+            </div>
+            <script type="text/javascript">
+                $(".but_dl").click(function () {
+                    $(".tcdl").click();
+                });
+
+                $(document).keydown(function (e) {
+                    var ev = document.all ? window.event : e;
+                    if (ev.keyCode == 13) {
+                        $(".tcdl").click();
+                    }
+                });
+                function setinto() {
+                    var vl = $(".dlyhid").val().split(',');
+                    var controls = $("#hdControls").val().split(',');
+                    var button = $("#hdButton").val();
+                    if (button == "ZJDL") {
+                        window.top.hiddivAndreParent();
+                    }
+                    else if (button == "QXDL") {
+                        window.parent.location = window.parent.location;
+                    }
+                    else {
+                        //parent.set(vl[0]);
+                        window.top.setValueAndhiddiv(controls, vl, button);
+
+                    }
+                    // window.top.hiddivAndreParent();
+                }
+            </script>
+        </form>
+
+    </body>
+</html>

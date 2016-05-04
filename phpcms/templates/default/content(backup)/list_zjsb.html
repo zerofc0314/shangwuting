@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+        <meta name="description" content="{$SEO['description']}" />
+        <meta name="keywords" content="{$SEO['keyword']}" />
+        {template "content","header_inclub"}
+        <link href="./static/scm/css/new/money.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+       {template "content","header"}
+    </div>
+       <div class="content">
+           <div class="main">
+               <div class="scroll">
+
+                   <script language="javascript" type="text/javascript">
+                           //注：图片只能为长宽大于等于360*257
+                           var pic_width = 709;
+                           var pic_height = 197;
+                           var text_height = 0;
+
+                           var texts = '成都市商务局 成都市财政局关于申报2...';  
+                           var pics='./uploadfile/poster/6.jpg'; 
+                           var links='http://www.swt.com';
+                   </script>
+                   <script src="{JS_PATH}new/FlashPic.js" type="text/javascript"></script>
+               </div>
+               <div class="zjxm">
+                   <div class="title">
+                       <h2>
+                           资金项目申请</h2>
+                   </div>
+                   <p>
+                       项目基本情况请写清楚项目投资额，项目完成时间等信息；对不清楚项目基本情况的，请简单填写企业基本情况，我们会及时与你们联系，对你们项目进行分析。</p>
+                   <div class="mainform">
+                       <div class="formtop">
+                       </div>
+                       <div class="formcenter">
+                           <div>
+                               <label for="name">*公司名称：</label>
+                               <input name="ctl00$ContentPlaceHolder1$gsmc_gs" type="text" id="ctl00_ContentPlaceHolder1_gsmc_gs" class="gsmc_gs" />
+                                <input name="ctl00$ContentPlaceHolder1$gsmc_id" type="text" id="ctl00_ContentPlaceHolder1_gsmc_id" style="display: none;" class="gsmc_id" />
+                                <label for="contact">*联系人：</label>
+                                <input name="ctl00$ContentPlaceHolder1$lxr_lxr" type="text" id="ctl00_ContentPlaceHolder1_lxr_lxr" class="lxr_lxr" />
+                           </div>
+                           <div>
+                               <label for="tel">*联系电话：</label>
+                               <input name="ctl00$ContentPlaceHolder1$lxdh_dh" type="text" id="ctl00_ContentPlaceHolder1_lxdh_dh" class="lxdh_dh" />
+                               <label for="qq">QQ：</label>
+                               <input name="ctl00$ContentPlaceHolder1$qq_qq" type="text" id="ctl00_ContentPlaceHolder1_qq_qq" class="qq_qq" />
+                           </div>
+                           <div>
+                               <label for="xiangmu"> *项目名称：</label>
+                               <input name="ctl00$ContentPlaceHolder1$zjxm_zj" type="text" id="ctl00_ContentPlaceHolder1_zjxm_zj" class="zjxm_zj" />
+                               <span style="font-size: 11px; color: red;">(备注：如中小企业资金)</span>
+                           </div>
+                           <div class="area">
+                               <label for=""> *项目基本情况：</label>
+                               <textarea name="ctl00$ContentPlaceHolder1$txtjbqk" id="ctl00_ContentPlaceHolder1_txtjbqk" class="txtjbqk"></textarea>
+
+                               <input name="ctl00$ContentPlaceHolder1$zc_id" type="text" id="ctl00_ContentPlaceHolder1_zc_id" style="display: none;" class="zc_id" />
+                               <input name="ctl00$ContentPlaceHolder1$dlyhid" type="text" id="ctl00_ContentPlaceHolder1_dlyhid" style="display: none;" class="dlyhid" value="-1" />
+                               <input type="button" class="btn_insert" id="btn_insert" value=" 提交" />
+                               <input type="submit" name="ctl00$ContentPlaceHolder1$btnnonetj" value="Button" id="ctl00_ContentPlaceHolder1_btnnonetj" class="btnnonetj" style="display: none;" />
+                           </div>
+                       </div>
+                       <div class="formbtm">
+                       </div>
+                   </div>
+                   <script type="text/javascript">
+                       $(".btn_insert").click(function () {
+                           if ($(".zjxm_zj").val() != "" && $(".lxdh_dh").val() != "" && $(".txtjbqk").val() != "" && $(".lxr_lxr").val() != "" && $(".gsmc_gs").val() != "") {
+                               if ($(".dlyhid").val() == "-1" || $(".dlyhid").val() == "") {
+                                   var Button = $(".btnnonetj").attr("id");
+                                   var yhid = $(".dlyhid").attr("id");
+                                   window.top.createDIV(window, "/Themes/cdweb/htm/Login.aspx?Controls=" + yhid + "&Button=" + Button, "用户登录", 450, 265, window, "", "", true);
+                                   return false;
+                               }
+                               $(".btnnonetj").click();
+                           } else {
+                               alert("请将带星号的信息填写完整");
+                           }
+                       });
+
+                   </script>
+               </div>
+
+               <div class="zcrd">
+                   <div class="title">
+                       <h2>
+                           政策热点新闻</h2>
+                       <ul>
+                           <li><span>2013-08-09</span><a href="/LMNR/LMNRDetail.aspx?PKID=22997"target="_blank">&middot;成都市商务局 成都市财政局关于申报2013年度中小企业国际市场开拓资金项目计...</a></li>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+           <div class="side">
+               <div class="zxqy">
+                   <h2>
+                       中小企业国际市场开拓资金</h2>
+                   <h3>
+                       拨付公示</h3>
+                   <div class="sideform">
+                       <div class="ddlcsnd">
+                           <label for="">
+                               年度：</label>
+
+                           <select name="ctl00$ContentPlaceHolder1$ddlND" id="ctl00_ContentPlaceHolder1_ddlND" class="ddlND">
+                               <option value="-1">-请选择-</option>
+                               <option value="1993">1993</option>
+                               <option value="1994">1994</option>
+                               <option value="1995">1995</option>
+                               <option value="1996">1996</option>
+                               <option value="1997">1997</option>
+                               <option value="1998">1998</option>
+                               <option value="1999">1999</option>
+                               <option value="2000">2000</option>
+                               <option value="2001">2001</option>
+                               <option value="2002">2002</option>
+                               <option value="2003">2003</option>
+                               <option value="2004">2004</option>
+                               <option value="2005">2005</option>
+                               <option value="2006">2006</option>
+                               <option value="2007">2007</option>
+                               <option value="2008">2008</option>
+                               <option value="2009">2009</option>
+                               <option value="2010">2010</option>
+                               <option value="2011">2011</option>
+                               <option value="2012">2012</option>
+                               <option value="2013">2013</option>
+                               <option value="2014">2014</option>
+                               <option value="2015">2015</option>
+                               <option value="2016">2016</option>
+                               <option value="2017">2017</option>
+                           </select>
+                       </div>
+                       <div class="ddlcsxm">
+                           <label for=""> 项目类别：</label>
+                           <select name="ctl00$ContentPlaceHolder1$ddlXMLB" id="ctl00_ContentPlaceHolder1_ddlXMLB" class="ddlXMLB">
+                               <option value="-1">-所有-</option>
+                               <option value="1">电子商务</option>
+
+                           </select>
+                       </div>
+                       <div>
+                           <label for="qiye">
+                               企业名称：</label><input name="ctl00$ContentPlaceHolder1$qiye" type="text" id="ctl00_ContentPlaceHolder1_qiye" class="qiye" /></div>
+                       <div>
+                           <label for="xiangmu">
+                               项目名称：</label><input name="ctl00$ContentPlaceHolder1$xiangmu" type="text" id="ctl00_ContentPlaceHolder1_xiangmu" class="xiangmu" /></div>
+                       <div>
+                           <label for="code">
+                               平台用户名：</label><input name="ctl00$ContentPlaceHolder1$ptyhm" type="text" id="ctl00_ContentPlaceHolder1_ptyhm" class="ptyhm" /></div>
+                       <div>
+                           <label for="code">
+                               密码：</label><input name="ctl00$ContentPlaceHolder1$mima" type="text" id="ctl00_ContentPlaceHolder1_mima" class="mima" /></div>
+                       <div class="btn">
+                           <input type="button" value="查询" class="btncx_1" style="color: #fff;" /><input type="button" value="重置" style="color: #fff;" class="btncz_1" />
+                       </div>
+                       <input type="submit" name="ctl00$ContentPlaceHolder1$btnnone" value="Button" id="ctl00_ContentPlaceHolder1_btnnone" class="btnnone" style="display: none;" />
+                   </div>
+                   <div class="foot_zxqy">
+                       <img src="{IMG_PATH}new1/money_2_27.jpg" />
+                   </div>
+                   <script type="text/javascript">
+                       $(".btncz_1").click(function () {
+                           $(".ddlcsnd").find("select").find("option:selected").val(-1);
+                           $(".ddlcsxm").find("select").find("option:selected").val(-1);
+                           $(".qiye").val("");
+                           $(".xiangmu").val("");
+                           $(".mima").val("");
+                           $(".ptyhm").val("");
+                       });
+
+                       $(".btncx_1").click(function () {
+                           $(".btnnone").click();
+
+                       });
+                       function showMonth() {
+                           WdatePicker({skin: 'whyGreen', dateFmt: 'yyyy'});
+                       }
+                   </script>
+               </div>
+
+               <div class="lianxi">
+                   <a href="/ZJSB/ZJSBIndes.aspx">
+                       <img src="{IMG_PATH}new1/money_zx_31.jpg" alt="" /></a>
+               </div>
+               <div class="new new2">
+                   <div class="sidetitle">
+                       <h4>最新扶持政策</h4>
+                   </div>
+                   <ul>
+                       <li>
+                           <a href="/ZCFG/ZCFGDetail.aspx?ZCLX=2&PKID=649" target="_blank" class="lala">&middot;成都市商务委员会关于组织开展2...</a>
+                       </li>
+                       <li>
+                           <a href="/ZCFG/ZCFGDetail.aspx?ZCLX=2&PKID=639" target="_blank" class="lala">&middot;成都高新区技术创新服务中心关于...</a>
+                       </li>
+                       <li>
+                           <a href="/ZCFG/ZCFGDetail.aspx?ZCLX=2&PKID=634" target="_blank" class="lala">&middot;关于组织区内企业申报成都市20...</a>
+                       </li>
+                       <li>
+                           <a href="/ZCFG/ZCFGDetail.aspx?ZCLX=2&PKID=630" target="_blank"&middot;四川省科学技术厅关于发布201...</a>
+                       </li>
+                       <li>
+                           <a href="/ZCFG/ZCFGDetail.aspx?ZCLX=2&PKID=629" target="_blank"&middot;2015年成都市中小企业示范服...</a>
+                       </li>
+                       <li>
+                           <a href="/ZCFG/ZCFGDetail.aspx?ZCLX=2&PKID=636" target="_blank"&middot;四川省培育大企业大集团联席会议...</a>
+                       </li>
+                       <li>
+                           <a href="/ZCFG/ZCFGDetail.aspx?ZCLX=2&PKID=632" target="_blank"&middot;成都高新区推进“三次创业”加快...</a>
+                       </li>
+                       <li>
+                           <a href="/ZCFG/ZCFGDetail.aspx?ZCLX=2&PKID=621" target="_blank"&middot;鼓励进口技术和产品目录（201...</a>
+                       </li>
+                       <li>
+                           <a href="/ZCFG/ZCFGDetail.aspx?ZCLX=2&PKID=635" target="_blank"&middot;关于组织申报国家专利导航产业发...</a>
+                       </li>
+                       <li>
+                           <a href="/ZCFG/ZCFGDetail.aspx?ZCLX=2&PKID=631" target="_blank"&middot;四川省商务厅关于开展2015年...</a>
+                       </li>
+                       <li>
+                           <a href="/ZCFG/ZCFGDetail.aspx?ZCLX=2&PKID=618" target="_blank"&middot;关于开展2015年四川省“互联...</a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+
+       {template "content","footer"}
+    </body>
+</html>

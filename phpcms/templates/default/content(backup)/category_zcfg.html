@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+        <meta name="description" content="{$SEO['description']}" />
+        <meta name="keywords" content="{$SEO['keyword']}" />
+        <link href="{CSS_PATH}new/law.css" rel="stylesheet" type="text/css"/>
+        {template "content","header_inclub"}
+    </head>
+    
+    <body>
+      {template "content","header"}
+    </div>
+      <div class="mid">
+          <div class="ui_layout_left">
+              <div class="ui_lay_zccx">
+                  <div class="ui_zccx_nav">
+                  </div>
+                  <div class="ui_lay_cont">
+                      <div class="ui_check">
+                          <label>
+                              <input type="radio" name="ui_zc" class="rdozcfg" checked="ckecked" value="zcfg" />政策法规</label>
+                          <label>
+                              <input type="radio" name="ui_zc" class="rdofczc" value="fczc" />扶持政策</label>
+                      </div>
+                      <div class="formcont">
+                          <div>
+                              <label for="title">
+                                  标题：</label><input type="text" class="zcbt" name="" id="zcbt" /></div>
+                          <div>
+                              <label for="title">
+                                  文号：</label><input type="text" name="" class="zcwh" id="zcwh" /></div>
+                          <div>
+                              <label for="title">
+                                  发文单位：</label><input type="text" name="" class="fwdw" id="fwdw" /></div>
+                          <div>
+                              <label for="title">
+                                  关键字：</label><input type="text" name="" class="gjz" id="gjz" /></div>
+                          <div class="btn">
+                              <input type="button" class="btnzccx_1" /></div>
+                      </div>
+                  </div>
+                  <script type="text/javascript">
+                      var BT = $(".zcbt").val();
+                      var WH = $(".zcwh").val();
+                      var DW = $(".fwdw").val();
+                      var GJZ = $(".gjz").val();
+                      $(".btnzccx_1").click(function () {
+                          if ($(".rdozcfg").attr("checked") == true) {
+                              window.location = "ZCFGList.aspx?ZCLX=1&&BT=" + encodeURIComponent($(".zcbt").val()) + "&WH=" + encodeURIComponent($(".zcwh").val()) + "&DW=" + encodeURIComponent($(".fwdw").val()) + "&SSNR=" + encodeURIComponent($(".gjz").val());
+                          } else if ($(".rdofczc").attr("checked") == true) {
+                              window.location = "ZCFGList.aspx?ZCLX=2&&BT=" + encodeURIComponent($(".zcbt").val()) + "&WH=" + encodeURIComponent($(".zcwh").val()) + "&DW=" + encodeURIComponent($(".fwdw").val()) + "&SSNR=" + encodeURIComponent($(".gjz").val());
+                          }
+                      });
+
+
+                  </script>
+              </div>
+              <!--以上是政策查询-->
+              <div class="ui_but">
+                  <a href="/ZCFG/ZCFGList.aspx?ZCLX=1" target="_blank">
+                      <img src="{IMG_PATH}new/Policy_zcfg_10.gif" alt="政策法规" /></a>
+              </div>
+              <div class="ui_but">
+                  <a href="/ZCFG/ZCFGList.aspx?ZCLX=2" target="_blank">
+                      <img src="{IMG_PATH}new/Policy_fczc_12.gif" alt="扶持政策" /></a>
+              </div>
+              <!--以上是图片链接-->
+              <div class="ui_import">
+                  <div class="ui_import_nav">
+                      重要政策法规推荐</div>
+                  <div class="ui_import_cont">
+                      <ul>
+                          <li><img src="{IMG_PATH}new/icon_13.gif" /><a  href="ZCFGDetail.aspx?PKID=672" target="_blank">海关总署公告2015年第70号...</a></li>
+                          <li><img src="{IMG_PATH}new/icon_13.gif" /><a  href="ZCFGDetail.aspx?PKID=667" target="_blank">国家税务总局关于取消销货退回消...</a></li>
+                          <li><img src="{IMG_PATH}new/icon_13.gif" /><a  href="ZCFGDetail.aspx?PKID=668" target="_blank">国家税务总局关于发布影视等出口...</a></li>
+                          <li><img src="{IMG_PATH}new/icon_13.gif" /><a  href="ZCFGDetail.aspx?PKID=671" target="_blank">中国人民银行 国家外汇管理局公...</a></li>
+                          <li><img src="{IMG_PATH}new/icon_13.gif" /><a  href="ZCFGDetail.aspx?PKID=669" target="_blank">国家税务总局关于发布《市场采购...</a></li>
+                          <li><img src="{IMG_PATH}new/icon_13.gif" /><a  href="ZCFGDetail.aspx?PKID=670" target="_blank">国家税务总局关于《适用增值税零...</a></li>
+                          <li><img src="{IMG_PATH}new/icon_13.gif" /><a  href="ZCFGDetail.aspx?PKID=666" target="_blank">商务部公告2015年第60号 ...</a></li>
+                          <li><img src="{IMG_PATH}new/icon_13.gif" /><a  href="ZCFGDetail.aspx?PKID=665" target="_blank">联合公告2015年第69号(关...</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="ui_import" >
+                  <div class="ui_import_nav">
+                      重要扶持政策推荐</div>
+                  <div class="ui_import_cont">
+                      <ul>
+                          <li><img src="{IMG_PATH}new/icon_13.gif" />
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=649" target="_blank">成都市商务委员会关于组织开展2...</a>
+                          </li>
+                          
+                          <li><img src="{IMG_PATH}new/icon_13.gif" />
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=639" target="_blank">成都高新区技术创新服务中心关于...</a>
+                          </li>
+                          
+                          <li><img src="{IMG_PATH}new/icon_13.gif" />
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=634" target="_blank">关于组织区内企业申报成都市20...</a>
+                          </li>
+                          
+                          <li><img src="{IMG_PATH}new/icon_13.gif" />
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=630" target="_blank">四川省科学技术厅关于发布201...</a>
+                          </li>
+                          
+                          <li><img src="{IMG_PATH}new/icon_13.gif" />
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=629" target="_blank">2015年成都市中小企业示范服...</a>
+                          </li>
+                          
+                          <li><img src="{IMG_PATH}new/icon_13.gif" />
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=636" target="_blank">四川省培育大企业大集团联席会议...</a>
+                          </li>
+                          
+                          <li><img src="{IMG_PATH}new/icon_13.gif" />
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=632" target="_blank">成都高新区推进“三次创业”加快...</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="ui_layout_right">
+              <div class="ui_list_zcfg">
+                  <div class="ui_list_nav">
+                      <a target="_blank" href="{$CATEGORYS[21][url]}">更多>></a>
+                      <img src="{IMG_PATH}new/Policy_icon_06.png" />政策法规
+                  </div>
+                  <div class="ui_list_cont">
+                      <div class="ui_list_current">
+                          <ul>
+                              <li class="list_check lxnone" zcvl="zcvl1"><a href="#">商务</a></li>
+                              <li class="list_none lxnone" zcvl="zcvl2"><a href="#">国税</a></li>
+                              <li class="list_none lxnone" zcvl="zcvl3"><a href="#">外管</a></li>
+                              <li class="list_none lxnone" zcvl="zcvl4"><a href="#">海关</a></li>
+                              <li class="list_none lxnone" zcvl="zcvl5"><a href="#">商检</a></li>
+                              <li class="list_none lxnone" zcvl="zcvl6"><a href="#">其他</a></li>
+                          </ul>
+                      </div>
+                      <ul class="LIST_cont zxvl_1" id="zcvl1">
+                          <li><span>2015-12-09</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=666" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />商务部公告2015年第60号 关于原产于新加坡、泰国和日本的进口甲基丙烯酸甲酯反倾销调查最终裁定...
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-12-08</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=665" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />联合公告2015年第69号(关于落实《中华人民共和国固体废物污染环境防治法》第二十五条修订内容的...
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-11-11</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=664" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />商务部 海关总署公告2015第59号 关于调整加工贸易禁止类商品目录的公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-11-05</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=663" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />商务部公告2015年第55号 关于2016年度镁砂、滑石出口配额招标资质的公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-11-05</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=662" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />商务部公告2015年第54号公布《2016年成品油（燃料油）非国营贸易进口允许量申领条件、分配原...
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-11-05</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=661" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />商务部公告2015年第52号 公布《2016年原油非国营贸易进口允许量总量、申请条件和申请程序》
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-11-03</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=660" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />商务部公告2015年第53号 公布《2016年农产品和工业品出口配额总量》
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-11-03</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=659" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />商务部公告2015年第51号 公布《2016年化肥进口关税配额总量、分配原则及相关程序》
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-11-03</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=658" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />商务部公告2015年第50号 公布《2016年铟、锡出口配额申报条件及申报程序》
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-11-03</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=656" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />商务部公告2015年第48号 公布《2016年磷矿石出口配额申报条件、申报程序及分配原则》
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-10-28</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=655" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />商务部公告2015年第47号 公布《2016年度铁合金出口许可申报条件和申报程序》
+                              </a>
+                          </li>
+                      </ul>
+                      
+                      <ul class="LIST_cont zxvl_1" style="display: none;" id="zcvl2">
+                          <li><span>2015-12-23</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=667" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国家税务总局关于取消销货退回消费税退税等两项消费税审批事项后有关管理问题的公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-12-22</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=668" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国家税务总局关于发布影视等出口服务编码及2015A版出口退税率文库（升级包）的通知
+                              </a>
+                              
+                          </li>
+                          
+                          <li><span>2015-12-17</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=669" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国家税务总局关于发布《市场采购贸易方式出口货物免税管理办法（试行）》的公告
+                              </a>
+                          
+                          </li>
+                          
+                          <li><span>2015-12-14</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=670" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国家税务总局关于《适用增值税零税率应税服务退（免）税管理办法》的补充公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-08-11</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=641" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于贯彻落实《国务院办公厅关于促进进出口稳定增长的若干意见》的通知
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-04-28</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=604" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国家税务总局 关于出口企业申报出口退（免）税免予提供纸质出口货物报关单的公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-03-02</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=586" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于《国家税务总局关于发布适用启运港退（免）税政策的运输企业及运输工具名单的公告》的解读
+                              </a>
+                          </li>
+                          
+                          <li><span>2014-10-23</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=581" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于企业出口集装箱有关退(免）税问题的公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2014-09-30</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=580" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />《2015年食糖进口关税配额申请和分配细则》
+                              </a>
+                          </li>
+                          
+                          <li><span>2014-09-01</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=577" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />三部门开展融资租赁货物出口退税政策试点的通知
+                              </a>
+                          </li>
+                          
+                          <li><span>2014-09-01</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=574" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于公布《中华人民共和国进出口税则本国子目注释(2014年新增和调整部分)》的公告
+                              </a>
+                          </li>
+                          
+                      </ul>
+                      
+                      <ul class="LIST_cont zxvl_1" style="display: none;" id="zcvl3">
+                          <li><span>2015-12-21</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=671" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />中国人民银行 国家外汇管理局公告〔2015〕第40号
+                              </a>
+                          </li>
+                          
+                          <li><span>2014-07-18</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=562" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />商务部、财政部令2014年第2号 《对外劳务合作风险处置备用金管理办法（试行）》
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-12-16</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=473" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国家外汇管理局关于调整人民币外汇衍生产品业务管理的通知
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-12-06</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=447" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国家外汇管理局关于完善银行贸易融资业务外汇管理有关问题的通知
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-12-02</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=446" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国家外汇管理局关于印发《对外金融资产负债及交易统计制度》的通知
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-11-09</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=436" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国务院关于修改《国际收支统计申报办法》的决定
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-09-03</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=393" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />中华人民共和国海关总署 国家外汇管理局公
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-08-27</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=379" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国家外汇管理局公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-08-20</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=365" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国家外汇管理局综合司关于规范电子银行个人结售汇业务接入审核工作的通知
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-08-12</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=364" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />现行有效外汇管理主要法规目录（截至2013年7月31日）
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-07-18</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=363" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国家外汇管理局关于印发服务贸易外汇管理法规的通知
+                              </a>
+                          </li>
+                          
+                      </ul>
+                      
+                      <ul class="LIST_cont zxvl_1" style="display: none;" id="zcvl4">
+                          <li><span>2015-12-30</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=672" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />海关总署公告2015年第70号（关于启用海关行政审批网上办理平台的公告 ）
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-12-08</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=665" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />联合公告2015年第69号(关于落实《中华人民共和国固体废物污染环境防治法》第二十五条修订内容的...
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-11-11</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=664" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />商务部 海关总署公告2015第59号 关于调整加工贸易禁止类商品目录的公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-08-12</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=643" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于《纳入自动进口许可管理货物目录》的公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-07-31</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=624" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />商务部 海关总署公告2015年第31号 关于加强部分两用物项出口管制的公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-07-29</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=642" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于进一步扩大自动进口许可证通关作业无纸化试点的公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-07-29</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=627" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于《货物进口证明书》相关事宜
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-07-24</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=628" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于在全国范围推广汇总征税
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-04-27</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=603" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于取消打印出口货物报关单证明联〔出口退税专用〕的公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-04-13</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=599" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于废止《中华人民共和国海关对加工贸易保税工厂管理办法》有关事项的公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-04-07</span><a  href="ZCFGDetail.aspx?ZCLX=1&PKID=600" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于扩大广东地区海关区域通关一体化改革的公告
+                              </a>
+                          </li>
+                          
+                      </ul>
+                      
+                      <ul class="LIST_cont zxvl_1" style="display: none;" id="zcvl5">
+                          <li><span>2015-12-08</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=665" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />联合公告2015年第69号(关于落实《中华人民共和国固体废物污染环境防治法》第二十五条修订内容的...
+                              </a>
+                          </li>
+                          
+                          <li><span>2014-02-12</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=532" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于2014年继续免收出口商品检验检疫费的通知
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-08-28</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=370" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />质检总局关于进口蒙古国大麦植物检验检疫要求的公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-08-27</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=369" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />质检总局关于进口保加利亚玉米植物检验检疫要求的公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-08-27</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=368" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />质检总局关于进口加拿大谷物油籽植物检验检疫要求的公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-07-02</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=367" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于实施《进出口乳品检验检疫监督管理办法》有关要求的公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-01-24</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=193" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国家质量监督检验检疫总局《关于进口美国鲜梨植物检验检疫要求的公告》（2013年第11号公告）
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-01-18</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=194" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国家质量监督检验检疫总局《关于发布《压力管道元件制造监督检验规则》等6个特种设备安全技术规范的公...</a>
+                          </li>
+                          
+                          <li><span>2013-01-15</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=196" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于撤销YHK ENTERPRISE LIMITED进口可用作原料的固体废物国外供货商注册登记资...
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-01-15</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=195" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于批准对新乐西瓜、清苑熏香、李渡酒、丰城富硒大米、新晃龙脑实施地理标志产品保护的公告
+                              </a>
+                          </li>
+                          
+                          <li><span>2012-12-31</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=227" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />进口储存玉米筛下物无害化处理要求
+                              </a>
+                          </li>
+                          
+                      </ul>
+                      
+                      <ul class="LIST_cont zxvl_1" style="display: none;" id="zcvl6">
+                          <li><span>2015-07-14</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=611" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于小型无人驾驶航空器自动进口许可签发有关问题的通知
+                              </a>
+                          </li>
+                          
+                          <li><span>2015-01-30</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=587" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />中华人民共和国政府采购法实施条例
+                              </a>
+                          </li>
+                          
+                          <li><span>2014-06-10</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=547" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />四川省人民政府办公厅关于印发促进当前经济稳增长的十六条措施的通知
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-10-22</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=415" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于启动第三届“四川省政府质量管理奖”评选工作的通知
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-09-11</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=396" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />企业产品标准管理规定
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-08-12</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=375" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />成都市农业委员会关于召开全市农业综合执法工作会议的通知
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-07-29</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=377" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />科技部办公厅关于报送2010、2011年度国家软科学研究计划重大项目成果的通知
+                              </a>
+                          </li>
+                          
+                          <li><span>2013-04-01</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=337" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于示范平台（技术类）享受科技开发用品进口免税政策资格申报工作补充通知
+                              </a>
+                          </li>
+                          
+                          <li><span>2012-07-09</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=265" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />做好2012年成都市中小（微型）企业发展专项资金项目申报工作有关事项通知
+                              </a>
+                          </li>
+                          
+                          <li><span>2012-06-28</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=268" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于组织申报成都市工业信息化企业
+                              </a>
+                          </li>
+                          
+                          <li><span>2012-06-04</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=1&PKID=266" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于组织申报2012年全省产业园区产业发展引导资金项目（第二批）的通知》
+                              </a>
+                          </li>
+                          
+                      </ul>
+                      
+                      <div class="clear">
+                      </div>
+                      <script type="text/javascript">
+                          //控制点击更换下面列表
+                          $(".lxnone").click(function () {
+                              var topbtli = this;
+                              $(".lxnone").each(function () {
+                                  if (this == topbtli) {
+                                      if ($(this).hasClass("list_none")) {
+                                          $(this).removeClass("list_none");
+                                          $(this).addClass("list_check");
+                                      }
+                                  } else {
+                                      if ($(this).hasClass("list_check")) {
+                                          $(this).removeClass("list_check");
+                                          $(this).addClass("list_none");
+                                      }
+                                  }
+                              });
+                              $(".zxvl_1").hide();
+                              $("#" + $(topbtli).attr("zcvl")).show();
+                              return false;
+                          });
+                      </script>
+                  </div>
+              </div>
+              <div class="ui_list_zcfg">
+                  <div class="ui_list_nav">
+                      <a target="_blank" href="{$CATEGORYS[22][url]}">更多>></a>
+                      <img src="{IMG_PATH}new/Policy_icon_06.png" />扶持政策
+                  </div>
+                  <div class="ui_list_cont">
+                      <div class="ui_list_current">
+                          <ul>
+                              <li class="list_check jdnone" jdvl="jdvl1" id="jd_kb"><a href="#">商务</a></li>
+                              <li class="list_none jdnone" jdvl="jdvl2"><a href="#">经委</a></li>
+                              <li class="list_none jdnone" jdvl="jdvl3"><a href="#">农委</a></li>
+                              <li class="list_none jdnone" jdvl="jdvl4"><a href="#">科技</a></li>
+                              <li class="list_none jdnone" jdvl="jdvl5"><a href="#">其他</a></li>
+                          </ul>
+                      </div>
+                      
+                      <ul class="LIST_cont jd_fljd" id="jdvl1">
+                          <li><span>2015-09-02</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=649" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />成都市商务委员会关于组织开展2015年第二批创新型电子商务企业申报工作的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2015-07-23</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=621" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />鼓励进口技术和产品目录（2015年版）
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2015-07-17</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=631" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />四川省商务厅关于开展2015年省级电子商务示范基地、示范企业申报创建工作的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2014-09-10</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=595" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于印发《中央外经贸发展专项资金管理 实施细则》的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2014-05-07</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=594" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于做好2014年中央中小企业发展专项资金商贸服务项目申报工作的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-08-08</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=356" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />成都市商务局 成都市财政局关于申报2013年度中小企业国际市场开拓资金项目计划的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-03-08</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=286" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于做好2013年度进口贴息资金申报工作的预通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-02-16</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=355" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />财政部 商务部关于印发中央财政促进服务业发展专项资金管理办法的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-01-21</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=151" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />成都市商务局成都市财政局关于办理2012年度中小企业国际市场开拓资金审核拨付有关问题的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-01-06</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=312" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />商务部关于鼓励和引导民间资本进入商贸流通领域的实施意见
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2012-09-25</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=280" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于开展2013年度内贸流通服务业发展
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2011-04-12</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=321" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />商务部 财政部 环境保护部关于进一步规范家电以旧换新工作的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2010-05-24</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=328" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />财政部  商务部关于印发《中小企业国际市场开拓资金管理办法》的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                      </ul>
+                      
+                      <ul class="LIST_cont jd_fljd" style="display: none;" id="jdvl2">
+                          <li><span>2015-08-05</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=634" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于组织区内企业申报成都市2015年度服务业发展引导资金（竞争立项部分）的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2015-07-31</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=629" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />2015年成都市中小企业示范服务机构评选结果公示
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2015-07-15</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=618" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于开展2015年四川省“互联网+”制造示范企业申报工作的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2015-04-20</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=597" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于做好2015年全市技术改造补助项目组织申报工作的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2015-04-20</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=596" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于申报鼓励企业间协作配套奖励资金的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-11-20</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=493" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />四川省公安厅、四川省经济和信息化委员会、四川省交通运输厅、四川省商务厅、四川省工商行政管理局
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-09-23</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=395" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />四川省经济和信息化委员会关于同意成立四川省中小企业服务促进会的批复
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-08-20</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=374" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于申报2013年成都市中小（微型）企业发展专项资金服务体系类项目的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-07-17</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=372" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于申报2013年成都市中小（微型）企业发展专项资金培育企业类项目的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-07-17</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=371" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于申报2013年国家中小企业发展专项资金项目的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-02-25</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=292" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于做好铁合金准入公告企业监督检查和第五批准入公告申报工作的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-02-20</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=282" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于成都市新上规模企业
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-02-06</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=295" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于组织申报2013年度国家中药材生产扶持项目的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                      </ul>
+                      
+                      <ul class="LIST_cont jd_fljd" style="display: none;" id="jdvl3">
+                          <li><span>2012-04-16</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=297" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />将采取新举措坚决治理涉农乱收费
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2011-12-02</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=298" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />中国农村扶贫开发纲要（2011－2020年）
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2011-07-27</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=300" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国务院办公厅出台八措施 防止生猪市场和价格大幅波动
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2011-02-23</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=320" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于切实加强农机购置补贴政策实施监管工作的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2009-10-14</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=303" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />四川省新型农村社会养老保险试点实施办法
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2009-07-11</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=301" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />党中央、国务院和省委、省政府2009年强农惠农政策要览
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2009-06-23</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=304" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />中央和四川省2009年强农惠农政策
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2009-06-17</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=306" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国家油菜籽收购加工补贴管理办法
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2009-06-05</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=305" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国家关于提高今年稻谷最低收购价的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                      </ul>
+                      <ul class="LIST_cont jd_fljd" style="display: none;" id="jdvl4">
+                          <li><span>2015-07-31</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=630" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />四川省科学技术厅关于发布2016年四川省科技计划项目申报指南的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2015-07-20</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=635" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于组织申报国家专利导航产业发展实验区、国家专利协同运用试点单位和国家专利运营试点企业的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2014-09-16</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=598" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />成都市科学技术局关于印发《成都市科技企业创新券实施管理暂行办法》的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-08-28</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=378" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />科技部关于组织申报2014年度国家星火计划项目的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-07-23</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=376" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />科技部关于组织申报2014年度国家火炬计划、重点新产品计划和软科学研究计划等计划项目的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2012-06-21</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=311" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于2012年度中欧中小企业节能减排科研合作资金项目立项的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2012-06-18</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=316" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于印发进一步鼓励和引导民间资本进入科技创新领域意见的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2012-06-18</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=310" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />科技部关于印发进一步鼓励和引导
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2012-01-27</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=314" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国务院关于2011年度国家科学技术奖励的决定
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2011-05-13</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=309" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />鼓励各级政府、企事业单位和科研院所利用国际、国内两类资金开展APEC能源项目合作
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                      </ul>
+                      <ul class="LIST_cont jd_fljd" style="display: none;" id="jdvl5">
+                          <li><span>2015-08-05</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=639" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />成都高新区技术创新服务中心关于申报2015年第二批科技型初创企业启动资金资助和房租补贴的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2015-07-23</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=632" target="_blank">
+                                  <img src="/Themes/cdweb/img/law/icon_13.gif" />成都高新区推进“三次创业”加快商务服务业发展的若干政策
+                              </a><a  target="_blank" class="zxxxbm" id="632" zxxxbmid="632">
+                                  <img src="{IMG_PATH}new/sq.gif" /></a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2015-04-01</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=606" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国务院关于改进口岸工作支持外贸发展的若干意见
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-08-25</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=357" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于执行软件企业所得税优惠政策有关问题的公告
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-04-01</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=338" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />工业和信息化部关于开展扶助小微企业专项行动的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2013-02-04</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=285" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />今年将开展扶助小微企业专项行动
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2012-11-06</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=319" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于公布国务院第六批取消和调整的涉及财政部的行政审批项目的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2012-10-18</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=287" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />成都市人民政府关于对我市获2011年度国家科学技术奖获奖项目给予配套奖励的通报
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2012-06-01</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=318" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于安排政府性资金对民间投资主体同等对待的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2012-05-31</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=313" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />国家发展改革委关于鼓励和引导工程咨询机构服务民间投资的实施意见
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2012-05-23</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=317" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于印发《关于国有企业改制重组中积极引入民间投资的指导意见》的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2012-05-04</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=272" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于做好2012年小型微型企业扶持专项资金项目申报工作的通知
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                          <li><span>2012-01-11</span>
+                              <a  href="ZCFGDetail.aspx?ZCLX=2&PKID=256" target="_blank">
+                                  <img src="{IMG_PATH}new/icon_13.gif" />关于申报《2012年成都市地方名优产品
+                              </a>
+                          </li>
+                          <div style='clear:both;'></div>
+                      </ul>
+                      <script type="text/javascript">
+                          //控制点击更换下面列表
+                          $(".jdnone").click(function () {
+                              var topbtli = this;
+                              $(".jdnone").each(function () {
+                                  if (this == topbtli) {
+                                      if ($(this).hasClass("list_none")) {
+                                          $(this).removeClass("list_none");
+                                          $(this).addClass("list_check");
+                                      }
+                                  } else {
+                                      if ($(this).hasClass("list_check")) {
+                                          $(this).removeClass("list_check");
+                                          $(this).addClass("list_none");
+                                      }
+                                  }
+                              });
+                              $(".jd_fljd").hide();
+                              $("#" + $(topbtli).attr("jdvl")).show();
+                              return false;
+                          });
+                      </script>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="clear">
+      </div>
+      <!--以上是中间内容部分-->
+
+      
+      {template "content","footer"}
+    </body>
+</html>

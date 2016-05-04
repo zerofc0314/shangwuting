@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+.barcont{margin:auto;width:974px;margin-top:-40px;}
+.leftbar{float:left;width:200px;border:1px solid #ffbd5d;background:#fdf3d8;}
+.leftbar ul li{width:200px;height:40px;line-height:40px;font:700 12px/40px "微软雅黑";text-align:center;}
+.leftbar ul li a{display:inline-block;*display:inline;*zoom:1;width:200px;height:40px;}
+.leftbar ul li a:hover{display:inline-block;*display:inline;*zoom:1;width:200px;height:40px;background:#fbe29d;color:#c43502;}
+.rightbar{float:left;width:760px;border:1px solid #ffbd5d;margin-left:10px;_margin-left:5px;}
+.rightbar h5{text-align:center;height:30px;line-height:30px;margin-top:10px;font:700 16px/30px "\5B8B\4F53";}
+.CONT_info{text-align:center;height:25px;line-height:25px;}
+.CONT_p{margin:auto;width:750px;line-height:25px;border:0px solid blue;padding-left:5px;padding-right:5px;}
+.CONT_p p{text-indent:2em;line-height:24px;font:500 14px/24px "\5B8B\4F53";}
+
+
+.rightbarnav{width:760px;height:31px;background:url(/Themes/cdweb/img/zx_top_11.jpg) 0px 0px repeat-x;font:700 14px/31px "微软雅黑";color:#c43502;text-indent:15px;}
+.rightbar ul{margin:auto;width:750px;margin-top:10px;margin-bottom:10px;}
+.rightbar ul li{height:30px;line-height:30px;border-bottom:1px dashed #CCCCCC;}
+.link_more{margin:auto;width:650px;height:30px;margin-top:10px;_margin-top:5px;margin-bottom:10px;text-align:center;line-height:30px;}
+.back_white{padding:4px 5px;border:1px solid #ccc;}
+.back_color{background:#f78c11;border:none;color:#fff;}
+.back_color:hover{color:#fff;}

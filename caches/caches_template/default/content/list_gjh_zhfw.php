@@ -1,0 +1,30 @@
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title><?php if(isset($SEO['title']) && !empty($SEO['title'])) { ?><?php echo $SEO['title'];?><?php } ?><?php echo $SEO['site_title'];?></title>
+        <meta name="description" content="<?php echo $SEO['description'];?>"/>
+        <meta name="keywords" content="<?php echo $SEO['keyword'];?>"/>
+        <?php include template("content","header1_inclub"); ?>
+    <body>
+        <?php include template("content","header_gjh"); ?>
+        
+        <div class="ex_click clear">
+            <div class="nav_gjh_m" style=" width:100%">展会服务</div>
+        </div>
+        <div class="ex_click  " style=" font-size:20px;" >
+            <div style=" width:30%; margin-left:300px""><a target="_blank" href="http://hotel.cantonfair.org.cn/cn/index.aspx"><img src="<?php echo IMG_PATH;?>new1/ico_content_bg.png" />酒店预订</a><br /><br />
+                <a target="_blank" href="http://www.cantonfair.org.cn/cn/service/traffic/index.shtml"><img src="<?php echo IMG_PATH;?>new1/ico_content_bg.png" />交通指引</a><br /><br />
+                <a target="_blank" href="http://www.cantonfair.org.cn/cn/exhibitor/exhibition/index.aspx"><img src="<?php echo IMG_PATH;?>new1/ico_content_bg.png" />特装天地</a><br /><br />
+                <a target="_blank" href="http://www.pdc.org.cn/"><img src="<?php echo IMG_PATH;?>new1/ico_content_bg.png" />产品设计与贸易促进中心</a><br /><br />
+                <a target="_blank" href="http://www.cantonfair.org.cn/cn/service/IPP/index.shtml"><img src="<?php echo IMG_PATH;?>new1/ico_content_bg.png" />知识产权保护和贸易纠纷解决</a><br /><br />
+                <a target="_blank" href="http://www.cantonfair.org.cn/cn/ezine/ezine_bulletin.shtml"><img src="<?php echo IMG_PATH;?>new1/ico_content_bg.png" />广交会会刊</a><br /><br />
+                <a target="_blank" href="http://hk.cantonfair.org.cn/cn/"><img src="<?php echo IMG_PATH;?>new1/ico_content_bg.png" />广交会驻香港客商服务中心</a><br /><br />
+                <a target="_blank" href="http://www.cantonfair.org.cn/cn/about/partners.shtml"><img src="<?php echo IMG_PATH;?>new1/ico_content_bg.png" />境外合作伙伴</a><br /><br /></div>
+        </div>
+        <!--以上是中间内容部分-->
+    
+        <?php include template("content","foot1"); ?>
+    </body>
+</html>

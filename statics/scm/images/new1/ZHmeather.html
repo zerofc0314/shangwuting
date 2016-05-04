@@ -1,0 +1,190 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <meta name="Description" content="Power by hill">
+    <script src="{JS_PATH}new/geturlpara.js" type="text/javascript"></script>
+    <style type="text/css">
+  @charset "utf-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textarea, blockquote, th, td {
+	margin:0;
+	padding:0;
+	font-family:"宋体", "微软雅黑", tahoma, Arial, srial, helvetila, sans-serif;
+	word-spacing:0
+}
+body, button, input, select, textarea {
+	font-size:13px;
+	font-family:"宋体";
+	color:#4c4c4c
+}
+img {
+	border:0
+}
+em, strong {
+	font-style:normal;
+	font-weight:normal
+}
+ul, li, ol {
+	list-style:none
+}
+h1 {
+	font-size:18px
+}
+h2 {
+	font-size:16px;
+	color:#F00;
+	text-align:center;
+	line-height:25px
+}
+h3 {
+	font-size:15px
+}
+h1, h2, h3, h4 {
+	font-weight:bold
+}
+h6 {
+	font-weight:100
+}
+h5, h6 {
+	font-size:100%;
+}
+h4{line-height:30px;font-size:16px}
+address, cite, dfn, em, var {
+	font-style:normal
+}
+button {
+	cursor:pointer;
+	outline:0
+}
+q:before, q:after {
+	content:''
+}
+a {
+	text-decoration:none;
+	color:#4c4c4c;
+	cursor:pointer;
+	outline:0
+}
+a:hover {
+	text-decoration:underline;
+	color:#F00
+}
+* {
+	margin:0;
+	padding:0
+}
+.clear {
+	clear:both
+}
+.clear:after {
+	clear:both;
+	content:" ";
+	display:block;
+	height:0;
+	visibility:hidden
+}
+.weather{width:}
+.weather span{font:500 14px/22px "宋体";}
+.weather p{font:500 14px/22px "宋体";}
+.wd{font:700 22px/40px "宋体";}
+</style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#imgw").hide();
+            var today = new Date().toDateString(); //每天更新一次,避免重复更新!
+            try {
+                $.getScript("http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js", function (data) {
+                    //var city = remote_ip_info.city;
+                    var city = decodeURIComponent(getpara("SCity"));
+                    try {
+                        if (city == undefined || city == "") {
+                            // $("#wea").hide();
+                            // return;
+                            city = remote_ip_info.city; //缺省地区
+                        }
+                        var url = "http://php.weather.sina.com.cn/iframe/index/w_cl.php?day=0&city=" + encodeURI(city) + "&today=" + today;
+                        $.getScript(url, function () {
+
+                            if (window.SWther) {
+                                var img = "http://php.weather.sina.com.cn/images/yb3/78_78/" + window.SWther.w[city][0].f1 + "_1.png"
+                                $("#weather1").html(city + " " + window.SWther.w[city][0].t2 + "℃-" + window.SWther.w[city][0].t1 + "℃ " + window.SWther.w[city][0].s1 + "-" + window.SWther.w[city][0].s2 + " ");
+                                $(".bdcity").html(city);
+                                $(".bdtq").html(window.SWther.w[city][0].s1 + "-" + window.SWther.w[city][0].s2);
+                                $(".bdimg").attr("src", img).attr("title", window.SWther.w[city][0].s1 + " " + window.SWther.add.update); $(".bdimg").show("1000");
+                                $(".bdwd").html(window.SWther.w[city][0].t2 + "-" + window.SWther.w[city][0].t1);
+                                $(".bdfx").html(window.SWther.w[city][0].d2);
+                                $(".bdfl").html(window.SWther.w[city][0].p2);
+                            }
+                            else {
+                                $("#wea").hide();
+                            }
+                        });
+                    } catch (e) {
+                        city = remote_ip_info.city; //缺省地区
+                        window.location = window.location;
+                    }
+                });
+            }
+            catch (e) {
+                $("#wea").hide();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="wea" style="font-size: 12px; margin-top: 5px;">
+        <div class="weather">
+            <h4 class="bdcity" style="margin-left:15px;">
+            </h4>
+            <span id="divT" style="margin-left:15px;"></span>
+            <p class="bdtq" style="margin-left:15px;">
+            </p>
+            <span style="float: left; width: 60px; height: 60px;">
+                <img class="bdimg" src="" /></span><span class="bdwd" style="float: left; font-size: 48px;
+                    margin-top: 10px; margin-left: 20px; height: 40px; line-height: 40px; vertical-align: top;"></span><span
+                        style="float: left; height: 22px; line-height: 22px;">℃</span> <span style="float: left;
+                            margin-left: 20px">
+                            <ul>
+                                <li>风向：<span class="bdfx"></span></li>
+                                <li>风力：<span class="bdfl"></span></li>
+                            </ul>
+                        </span>
+        </div>
+    </div>
+    <script language="javascript">
+        function getCurDate() {
+            var d = new Date();
+            var week;
+            switch (d.getDay()) {
+                case 1: week = "星期一"; break;
+                case 2: week = "星期二"; break;
+                case 3: week = "星期三"; break;
+                case 4: week = "星期四"; break;
+                case 5: week = "星期五"; break;
+                case 6: week = "星期六"; break;
+                default: week = "星期天";
+            }
+            var years = d.getFullYear();
+            var month = add_zero(d.getMonth() + 1);
+            var days = add_zero(d.getDate());
+            var hours = add_zero(d.getHours());
+            var minutes = add_zero(d.getMinutes());
+            var seconds = add_zero(d.getSeconds());
+            var ndate = years + "年" + month + "月" + days + "日 " + hours + ":" + minutes + ":" + seconds + " " + week;
+            divT.innerHTML = ndate;
+        }
+
+        function add_zero(temp) {
+            if (temp < 10) return "0" + temp;
+            else return temp;
+        }
+
+        setInterval("getCurDate()", 100);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?>
+    <div>
+        <input type="hidden" name="" id="" value="" />
+    </div>
+    <div>
+        <input type="hidden" name="" id="" value="" />
+    </div>
+    <div class="">
+        <div class="top">
+            <div class="top_1 clear">
+                <div style="float:left;"><a href="#" style="display:inline-block;*display:inline;*zoom:1;width:500px;height:50px;margin-top:20px;"></a></div>
+                <div class="top_a">
+                    <input type="submit" name="ctl00$btn_exit" value="Button" id="ctl00_btn_exit" class="btn_exit" style="display:none;" />
+                    <div class="login_next"></div>
+                    <script language="javascript" type="text/javascript">
+                        $(".log_out").click(function () {
+                            if (confirm("您确定要退出登录吗？")) {
+                                $(".btn_exit").click();
+                            }
+                        });
+                    </script>
+                    <div class="clear">
+                    </div>
+                   <?php include template("content","reg"); ?>
+                    <div class="date">
+                        <script>
+                        var myDate = new Date();
+                        var now_year=myDate.getFullYear();   
+                        var now_month=myDate.getMonth()+1;     
+                        var now_date=myDate.getDate();       
+                        var now_day=myDate.getDay();        
+                        var week=['天','一','二','三','四','五','六'];
+                        for(var i=0;i<7;i++){
+                          if(now_day==i){
+                              now_day=week[i];
+                          }
+                        }
+                        document.write('今天是'+now_year+'年'+now_month+'月'+now_date+'号'+'&nbsp;星期'+now_day+'&nbsp;');
+                   </script>
+                        <iframe style="color:#9b0101; filter: Chroma(Color=white);" width="140px"; height="17px;" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" src="./statics/meather.html"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="top_menu">
+                <ul class="menu">
+                    <li class="menu_1"><a target="_blank" href="/">
+                            <img src="<?php echo IMG_PATH;?>new/menu_1_07.png" /></a>
+                    </li>
+                    <li class="menu_2"><a target="_blank"  href="#">
+                            <img src="<?php echo IMG_PATH;?>new/menu_2_07.png" /></a>
+                    </li>
+                    <li class="menu_3"><a target="_blank"  href="<?php echo $CATEGORYS['3']['url'];?>">
+                            <img src="<?php echo IMG_PATH;?>new/menu_3_07.png" /></a>
+                    </li>
+                    <li class="menu_4"><a target="_blank"  href="<?php echo $CATEGORYS['4']['url'];?>">
+                            <img src="<?php echo IMG_PATH;?>new/menu_4_07.png" /></a>
+                    </li>
+                    <li class="menu_5"><a target="_blank"  href="<?php echo $CATEGORYS['5']['url'];?>">
+                            <img src="<?php echo IMG_PATH;?>new/menu_5_07.png" /></a>
+                    </li>
+                    <li class="menu_6"><a target="_blank"  href="<?php echo $CATEGORYS['6']['url'];?>">
+                            <img src="<?php echo IMG_PATH;?>new/menu_6_07.png" /></a>
+                    </li>
+                    <li class="menu_7"><a target="_blank"  href="<?php echo $CATEGORYS['7']['url'];?>">
+                            <img src="<?php echo IMG_PATH;?>new/menu_7_07.png" /></a>
+                    </li>
+                    <li class="menu_8"><a target="_blank"  href="#">
+                            <img src="<?php echo IMG_PATH;?>new/menu_8_07.png" /></a>
+                    </li>
+                </ul>
+            </div>
+           
+            <script>
+                $('.menu .menu_1 a').hover(function(){
+                    $(this).find('img').attr('src','<?php echo IMG_PATH;?>new/menu_1_07_hover.png');
+                },function(){
+                     $(this).find('img').attr('src','<?php echo IMG_PATH;?>new/menu_1_07.png');
+                });
+                 $('.menu .menu_2 a').hover(function(){
+                    $(this).find('img').attr('src','<?php echo IMG_PATH;?>new/menu_2_07_hover.png');
+                },function(){
+                     $(this).find('img').attr('src','<?php echo IMG_PATH;?>new/menu_2_07.png');
+                });
+                
+                 $('.menu .menu_3 a').hover(function(){
+                    $(this).find('img').attr('src','<?php echo IMG_PATH;?>new/menu_3_07_hover.png');
+                },function(){
+                     $(this).find('img').attr('src','<?php echo IMG_PATH;?>new/menu_3_07.png');
+                });
+                
+                 $('.menu .menu_4 a').hover(function(){
+                    $(this).find('img').attr('src','<?php echo IMG_PATH;?>new/menu_4_07_hover.png');
+                },function(){
+                     $(this).find('img').attr('src','<?php echo IMG_PATH;?>new/menu_4_07.png');
+                });
+                 $('.menu .menu_5 a').hover(function(){
+                    $(this).find('img').attr('src','<?php echo IMG_PATH;?>new/menu_5_07_hover.png');
+                },function(){
+                     $(this).find('img').attr('src','<?php echo IMG_PATH;?>new/menu_5_07.png');
+                });
+                 $('.menu .menu_6 a').hover(function(){
+                    $(this).find('img').attr('src','<?php echo IMG_PATH;?>new/menu_6_07_hover.png');
+                },function(){
+                     $(this).find('img').attr('src','<?php echo IMG_PATH;?>new/menu_6_07.png');
+                });
+                
+                 $('.menu .menu_7 a').hover(function(){
+                    $(this).find('img').attr('src','<?php echo IMG_PATH;?>new/menu_7_07_hover.png');
+                },function(){
+                     $(this).find('img').attr('src','<?php echo IMG_PATH;?>new/menu_7_07.png');
+                });
+                
+                 $('.menu .menu_8 a').hover(function(){
+                    $(this).find('img').attr('src','<?php echo IMG_PATH;?>new/menu_8_07_hover.png');
+                },function(){
+                     $(this).find('img').attr('src','<?php echo IMG_PATH;?>new/menu_8_07.png');
+                });
+            </script>
+
+            <!--以上是头部-->
+       
+
+  

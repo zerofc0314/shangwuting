@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+        <meta name="description" content="{$SEO['description']}"/>
+        <meta name="keywords" content="{$SEO['keyword']}"/>
+        {template "content","header1_inclub"}
+        <!--[if !IE]><!--<script>  
+        if (/*@cc_on!@*/false) {  
+            document.documentElement.className+=' ie10';  
+        }  
+        </script><!--<![endif]-->
+
+        <link href="{CSS_PATH}new/CKTS.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        {template "content","header3"}
+         
+        <script src="{JS_PATH}new/CDPTPF.js" type="text/javascript"></script>
+        <div class="maincont">
+            <div class="kong"></div>
+            <div class="main_1_2_3">
+                <a target="_blank" href="/Manage/MainFrame1/index.aspx">
+                    <img src="{IMG_PATH}new1/temp_banner2.jpg" /></a>
+            </div>
+            <div class="main_1_2 clear">
+                <div class="sideimg">
+                    <script language="javascript" type="text/javascript">
+                    {pc:content action="position" posid="25" order="listorder DESC" thumb="1" num="5"}
+                            //注：图片只能为长宽大于等于360*257
+                            var pic_width = 299;
+                            var pic_height = 227;
+                            var text_height = 30;
+                            var config='3|0xffffff|0x0099ff|50|0xffffff|0x0099ff|0x000000';
+                                    //-- config 参数设置 -- 自动播放时间(秒)|文字颜色|文字背景色|文字背景透明度|按键数字颜色|当前按键颜色|普通按键色彩 --
+                                    var pics='{php $num = 1}
+                                    {loop $data $n $r}
+                                    {$r[thumb]}
+                                    {if $num%5!=0}|{/if}
+                                    {php $num++}
+                                    {/loop}';
+                                        
+                                    var links='{php $num2 = 1}
+                                    {loop $data $n $v}
+                                    {$v['url']}
+                                    {if $num2%5!=0}|{/if}
+                                    {php $num2++}
+                                    {/loop}';
+                                        
+                                    var texts='{php $num3 = 1}
+                                    {loop $data $n $k}
+                                    {$k['title']}
+                                    {if $num3%5!=0}|{/if}
+                                    {php $num3++}
+                                    {/loop}';      
+                                {/pc}
+                    </script>
+                    <script src="{JS_PATH}new/FlashPic.js" type="text/javascript"></script>
+                </div>
+                
+                <div class="sidetext">
+                    <div class="main_1_nav clear">
+                        <div class="AT_nav_left clear">
+                            <span class="AT_current AT_cur_check" contentid="sidetext_info1">通知公告</span> 
+                            <span class="AT_current NO_cur_check" contentid="sidetext_info2">相关下载</span>
+                        </div>
+                        <div class="AT_nav_right">
+                            <a target="_blank" class="gdclass" href="{$CATEGORYS[25][url]}">更多>></a>
+                        </div>
+                    </div>
+                    
+                    <div class="sidetext_info" id="sidetext_info1">
+                        <ul>
+                             {pc:content action="hits" catid="25" num="9" order="monthviews DESC" cache="3600"}
+                                {loop $data $r}
+                            <li>
+                                <a href="{$r[url]}" target="_blank" >&middot;{str_cut($r[title], 70, '……')}.</a>
+                            </li>
+                            {/loop}
+                            {/pc}
+                        </ul>
+                    </div>
+                    
+                    <div class="sidetext_info" id="sidetext_info2" style="display: none;">
+                        <ul>
+                            {pc:content action="hits" catid="28" num="9" order="monthviews DESC" cache="3600"}
+                            {loop $data $r}
+                            <li>
+                                <a href="{$r[url]}" target="_blank" >&middot;企业年报（海关）报送指南图示</a>
+                            </li>
+                            {/loop}
+                            {/pc}
+                        </ul>
+                    </div>
+                </div>
+                <script type="text/javascript" language="javascript">
+                    //控制点击更换下面列表
+                    $(".AT_current").click(function () {
+                        var topbtli = this;
+                        $(".AT_current").each(function () {
+                                if (this == topbtli) {
+                                    if ($(this).hasClass("NO_cur_check")) {
+                                        $(this).removeClass("NO_cur_check");
+                                        $(this).addClass("AT_cur_check");
+
+                                    }
+                                } else {
+                                    if ($(this).hasClass("AT_cur_check")) {
+                                        $(this).removeClass("AT_cur_check");
+                                        $(this).addClass("NO_cur_check");
+                                    }
+                                }
+                            });
+                            $(".sidetext_info").hide();
+                            if ($(topbtli).attr("contentid") == "sidetext_info1") {
+                                $(".gdclass").attr("href", "{$CATEGORYS[25][url]}");
+                            } else if ($(topbtli).attr("contentid") == "sidetext_info2") {
+                                $(".gdclass").attr("href", "{$CATEGORYS[28][url]}");
+                            }
+                            $("#" + $(topbtli).attr("contentid")).show();
+                            return false;
+                        });
+                </script>
+                <div class="sidelink">
+                    <a href="#">
+                        <img src="{IMG_PATH}new1/tspt_dh.jpg" /></a> <a href="#" class="tpsp_jl">
+                        <img src="{IMG_PATH}new1/tspt_wt.jpg" /></a> <a href="#">
+                        <img src="{IMG_PATH}new1/tspt_lj.jpg" /></a>
+                </div>
+            </div>
+            <!--以上是 main_1-->
+            <div class="main_1 clear">
+                <div class="AT_hl">
+                    <div class="AT_hl_nav">
+                        <a target="_blank" href="{$CATEGORYS[29][url]}">更多>></a>常见问题
+                    </div>
+                    <div class="AT_hl_cont">
+                        <ul>
+                            <li><a href="/WMZD/WMZDDetail.aspx?PKID=184&LMBH=0101"target="_blank" >&middot;进口机电产品办事流程？</a></li>
+                            <li><a href="/WMZD/WMZDDetail.aspx?PKID=1&LMBH=0301"target="_blank" >&middot;录入进料加工手册中有多个复出口商品...</a></li>
+                            <li><a href="/WMZD/WMZDDetail.aspx?PKID=712&LMBH=0302"target="_blank" >&middot;三证合一后，原纳税人识别号开具的发...</a></li>
+                            <li><a href="/WMZD/WMZDDetail.aspx?PKID=711&LMBH=0302"target="_blank" >&middot;被关注商品的界限有哪些</a></li>
+                            <li><a href="/WMZD/WMZDDetail.aspx?PKID=710&LMBH=0301"target="_blank" >&middot;老企业变更经营范围后税号变为社会信...</a></li>
+                            <li><a href="/WMZD/WMZDDetail.aspx?PKID=709&LMBH=0301"target="_blank" >&middot;打印到excel提示“ole错误”...</a></li>
+                            <li><a href="/WMZD/WMZDDetail.aspx?PKID=708&LMBH=0301"target="_blank" >&middot;出口货物报关单出口金额打错了，如何...</a></li>
+                            <li><a href="/WMZD/WMZDDetail.aspx?PKID=707&LMBH=0301"target="_blank" >&middot;如何将申报系统的报表数据导出到ex...</a></li>
+                            <li><a href="/WMZD/WMZDDetail.aspx?PKID=706&LMBH=0301"target="_blank" >&middot;生产企业申报系统用户提出找不到生成...</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ckts_zcfg">
+                    <div class="AT_m2_nav">
+                        <a target="_blank" href="/ZCFG/ZCFGList.aspx">更多>></a>政策法规
+                    </div>
+                    <div class="ckts_zcfg_c">
+                         {pc:content  action="lists" catid="21" order="updatetime DESC" num="1" return="info"}
+                         {loop $info $v}
+                        <h5><a  href="{$v['url']}" target="_blank" {title_style($v[style])}>{str_cut($v['title'],70,'……')}</a></h5>
+                        <p> {str_cut($v['description'],160,'……')}
+                            <a  href="{$v['url']}" target="_blank">[详细]</a>
+                        </p>
+                         {/loop}
+                         {/pc}  
+                         
+                          {pc:content action="lists" catid="21" num="6" order="id DESC" page="$page"}
+                        <ul>
+                            {loop $data $r}
+                            <li><span>{date('Y-m-d H:i:s',$r[inputtime])}</span>
+                                <a  href="{$r['url']}" target="_blank">&middot;{$r[title]}</a>
+                            </li>
+                            {/loop}
+                        </ul>
+                       {/pc} 
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="main_1 clear" style="margin-top: -10px;">
+                <div class="AT_hl">
+                    <div class="AT_hl_nav">
+                        <a target="_blank" href="{$CATEGORYS[26][url]}">更多>></a>退税资讯
+                    </div>
+                    <div class="AT_hl_cont">
+                         {pc:content  action="lists" catid="26" order="updatetime DESC" thumb="1" num="1" return="info"}
+                          {loop $info $v}
+                        <a href="{$v['url']}" target="_blank" ><img src="{thumb($v[thumb],280,120)}"/></a>
+                         {/loop}
+                       {/pc}        
+                       {pc:content action="lists" catid="26" num="7" order="id DESC" return="info"}
+                        <ul>
+                             {loop $info $v}
+                            <li>
+                                <a href="{$v['url']}" target="_blank" title="{$v['title']">&middot;{str_cut($v['title'],70,'……')}</a>
+                            </li>   
+                             {/loop}
+                        </ul>
+                        {/pc}
+                    </div>
+                </div>
+                
+                <div class="ckts_zcfg">
+                    <div class="AT_m2_nav">
+                        <a target="_blank" href="{$CATEGORYS[27][url]}">更多>></a>退税知识
+                    </div>
+                    <div class="ckts_zcfg_c">
+                         {pc:content  action="lists" catid="27" order="updatetime DESC" num="1" return="info"}
+                         {loop $info $v}
+                        <h5><a href="{$v['url']}" target="_blank" {title_style($v[style])}>{str_cut($v['title'],100,'……')}</a></h5>
+                        <p>{str_cut($v['description'],160,'……')}
+                            <a href="{$v['url']}" target="_blank" >[详细]</a>
+                        </p>
+                         {/loop}
+                         {/pc}      
+                         
+                        {pc:content action="lists" catid="27" num="7" order="id DESC" page="$page"}
+                        <ul>
+                            {loop $data $r}
+                            <li><span>{date('Y-m-d H:i:s',$r[inputtime])}</span>
+                                <a href="{$r[url]}" target="_blank" >&middot;{$r[title]}</a>
+                            </li>
+                            {/loop}
+                            
+                        </ul>
+                        {/pc} 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--以上是中间内容部分-->
+
+        {template "content","foot1"}
+    </body>
+</html>

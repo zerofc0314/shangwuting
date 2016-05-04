@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+        <meta name="description" content="{$SEO['description']}"/>
+        <meta name="keywords" content="{$SEO['keyword']}"/>
+        {template "content","header1_inclub"}
+    </head>
+    <body>
+        {template "content","header1"}
+         <div class="maincont">
+       <div class="kong"></div>
+         <div class="cont_1">
+           <div class="LEFT_cont_1">
+             <div class="kong"></div>
+             <p class="ZH_zj" style="text-align:center">2014年平台共指导67家企业 完成补贴申报</p>
+            
+             <div class="ZH_zj_list">
+               <ul>
+                 <li>四川新力光源有限公司</li>
+                 <li>成都江雪医疗器械有限公司</li>
+                 <li>成都远景数控设备实业有限公司</li>
+                 <li>成都三锐工具制造有限公司</li>
+                 <li>成都基均利多科技开发有限公司</li>
+                 <li>成都市壹佰刀具有限公司</li>
+                 <li><a href="ZHZXDetail.aspx?LMID=837">>>更多<a></li>
+               </ul>
+             </div>
+             <div class="ZH_but"><a href="ZHZXDetail.aspx?LMID=841" target="_blank"><img src="{IMG_PATH}new/but_1_03.gif" /></a></div>
+             <div class="ZH_but"><a href="ZHZXDetail.aspx?LMID=842" target="_blank"><img src="{IMG_PATH}new/but_2_06.gif" /></a></div>
+           </div>
+           <div class="MID_cont_1">
+             <div class="MID_ZH_nav">
+               <div class="MID_current">最新展会</div>
+             </div>
+             <div class="MID_ZH_ul">
+              <a href="ZHZLDetail.aspx?PKID=1090" target="_blank"><img src="{IMG_PATH}new/f80844a6-5752-4d86-9280-f2681734c4aa.jpg" /></a>
+               <ul>
+                 <li><span>10-22</span><a target="_blank" href="ZHZLDetail.aspx?PKID=1090">2015第21届西部制博会暨中国欧亚国际工业博...</a></li>
+                 <li><span>04-15</span><a target="_blank" href="GJHHIndex.aspx?ZHID=180">117届中国进出口商品交易会</a></li>
+                 <li><span>10-10</span><a target="_blank" href="ZHZLDetail.aspx?PKID=1077">2015年德国科隆食品展暨欧洲经贸促进活动</a></li>
+                 <li><span>09-14</span><a target="_blank" href="ZHZLDetail.aspx?PKID=1076">2015年俄罗斯国际食品展</a></li>
+                 
+               </ul>
+               <div class="MID_more"><a href="{$CATEGORYS[52][url]}">更多>></a></div>
+               <div class="clear"></div>
+             </div>  
+           </div>
+           <div class="RIGHT_cont_1">
+             <div class="RIGHT_ct1_nav">
+               <div class="RIGHT_current zhzx RIGHT_check" contentid="zhzx1"><a href="#">展会资讯</a></div>
+               <div class="RIGHT_current zhzx zhzs" contentid="zhzs1"><a href="{$CATEGORYS[54][url]}">展会知识</a></div>
+             </div>
+             <script type="text/javascript" language="javascript">
+                 //控制点击更换下面列表
+                 $(".zhzx").click(function () {
+                     var zhzx = this;
+                     $(".zhzx").each(function () {
+                         if (this == zhzx) {
+                             if ($(this).hasClass("zhzs")) {
+                                 $(this).removeClass("zhzs");
+                                 $(this).addClass("RIGHT_check");
+                             }
+                         } else {
+                             if ($(this).hasClass("RIGHT_check")) {
+                                 $(this).removeClass("RIGHT_check");
+                                 $(this).addClass("zhzs");
+                             }
+                         }
+                     });
+                     $(".RIGHT_ZH_ul").hide();
+                     $("#" + $(zhzx).attr("contentid")).show();
+                     return false;
+                 });
+               </script>
+             <div class="RIGHT_ZH_ul" id="zhzx1">
+               <ul>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=33879">四川省商务厅关于组团参加第四届中...</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=33848">四川省商务厅关于组织参加第四届中...</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=33806">2016中国国际酒业博览会3月1...</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=33804">第20届四川新春年货购物节“新”...</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=33755">2016广西首届汽车展览会开幕</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=33705">第22届中国国际家具展览会于20...</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=33704">自贡产品亮相2015宜宾第二届采...</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=33703">“川货全国行·武汉站”德阳食品香...</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=33702">四川省商务厅关于组织参加2016...</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=33668">2015第四届华南（广州）农资博...</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=33667">福建将举办国内首个跨境电商博览会</a></li>
+                 
+               </ul>
+               <div class="MID_more"><a href="ZHZXList.aspx?LMID=797">更多>></a></div>
+               <div class="clear"></div>
+             </div>
+             <div class="RIGHT_ZH_ul" style=" display:none" id="zhzs1">
+               <ul>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=32465">展台设计中传统模板与量身设计的利...</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=32351">企业在选择展览会时务必确定目标</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=31975">参展商容易忽略的四个细节</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=31963">参展的十个步骤</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=31884">维护会展知识产权 推动行业健康发展</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=31839">参展技巧攻略：如何实现最佳宣传效果</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=31838">参展企业如何赢得更多客户</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=31514">展览业地位提升发展方向明确</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=31408">参展广交会有窍门 防骗技巧全攻略</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=31338">参展商如何低成本利用广交会？</a></li>
+                 <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" /><a  target="_blank" href="ZHZXDetail.aspx?PKID=31168">展会知识产权保护四大问题</a></li>
+                 
+               </ul>
+               <div class="MID_more"><a href="ZHZXList.aspx?LMID=798">更多>></a></div>
+               <div class="clear"></div> 
+             </div>
+           </div>  
+           <div class="clear"></div>
+         </div>
+         <div class="cont_2">
+           <div class="LEFT_ct2">
+             <div class="ZH_cx">
+         <div class="JZ_polling">
+                 <label>展会名称:</label><input name="ctl00$ContentPlaceHolder1$zhname" type="text" id="ctl00_ContentPlaceHolder1_zhname" class="zhname" />
+               </div>
+               <div class="JZ_polling">
+                 <label>展会行业:</label> <select name="ctl00$ContentPlaceHolder1$ddlHY" id="ctl00_ContentPlaceHolder1_ddlHY" class="ddlHY" style="width:25%;">
+	<option value="-1">-所有-</option>
+	<option value="1">工业、机械、加工</option>
+	<option value="2">汽车、交通工具</option>
+	<option value="3">IT设备、数码、软件</option>
+	<option value="4">通信、通讯、电子</option>
+	<option value="5">海洋、航空、航天</option>
+	<option value="6">化工、能源、环保</option>
+	<option value="7">建筑、装潢、五金</option>
+	<option value="8">家居、家电、日用品</option>
+	<option value="9">服饰、皮革、纺织</option>
+	<option value="10">玩具、礼品、工艺品</option>
+	<option value="11">生物、医药、保健</option>
+	<option value="12">旅游、酒店、餐饮</option>
+	<option value="13">食品、饮料、酒</option>
+	<option value="14">首饰、珠宝、美容</option>
+	<option value="15">影视、娱乐、体育</option>
+	<option value="16">媒体、广告、出版</option>
+	<option value="17">印刷、包装、纸业</option>
+	<option value="18">运输、物流、仓储</option>
+	<option value="19">金融、保险、审计</option>
+	<option value="20">投资、连锁、加盟</option>
+	<option value="21">加工、贸易、进出口</option>
+	<option value="22">办公、文教、艺术</option>
+	<option value="23">农、林、牧、渔</option>
+	<option value="24">公共、安防、智能</option>
+	<option value="25">综合、跨行业类</option>
+	<option value="26">其他行业</option>
+
+</select>
+               </div>
+               <div class="MH_polling">
+                 <label>展会地区:</label>
+                   <div class="polling_2">
+                    <input type="radio" value="1" name="item" checked="true" />中国境内
+                    <input type="radio" value="2" name="item" />亚洲其他
+                    <input type="radio" value="3" name="item" />非洲
+                    <input type="radio" value="4" name="item" />欧洲
+                    <input type="radio" value="5" name="item" />美洲
+                    <input type="radio" value="6" name="item" />大洋洲
+
+                   </div> 
+                   <div class="clear"></div>
+               </div>
+               <div class="MH_polling">
+                 <label>展会时间:</label>从
+                 <input name="ctl00$ContentPlaceHolder1$txtZHKSRQ" type="text" id="ctl00_ContentPlaceHolder1_txtZHKSRQ" style=" width:88px" onfocus="WdatePicker()" class="txtZHKSRQ" />到
+                 <input name="ctl00$ContentPlaceHolder1$txtZHJSRQ" type="text" id="ctl00_ContentPlaceHolder1_txtZHJSRQ" style=" width:88px" onfocus="WdatePicker()" class="txtZHJSRQ" />
+               </div>
+               <div class="polling_but"><a class="search" target="_blank"><img src="{IMG_PATH}new/ct2_but_18.gif"  /></a></div>
+             </div>
+             <script language="javascript" type="text/javascript">
+                 $(".search").click(function () {
+                     window.location = "ZHZLList.aspx?ZHMC=" + encodeURIComponent($(".zhname").val()) + "&ZHDQ=" + $("input[@type=radio][name=item][checked]").val() + "&ZHKSSJ=" + encodeURIComponent($(".txtZHKSRQ").val()) + "&ZHJSRQ=" + encodeURIComponent($(".txtZHJSRQ").val()) + "&ZHHY=" + $(".ddlHY").find("option:selected").val();
+                 });
+                  
+              </script>
+             <div class="ZH_area">
+               <div class="ZH_area_nav">
+                 <div class="nav1 jnzhq MID_current" contentid="jnzh1"><a target="_blank" href="ZHZLList.aspx?SFJW=0">境内展会</a></div>
+                  <div class="nav1 jnzhq jwzhcunt"  contentid="jwzh1"><a  target="_blank" href="ZHZLList.aspx?SFJW=1">境外展会</a></div>
+                 <div class="clear"></div>
+                 <script type="text/javascript" language="javascript">
+                     //控制点击更换下面列表
+                     $(".jnzhq").click(function () {
+                         var jnzhq = this;
+                         $(".jnzhq").each(function () {
+                             if (this == jnzhq) {
+                                 if ($(this).hasClass("jwzhcunt")) {
+                                     $(this).removeClass("jwzhcunt");
+                                     $(this).addClass("MID_current");
+                                 }
+                             } else {
+                                 if ($(this).hasClass("MID_current")) {
+                                     $(this).removeClass("MID_current");
+                                     $(this).addClass("jwzhcunt");
+                                 }
+                             }
+                         });
+                         $(".ZH_area_cont").hide();
+                         $("#" + $(jnzhq).attr("contentid")).show();
+                         return false;
+                     });
+                        </script>
+               </div>
+          
+               <div class="ZH_area_cont" id="jnzh1">
+                  <div class="area_1">
+                      <div class="area_left"> 
+                          <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=1">
+                              <h5 class="h5_title">工业、机械、加工(20)</h5>
+                          </a>
+                          <ul>
+                              <li><a target="_blank" href="GJHHIndex.aspx?ZHID=180">117届中国进出口商品交易会</a></li>
+                              <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1055">2014上海工业自动化展览会</a></li>
+                              <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1051">2014年asiamold广州...</a></li>
+                          </ul>
+                      </div>
+                      <div class="area_left">
+                          <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=2"><h5 class="h5_title">汽车、交通工具(19)</h5></a>
+                          <ul>
+                              <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1053">ciame-2014第六届中国...</a></li>
+                              <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1012">2014第七届中国（南京）国际...</a></li>
+                              <li><a target="_blank" href="ZHZLDetail.aspx?PKID=962">2014中国（杭州）电动车与零...</a></li>
+                          </ul>
+                      </div>
+                      <div class="clear"></div>
+                          
+                  </div>
+                   <div class="area_1">
+                       <div class="area_left">
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=3">
+                               <h5 class="h5_title">IT设备、数码、软件(18)</h5>
+                           </a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1011">2014第七届亚洲（北京）国际...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=947">2014年广州便携式智能产品暨...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=946">2014亚洲（北京）国际POS...</a></li>
+                           </ul>
+                       </div>
+                       <div class="area_left">
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=4"><h5 class="h5_title">通信、通讯、电子(19)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="GJHHIndex.aspx?ZHID=180">117届中国进出口商品交易会</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1020">2014第9届射频连接器及电缆...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1019">EMC/China2014第十...</a></li>
+                           </ul>
+                       </div>
+                       <div class="clear"></div>
+                           
+                   </div>
+                   <div class="area_1">
+                       <div class="area_left">
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=5"><h5 class="h5_title">海洋、航空、航天(17)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1018">2014北京第17届科博会—海...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=953">2014第三届中国国际航空服务...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=952">2014上海国际航空运动用品与...</a></li>
+                           </ul>
+                       </div>
+                       <div class="area_left"> 
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=6">
+                               <h5 class="h5_title">化工、能源、环保(18)</h5>
+                           </a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1017">CCMB2014中国国际色母粒...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=960">2014海峡国际节能环保暨新能...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=951">2014年中国国际煤化工展览会...</a></li>
+                           </ul>
+                       </div>
+                       <div class="clear"></div>
+                           
+                   </div><div class="area_1">
+                       <div class="area_left"> 
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=7"><h5 class="h5_title">建筑、装潢、五金(18)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="GJHHIndex.aspx?ZHID=180">117届中国进出口商品交易会</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1016">2014中国（郑州）国际建筑装...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=959">2014北京木屋木结构木别墅房...</a></li>
+                           </ul>
+                       </div>
+                       <div class="area_left">
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=8"><h5 class="h5_title">家居、家电、日用品(17)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="GJHHIndex.aspx?ZHID=180">117届中国进出口商品交易会</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=991">2014第九届中国·上海国际户...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=992">2014上海休闲户外家具展览会</a></li>
+                           </ul>
+                       </div>
+                       <div class="clear"></div>
+                           
+                   </div>
+                   <div class="area_1">
+                       <div class="area_left"> 
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=9"><h5 class="h5_title">服饰、皮革、纺织(18)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1023">2014e+GZFW服装服饰电...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1022">2014中国国际箱包、裘革服装...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=967">2014上海国际牛仔服装博览会</a></li>
+                           </ul>
+                       </div>
+                       <div class="area_left">
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=10"><h5 class="h5_title">玩具、礼品、工艺品(18)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1033">2014第二届中国丹东国际工艺...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1032">2014第九届天津国际红木古典...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1021">2013深圳（秋冬）国际工艺品...</a></li>
+                           </ul>
+                       </div>
+                       <div class="clear"></div>
+                           
+                   </div>
+                   <div class="area_1">
+                       <div class="area_left">
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=11"><h5 class="h5_title">生物、医药、保健(19)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1025">2014第四届（成都）性福文化节</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=807">香港乐活博览2014</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=784">2014第五届上海高端生活方式...</a></li>
+                           </ul>
+                       </div>
+                       <div class="area_left">
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=12"><h5 class="h5_title">旅游、酒店、餐饮(18)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=966">2014第十五届西安国际酒店设...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=913">2014第十一届中国（郑州）欧...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=838">2014年北京国际旅游博览会</a></li>
+                           </ul>
+                       </div>
+                       <div class="clear">
+                           
+                       </div>
+                           
+                   </div>
+                   <div class="area_1">
+                       <div class="area_left">
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=13"><h5 class="h5_title">食品、饮料、酒(18)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1064">2015中国广州有机营养健康食...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1035">2014第十二届中国（漯河）食...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1034">仁创·2014江苏茶业博览会</a></li>
+                           </ul>
+                       </div>
+                       <div class="area_left">
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=14"><h5 class="h5_title">首饰、珠宝、美容(20)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=764">2014第十二届中国（郑州）国...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=708">2014中国（海南）珠宝玉石首...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=707">2014中国（新疆）国际珠宝首...</a></li>
+                           </ul>
+                       </div>
+                       <div class="clear"></div>
+                           
+                   </div>
+                   <div class="area_1">
+                       <div class="area_left">
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=15"><h5 class="h5_title">影视、娱乐、体育(17)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1030">2014世界麻将文化博览会</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1029">2014中国（上海）国际健身器...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=884">2014年海南国际游艺及娱乐设...</a></li>
+                           </ul>
+                       </div>
+                       <div class="area_left">
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=16"><h5 class="h5_title">媒体、广告、出版(16)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1028">2014年中国(北京)国际照明...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=882">2014兰州（春季）广告标识展...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=881">2014第二十一届西安（春季）...</a></li>
+                           </ul>
+                       </div>
+                       <div class="clear"></div>
+                           
+                   </div>
+                   <div class="area_1">
+                       <div class="area_left">
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=17"><h5 class="h5_title">印刷、包装、纸业(17)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1027">2014华南国际瓦楞展</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1026">2014第十届上海国际光学膜及...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=915">2014年台北国际食品加工设备...</a></li>
+                           </ul>
+                       </div>
+                       <div class="area_left"> 
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=18"><h5 class="h5_title">运输、物流、仓储(16)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1031">2014第10届广州国际品牌叉...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=886">2014第六届亚洲物流双年展—...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=885">2014第七届中国国际物流博览会</a></li>
+                           </ul>
+                       </div>
+                       <div class="clear"></div>
+                           
+                   </div>
+                   <div class="area_1">
+                       <div class="area_left">
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=19"><h5 class="h5_title">金融、保险、审计(17)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1040">2014第4届中国西部成都金融...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=916">2014中国贸易金融高峰论坛</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=917">2014第十一届上海理财博览会</a></li>
+                           </ul>
+                       </div>
+                       <div class="area_left">
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=20"><h5 class="h5_title">投资、连锁、加盟(17)</h5></a>
+                           <ul>
+                               <li>
+                                   <a target="_blank" href="ZHZLDetail.aspx?PKID=1039">2014上海第十六届创业项目投...</a>
+                               </li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1038">OIIS-2014海外置业·投...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=888">2014中国重庆海外置业投资移...</a></li>
+                           </ul>
+                       </div>
+                       <div class="clear"></div>
+                           
+                   </div>
+                   <div class="area_1">
+                       <div class="area_left"> 
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=21"><h5 class="h5_title">加工、贸易、进出口(17)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1064">2015中国广州有机营养健康食...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1037">2016第26届华东进出口商品...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1036">2014第十八届中国国际投资贸...</a></li>
+                           </ul>
+                       </div>
+                       <div class="area_left">
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=22"><h5 class="h5_title">办公、文教、艺术(15)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=919">2014中国成都国际艺术博览会</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=889">2014第10届中国国际文具及...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=848">2014‘云南文化产业博览会</a></li>
+                           </ul>
+                       </div>
+                       <div class="clear"></div>
+                           
+                   </div>
+                   <div class="area_1">
+                       <div class="area_left"> 
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=23"><h5 class="h5_title">农、林、牧、渔(15)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=847">2014第9届中国（山东）国际...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=846">2014年巴基斯坦国际农业展览会</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=797">2014第十三届中国西部（重庆...</a></li>
+                           </ul>
+                       </div>
+                       <div class="area_left"> 
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=24"><h5 class="h5_title">公共、安防、智能(13)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=801">2014第七届中国国际警用装备...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=800">2014中国上海国际智能终端展...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=769">2014北京国际应急信息技术与...</a></li>
+                           </ul>
+                       </div>
+                       <div class="clear"></div>
+                           
+                   </div>
+                   <div class="area_1">
+                       <div class="area_left"> 
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=25"><h5 class="h5_title">综合、跨行业类(16)</h5></a>
+                           <ul>
+                               <li><a target="_blank" href="GJHHIndex.aspx?ZHID=180">117届中国进出口商品交易会</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=722">2014第十八届中国（四川）新...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=695">2014中国北京国际宠物用品展...</a></li>
+                           </ul>
+                       </div>
+                       <div class="area_left">
+                           <a target="_blank" href="ZHZLList.aspx?SFJW=0&ZHHY=26"><h5 class="h5_title">其他行业(13)</h5></a>
+                           <ul>
+                               <li>
+                                   <a target="_blank" href="ZHZLDetail.aspx?PKID=845">2014西安春季ＬＥＤ照明及城...</a>
+                               </li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=802">2014中国北京国际宠物用品展...</a></li>
+                               <li><a target="_blank" href="ZHZLDetail.aspx?PKID=737">2014中国（上海）店铺产业博...</a></li>
+                           </ul>
+                       </div>
+                       <div class="clear"></div>
+                           
+                   </div>
+               </div>
+                <div class="ZH_area_cont" id="jwzh1" style=" display:none">
+                  <div class="area_1">
+                      <div class="area_left">
+                          <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=1"><h5 class="h5_title">工业、机械、加工(23)</h5></a>
+                          <ul>
+                              <li>
+                                  <a target="_blank" href="ZHZLDetail.aspx?PKID=1071">2015加拿大国际食品展暨北美...</a>
+                              </li>
+                              <li>
+                                  <a target="_blank" href="ZHZLDetail.aspx?PKID=1069">2015欧洲精细化工展览会</a>
+                              </li>
+                              <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1066">2015中国四川商品（印尼）展...</a></li>
+                          </ul>
+                      </div>
+                      <div class="area_left">
+                          <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=2"><h5 class="h5_title">汽车、交通工具(18)</h5></a>
+                          <ul>
+                              <li><a target="_blank" href="ZHZLDetail.aspx?PKID=974">2014第12届印度国际汽车、...</a></li>
+                              <li><a target="_blank" href="ZHZLDetail.aspx?PKID=975">2013法兰克福（马来西亚）国...</a></li>
+                              <li><a target="_blank" href="ZHZLDetail.aspx?PKID=896">2014年伊朗国际汽车及配件展...</a></li>
+                          </ul>
+                      </div>
+                      <div class="clear"></div>
+                          
+                  </div>
+                    <div class="area_1">
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=3"><h5 class="h5_title">IT设备、数码、软件(9)</h5></a>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="ZHZLDetail.aspx?PKID=1066">2015中国四川商品（印尼）展...</a>
+                                </li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=632">2014德国科隆世界影像博览会...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=352">2013年俄罗斯国际通信展|俄...</a></li>
+                            </ul>
+                        </div>
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=4"><h5 class="h5_title">通信、通讯、电子(20)</h5></a>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="ZHZLDetail.aspx?PKID=1066">2015中国四川商品（印尼）展...</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="ZHZLDetail.aspx?PKID=1061">关于组织企业赴巴西参加中国品牌...</a>
+                                </li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=972">2015年美国国际电子元器件及...</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                            
+                    </div>
+                    <div class="area_1">
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=5"><h5 class="h5_title">海洋、航空、航天(19)</h5></a>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="ZHZLDetail.aspx?PKID=998">2014年加拿大多伦多国际游艇...</a>
+                                </li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=997">2014新加坡国际航空航天展览...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=971">2014年美国迈阿密国际游艇展...</a></li>
+                            </ul>
+                        </div>
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=6"><h5 class="h5_title">化工、能源、环保(19)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1043">2014首届马来西亚石油天然气...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=980">2014年南非国际矿业及电力工...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=979">2014第21届俄罗斯 WPC...</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                            
+                    </div>
+                    <div class="area_1">
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=7"><h5 class="h5_title">建筑、装潢、五金(20)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1066">2015中国四川商品（印尼）展...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1042">2014年墨西哥国际空调、暖通...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=978">2014第24届俄罗斯新西伯利...</a></li>
+                            </ul>
+                        </div>
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=8"><h5 class="h5_title">家居、家电、日用品(21)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1063">关于赴印度、斯里兰卡举办201...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1061">关于组织企业赴巴西参加中国品牌...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1024">2014南非国际家具、家具配件...</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                            
+                    </div>
+                    <div class="area_1">
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=9"><h5 class="h5_title">服饰、皮革、纺织(19)</h5></a>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="ZHZLDetail.aspx?PKID=1063">关于赴印度、斯里兰卡举办201...</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="ZHZLDetail.aspx?PKID=985">2014第14届巴西布鲁梅瑙国...</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="ZHZLDetail.aspx?PKID=984">2014印尼雅加达国际纺织及制...</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=10"><h5 class="h5_title">玩具、礼品、工艺品(17)</h5></a>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="ZHZLDetail.aspx?PKID=1010">2014年西班牙马德里国际礼品...</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="ZHZLDetail.aspx?PKID=983">2014年美国纽约国际玩具展览...</a>
+                                </li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=905">2014第77届日本东京国际礼...</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                            
+                    </div><div class="area_1">
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=11"><h5 class="h5_title">生物、医药、保健(19)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1069">2015欧洲精细化工展览会</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=982">2014年泰国国际医疗设备及技...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=981">2014第21届巴西圣保罗医疗...</a></li>
+                            </ul>
+                        </div>
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=12"><h5 class="h5_title">旅游、酒店、餐饮(9)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=713">2014年法国巴黎食品及饮料展...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=671">2014美国芝加哥餐饮、酒店用...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=646">2014年第19届新加坡食品与...</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                            
+                    </div>
+                    <div class="area_1">
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=13"><h5 class="h5_title">食品、饮料、酒(23)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1077">2015年德国科隆食品展暨欧洲...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1076">2015年俄罗斯国际食品展</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1074">2015巴西食品展览会</a></li>
+                            </ul>
+                        </div>
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=14"><h5 class="h5_title">首饰、珠宝、美容(18)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1009">2014第19届西班牙国际美容...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1002">2014中国-东盟国际眼镜业 ...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=988">2014年意大利博洛尼亚国际化...</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                            
+                    </div>
+                    <div class="area_1">
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=15">
+                                <h5 class="h5_title">影视、娱乐、体育(17)</h5>
+                            </a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1049">2014年墨西哥自行车展览会（...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=874">2014年美国阿纳海姆国际乐器...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=873">2014年德国科隆国际体育用品...</a></li>
+                            </ul>
+                        </div>
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=16"><h5 class="h5_title">媒体、广告、出版(18)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=987">2014年马来西亚国际印刷及亚...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=986">2014俄罗斯城市节庆装饰广告...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=940">2014FESPA 南非国际广...</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                            
+                    </div>
+                    <div class="area_1">
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=17"><h5 class="h5_title">印刷、包装、纸业(18)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1005">2014年秘鲁国际包装机械展览会</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1001">2014年韩国国际包装展 KO...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=909">2014年尼日利亚印刷包装工业...</a></li>
+                            </ul>
+                        </div>
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=18"><h5 class="h5_title">运输、物流、仓储(17)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1062">第56届国际工程博览会</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=941">2014年泰国国际物流展览会</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=923">2014年印度国际仓储物流展（...</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                            
+                    </div>
+                    <div class="area_1">
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=19"><h5 class="h5_title">金融、保险、审计(4)</h5></a>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="ZHZLDetail.aspx?PKID=1062">第56届国际工程博览会</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="ZHZLDetail.aspx?PKID=631">2014第三届印度（孟买）国际...</a>
+                                </li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=318">2012第17届澳大利亚金融博...</a></li>
+                            </ul>
+                        </div>
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=20"><h5 class="h5_title">投资、连锁、加盟(3)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=560">2013第八届美国（加州）全球...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=298">2013美国拉斯维加斯品牌授权...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=297">2013英国伦敦品牌授权展览会...</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                            
+                    </div>
+                    <div class="area_1">
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=21"><h5 class="h5_title">加工、贸易、进出口(14)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1066">2015中国四川商品（印尼）展...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=943">2014年南非SAITEX国际...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=942">2014第十二届越南（胡志明）...</a></li>
+                            </ul>
+                        </div>
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=22"><h5 class="h5_title">办公、文教、艺术(16)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=995">2014年美国芝加哥国际办公家...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=871">2014年瑞士国际教育展览会</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=870">2014年中东（迪拜）国际纸制...</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                            
+                    </div>
+                    <div class="area_1">
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=23"><h5 class="h5_title">农、林、牧、渔(21)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1074">2015巴西食品展览会</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1066">2015中国四川商品（印尼）展...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=994">2014年韩国国际钓具展览会</a></li>
+                            </ul>
+                        </div>
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=24"><h5 class="h5_title">公共、安防、智能(18)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=955">SSE2014第七届俄罗斯国际...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=956">INTERPOLITEX 20...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=930">2014年美国RFID专业展览会</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                            
+                    </div>
+                    <div class="area_1">
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=25"><h5 class="h5_title">综合、跨行业类(14)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1007">2014年朝鲜平壤春季国际商品...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=958">2014第九届柬埔寨进出口商品...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=957">2014第五届越南国际家具及室...</a></li>
+                            </ul>
+                        </div>
+                        <div class="area_left">
+                            <a target="_blank" href="ZHZLList.aspx?SFJW=1&ZHHY=26"><h5 class="h5_title">其他行业(19)</h5></a>
+                            <ul>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1066">2015中国四川商品（印尼）展...</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=1006">2014波兰国际婴幼儿用品展览会</a></li>
+                                <li><a target="_blank" href="ZHZLDetail.aspx?PKID=928">2014美国少儿婴童用品展 A...</a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                            
+                    </div>
+               </div>
+             </div>
+             
+           </div>
+           <div class="RIGHT_ct2">
+             <div class="ZH_recent">
+               <div class="ZH_recent_nav">
+                 <div class="nav1 MID_current">推荐展会</div>
+                 <div class="clear"></div>
+               </div>
+               <div class="ZH_recent_cont">
+                 <ul>
+                    <li>
+                        <a class="tjzh_lbz" href="#">[未组织]</a>
+                        <span>
+                            <a  target="_blank" class="tjzh_lb" href="ZHZLDetail.aspx?PKID=1090">
+                            <img src="{IMG_PATH}new/RIGHT_icon_13.gif" />2015第21届西部制博会暨中国欧亚国际...
+                        </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tjzh_lbz" href="#">[未组织]</a>
+                            <span>
+                                <a  target="_blank" class="tjzh_lb" href="GJHHIndex.aspx?ZHID=180">
+                                <img src="{IMG_PATH}new/RIGHT_icon_13.gif" />117届中国进出口商品交易会
+                            </span>
+                        </a></li><li><a class="tjzh_lbz" href="#">[未组织]</a>
+                            <span>
+                                <a  target="_blank" class="tjzh_lb" href="ZHZLDetail.aspx?PKID=1077">
+                                <img src="{IMG_PATH}new/RIGHT_icon_13.gif" />2015年德国科隆食品展暨欧洲经贸促进活动
+                            </span>
+                        </a>
+                            </li>
+                            <li>
+                                <a class="tjzh_lbz" href="#">[未组织]</a>
+                                <span>
+                                    <a  target="_blank" class="tjzh_lb" href="ZHZLDetail.aspx?PKID=1076">
+                                    <img src="{IMG_PATH}new/RIGHT_icon_13.gif" />2015年俄罗斯国际食品展
+                                </span></a></li><li><a class="tjzh_lbz" href="#">[未组织]</a>
+                                    <span>
+                                        <a  target="_blank" class="tjzh_lb" href="ZHZLDetail.aspx?PKID=1074">
+                                        <img src="{IMG_PATH}new/RIGHT_icon_13.gif" />2015巴西食品展览会
+                                    </span>
+                                </a></li><li><a class="tjzh_lbz" href="#">[未组织]</a>
+                                    <span>
+                                        <a  target="_blank" class="tjzh_lb" href="ZHZLDetail.aspx?PKID=1071">
+                                        <img src="{IMG_PATH}new/RIGHT_icon_13.gif" />2015加拿大国际食品展暨北美经贸活动
+                                    </span>
+                                </a>
+                                    </li>
+                                    <li>
+                                        <a class="tjzh_lbz" href="#">[未组织]</a>
+                                        <span>
+                                            <a  target="_blank" class="tjzh_lb" href="ZHZLDetail.aspx?PKID=1070">
+                                            <img src="{IMG_PATH}new/RIGHT_icon_13.gif" />2015韩国食品展览会
+                                        </span>
+                                      </a>
+                                        </li>
+                                        <li>
+                                            <a class="tjzh_lbz" href="#">[未组织]</a>
+                                            <span>
+                                                <a  target="_blank" class="tjzh_lb" href="ZHZLDetail.aspx?PKID=1069">
+                                                <img src="{IMG_PATH}new/RIGHT_icon_13.gif" />2015欧洲精细化工展览会
+                                            </span>
+                                        </a>
+                                            </li>
+               </ul>
+                <div class="clear"></div>
+               </div>
+               
+             </div>
+             <!--以上是  ZH_recent-->
+             <div class="A_bit">
+               <div class="A_bit_nav">
+                 <div class="RIGHT_current RIGHT_check"><a href="#">展会一点通</a></div>
+               
+               </div>
+               <div class="A_bit_cont">
+                 <div class="but_bit">
+                   <a href="#"><img src="{IMG_PATH}new/BUT_1_06.gif" /></a>
+                 </div>
+                 <div class="but_bit">
+                   <a href="#"><img src="{IMG_PATH}new/BUT_2_06 (2).gif" /></a>
+                 </div>
+                 <div class="but_bit3">
+                   <a href="#"><img src="{IMG_PATH}new/BUT_3_06.gif" /></a>
+                 </div>
+                 <div class="but_bit">
+                   <a href="#"><img src="{IMG_PATH}new/BUT_4_06.gif" /></a>
+                 </div>
+                 <div class="but_bit">
+                   <a href="#"><img src="{IMG_PATH}new/but_5_06.gif"/></a>
+                 </div>
+                 <div class="but_bit3">
+                   <a href="#"><img src="{IMG_PATH}new/BUT_6_06.gif"/></a>
+                 </div>
+                 <div class="but_bit bit_bt">
+                   <a href="#"><img src="{IMG_PATH}new/BUT_7_06.gif"/></a>
+                 </div>
+                 <div class="but_bit bit_bt">
+                   <a href="#"><img src="{IMG_PATH}new/but_8_06.gif" /></a>
+                 </div>
+                 <div class="but_bit4">
+                   <a href="#"><img src="{IMG_PATH}new/but_9_06.gif" /></a>
+                 </div>
+                 <div class="clear"></div>
+               </div>
+             </div>
+             <!--以上是 A_bit-->
+             <div class="V_introduciton">
+               <div class="V_id_nav">场馆介绍</div>
+               <div class="V_id_cont">
+                 <div class="V_nav">
+                   <div class="jnwcg  RIGHT_check RIGHT_current" contentid="jncg1"><a href="#">境内场馆</a></div>
+                   <div class="jnwcg jw RIGHT_current" contentid="jwcg2"><a href="#">境外场馆</a></div>
+                 </div>
+                 <script type="text/javascript" language="javascript">
+                     //控制点击更换下面列表
+                     $(".jnwcg").click(function () {
+                         var jnwcg = this;
+                         $(".jnwcg").each(function () {
+                             if (this == jnwcg) {
+                                 if ($(this).hasClass("jw")) {
+                                     $(this).removeClass("jw");
+                                     $(this).addClass("RIGHT_check");
+                                 }
+                             } else {
+                                 if ($(this).hasClass("RIGHT_check")) {
+                                     $(this).removeClass("RIGHT_check");
+                                     $(this).addClass("jw");
+                                 }
+                             }
+                         });
+                         $(".V_ul").hide();
+                         $("#" + $(jnwcg).attr("contentid")).show();
+                         return false;
+                     });
+                     $(".baoming").click(function () {
+                         var ZHID = $(".baoming").attr("zhid").toString();
+                         window.top.createDIV(window, "/ZHZL/Baoming.aspx?PKID="+ZHID, "展会报名", 750, 600);
+                     });
+                        </script>
+                 <div class="V_ul" id="jncg1">
+                   <ul>
+                     <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" />
+                         <a target="_blank" href="ZHZXDetail.aspx?PKID=17801">潍坊富华国际展览中心</a>
+                     </li>
+                     <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" />
+                         <a target="_blank" href="ZHZXDetail.aspx?PKID=17800">陕西国际会展中心</a>
+                     </li>
+                     <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" />
+                         <a target="_blank" href="ZHZXDetail.aspx?PKID=17334">沈阳科学宫会展中心</a>
+                     </li>
+                     <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" />
+                         <a target="_blank" href="ZHZXDetail.aspx?PKID=17332">辽宁大连世界博览广场</a>
+                     </li>
+                     <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" />
+                         <a target="_blank" href="ZHZXDetail.aspx?PKID=17249">济南舜耕国际会展中心</a>
+                     </li>
+                      
+                   </ul>
+                   <div class="MID_more"><a href="ZHZXList.aspx?LMID=808">更多>></a></div>
+                   <div class="clear"></div>
+                 </div>
+                 <div class="V_ul" id="jwcg2" style="display:none;">
+                   <ul>
+                     <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" />
+                         <a target="_blank" href="ZHZXDetail.aspx?PKID=18045">阿德莱德会议中心</a>
+                     </li>
+                     <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" />
+                         <a target="_blank" href="ZHZXDetail.aspx?PKID=18044">波多黎各会议中心</a>
+                     </li>
+                     <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" />
+                         <a target="_blank" href="ZHZXDetail.aspx?PKID=17803">毕尔巴鄂展览中心</a>
+                     </li>
+                     <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" />
+                         <a target="_blank" href="ZHZXDetail.aspx?PKID=17802">阿德莱德会议中心</a>
+                     </li>
+                     <li><img src="{IMG_PATH}new/RIGHT_icon_13.gif" />
+                         <a target="_blank" href="ZHZXDetail.aspx?PKID=17336">赫尔辛基展览中心</a>
+                     </li>
+                      
+                   </ul>
+                   <div class="MID_more"><a href="ZHZXList.aspx?LMID=809">更多>></a></div>
+                   <div class="clear"></div>
+                 </div>
+               </div>
+             </div>
+             <!--以上是V_introduction-->
+             <div class="A_bit">
+               <div class="A_bit_nav">
+                 <div class="RIGHT_current RIGHT_check"><a href="ZHZXList.aspx?LMID=799">推荐机构</a></div>
+               
+               </div>
+               <div class="A_bit_cont">
+                 <ul>
+                    <li>
+                        <a target="_blank" href="ZHZXDetail.aspx?PKID=15069">▪&nbsp;广州市正点礼仪服务有限公司</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="ZHZXDetail.aspx?PKID=15067">▪&nbsp;上海慧展广告有限公司</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="ZHZXDetail.aspx?PKID=15065">▪&nbsp;上海仕博文化传播有限公司</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="ZHZXDetail.aspx?PKID=15063">▪&nbsp;金字塔（上海）展览展示工程有限公司</a>
+                    </li> 
+                    <li>
+                        <a target="_blank" href="ZHZXDetail.aspx?PKID=15060">▪&nbsp;双流嘉盛展览展示制作厂</a>
+                    </li>
+                   
+                 </ul>
+                 <div class="MID_more"><a href="ZHZXList.aspx?LMID=799">更多>></a></div>
+                 <div class="clear"></div>
+               </div>
+             </div>
+           </div>
+           <div class="clear"></div>
+         </div>
+       </div>
+       <div class="clear"></div>
+<script type="text/javascript" language="javascript">
+
+</script>
+
+       <!--以上是中间内容部分-->
+      {template "content","foot1"}
+    </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+        <meta name="description" content="{$SEO['description']}" />
+        <meta name="keywords" content="{$SEO['keyword']}" />
+        <link href="{CSS_PATH}new/public.css" rel="stylesheet" type="text/css" />
+        <script src="{JS_PATH}/jquery.min.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/WdatePicker.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/PostionHelper.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/StringHelper.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/getURLparameters.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/OpenWindow.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/FormCheck.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/CDPTPF.js" type="text/javascript"></script>
+        <script src="{JS_PATH}new/picScrollByStep.js" type="text/javascript"></script>
+        <link href="{CSS_PATH}new/money.css" rel="stylesheet" type="text/css"/>
+        <style>
+            .content{        
+                width:994px;
+                margin:auto;
+            }
+        </style>
+    </head>
+    <body>
+      {template "content","header"}
+    </div>   <!--为了避免乱布局使用的-->
+    
+    <div class="content">
+        <div class="main">
+            <div class="zcrd">
+                <div class="title">
+                    <h2>资金拨付公示</h2>
+                </div>
+                <table border="0" cellpadding="0" cellspacing="1" bgcolor="#e2e1e0" style="margin-top: 10px;">
+                    <tr bgcolor="#ccc">
+                        <th align="center" valign="middle" bgcolor="#FFFFFF">
+                            申报单位
+                        </th>
+                        <th align="center" valign="middle" bgcolor="#FFFFFF">
+                            所属区(市)县
+                        </th>
+                        <th align="center" valign="middle" bgcolor="#FFFFFF">
+                            项目名称
+                        </th>
+                        <th align="center" valign="middle" bgcolor="#FFFFFF">
+                            所属行业
+                        </th>
+                        <th align="center" valign="middle" bgcolor="#FFFFFF">
+                            批复支持金额（万）
+                        </th>
+                        <th align="center" valign="middle" bgcolor="#FFFFFF">
+                            项目补助金额（万）
+                        </th>
+                        <th align="center" valign="middle" bgcolor="#FFFFFF">
+                            年度
+                        </th>
+                    </tr>
+                    
+                <?php 
+                  if($title && ($hide_area_id==0)) { 
+                   $where =" title LIKE '%$title%' AND industry = $hide_industry_id AND unit='$unit'";
+                   }
+
+                   if($title && $hide_area_id) { 
+                   $where =" title LIKE '%$title%' AND year = $hide_area_id AND industry = $hide_industry_id AND unit='$unit' ";
+                   }
+                   ?> 
+                           
+                   
+                  {pc:content action="lists" catid="200" num="20" order="id DESC" page="$page" where="$where"}     
+                     {loop $data $r} 
+                    <tr bgcolor="#ccc" style="font-weight:normal;color: #0066ff;">
+                        <th align="center" valign="middle" bgcolor="#FFFFFF">
+                            {$r[unit]}
+                        </th>
+                        <th align="center" valign="middle" bgcolor="#FFFFFF">
+                            {$r[county]}
+                        </th>
+                        <th align="center" valign="middle" bgcolor="#FFFFFF">
+                           {$r[title]}
+                        </th>
+                        <th align="center" valign="middle" bgcolor="#FFFFFF">
+                          {get_linkage($r[industry],3439,2)} 
+                        </th>
+                        <th align="center" valign="middle" bgcolor="#FFFFFF">
+                            {$r[support]}
+                        </th>
+                        <th align="center" valign="middle" bgcolor="#FFFFFF">
+                            {$r[sidy_capital]}
+                        </th>
+                        <th align="center" valign="middle" bgcolor="#FFFFFF">
+                          {get_linkage($r[year],3416,2)} 
+                        </th>
+                    </tr>
+                    {/loop}
+                    {/pc}
+
+                </table>
+                <div>
+                     {$pages}
+                </div>
+            </div>
+        </div>
+        <div class="side">
+            
+              {template "content","zjsb_search"}  <!--拨付公告公共的搜索框-->  
+            
+            
+            <div class="lianxi">
+                <img src="{IMG_PATH}new1/money_zx_31.jpg" alt="" />
+            </div>
+            <div class="new new2">
+                   <div class="sidetitle">
+                       <h4>最新扶持政策</h4>
+                   </div>
+                   <ul>
+                    {pc:content  action="lists" catid="22" order="updatetime DESC" num="9" return="info"}
+                     {loop $info $v}
+                       <li>
+                         <a href="{$v['url']}" target="_blank" class="lala" {title_style($v[style])}>&middot;{str_cut($v['title'],50,'……')}</a>
+                       </li>
+                    {/loop}
+                    {/pc}    
+                  </ul>
+               </div>
+
+        </div>
+    </div>
+     {template "content","footer"}
+    </body>
+</html>

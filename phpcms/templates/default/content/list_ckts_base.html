@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+        <meta name="description" content="{$SEO['description']}" />
+        <meta name="keywords" content="{$SEO['keyword']}" />
+        {template "content","header_inclub"}
+         <link href="{CSS_PATH}new/law.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+         {template "content","header"}
+          </div>
+          <div class="mid" style="min-height:555px;margin:0 auto;">
+             <div class="ui_layout_right list_width">
+                 <div class="site">
+                     <div class="site_img"></div>
+                     <div class="site_write">
+                         您的位置：<a href="{siteurl($siteid)}">频道首页</a> >
+                            {catpos($catid)}
+                     </div>
+                     <input name="" type="text" id="" style="display: none;" class="dlyhid" value="-1" />
+                     <div class="clear"></div>
+                 </div>
+                 
+                 <div class="ui_list_zcfg">
+                   {pc:content action="lists" catid="$catid" num="20" order="id DESC" page="$page"}
+                     <ul class="LIST_cont_law">
+                        {loop $data $r}
+                         <li><span>{date('Y-m-d',$r[inputtime])}</span>
+                             <a href="{$r[url]}" target="_blank" {title_style($r[style])}><img src="{IMG_PATH}new1/icon_1_07.gif" />{$r[title]}</a>
+                         </li>
+                        {/loop}
+                     </ul>
+                   
+                     <div class="link_more">
+                         {$pages}
+                     </div>
+                    {/pc}
+                 </div>
+             </div>
+             <!--以上是列表-->
+             <div class="ui_layout_left">
+                 <div class="ui_lay_zccx">
+                     <div class="ui_zccx_nav"></div>
+                     <div class="ui_lay_cont">
+                         <div class="ui_check"></div>
+                        <form method="get" action="./index.php?m=search&c=index&a=init&siteid=1&typeid=1">
+                        <input type="hidden" name="m" value="search"/>
+                        <input type="hidden" name="c" value="index"/>
+                        <input type="hidden" name="a" value="init"/>
+                        <input type="hidden" name="typeid" value="1" id="typeid"/>
+                        <input type="hidden" name="siteid" value="1" id="siteid"/>
+                         <div class="formcont sr_frm_box">
+                             <div class="sr_frmipt">
+                                 <label for="q">
+                                     标题：</label><input type="text" class="gjz ipt" name="q" id="q" /> </div>
+                             <div class="sr_frmipt">
+                                 <label for="q">
+                                     关键字：</label><input name="keywords" type="text" id="q" class="gjz ipt" /></div>
+                                     
+                             <div class="btn">
+                                 <input type="submit" class="ss_btn btnzccx_2" value=""/></div>
+                         </div>
+                        </form>
+                     </div>
+                 </div>
+                 <!--以上是政策查询-->
+             </div>
+             <div class="clear"></div>
+         </div>
+
+         {template "content","footer"}
+    </body>
+</html>

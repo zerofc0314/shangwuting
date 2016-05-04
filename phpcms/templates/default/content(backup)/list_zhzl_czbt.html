@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+        <meta name="description" content="{$SEO['description']}"/>
+        <meta name="keywords" content="{$SEO['keyword']}"/>
+        {template "content","header1_inclub"}
+    </head>
+    <body>
+    {template "content","header1"}
+    <div class="maincont">
+        <div class="kong"></div>
+        <div class="cont_2_sj">
+            <div class="LEFT_ct2">
+                <div class="ZH_recent_list">
+                    <div class="ZHli_recent_nav">
+                        <div class="nav1 MID_current">参展补贴</div>
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="recent_butie">
+
+                        <img src="{IMG_PATH}new/BUT_6_06.gif" />
+                        <ul>
+                            <li>
+                                <a href="ZHZXDetail.aspx?PKID=15146" target="_blank">
+                                    <font class="word_red">&middot;</font>四川新力光源有限公司
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ZHZXDetail.aspx?PKID=15146" target="_blank"><font class="word_red">&middot;</font>成都江雪医疗器械有限公司</a>
+                            </li>
+                            <li>
+                                <a href="ZHZXDetail.aspx?PKID=15146" target="_blank"><font class="word_red">&middot;</font>成都远景数控设备实业有限公司</a>
+                            </li>
+                            <li>
+                                <a href="ZHZXDetail.aspx?PKID=15146" target="_blank"><font class="word_red">&middot;</font>成都三锐工具制造有限公司</a>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+
+                </div>
+                <!--以上是最新资讯-->
+                <div class="ZH_area">
+                    <div class="ZH_area_nav">
+                        <div class="nav1 MID_current">政府组织</div>
+                        <a target="_blank" href="ZHZXDetail.aspx?LMID=841">更多>></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="ZH_new_cont">
+                        <ul>
+                            <li><a href="ZHZXDetail.aspx?PKID=15148" target="_blank"><font class="word_red">&middot;</font>成都市商务局组展补贴</a><span>2013-03-13</span> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ZH_area">
+                    <div class="butie_nav">
+                        <a target="_blank" href="ZHZXDetail.aspx?LMID=842">更多>></a><span>中小企业国际市场开拓资金</span>
+                    </div>
+                    <div class="ZH_new_cont">
+
+                        <p>
+                            <a target="_blank" href="ZHZXDetail.aspx?PKID=15152">（一）境外展览会项目的支持内容和标准。申请者：中小企业、项目组织单位支持内容支持比例支持标准展位费（场地、基本展台、桌椅、照明...</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="ZH_area">
+                    <div class="ZH_area_nav">
+                        <div class="nav1 MID_current">其他资金</div>
+                        <a target="_blank" href="ZHZXList.aspx?LMID=843">更多>></a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="ZH_new_cont">
+                        <ul>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="RIGHT_ct2">
+                <div class="ZH_cx_list">
+                    <div class="RED">
+                        <div class="kong"></div>
+                        <div class="JZ_polling">
+                            <label>展会名称:</label><input name="ctl00$ContentPlaceHolder1$zhname" type="text" id="ctl00_ContentPlaceHolder1_zhname" class="zhname" />
+                        </div>
+                        <div class="JZ_polling">
+                            <label>展会行业:</label> <select name="ctl00$ContentPlaceHolder1$ddlHY" id="ctl00_ContentPlaceHolder1_ddlHY" class="ddlHY" style="width:25%;">
+                                <option value="-1">-所有-</option>
+                                <option value="1">工业、机械、加工</option>
+                                <option value="2">汽车、交通工具</option>
+                                <option value="3">IT设备、数码、软件</option>
+                                <option value="4">通信、通讯、电子</option>
+                                <option value="5">海洋、航空、航天</option>
+                                <option value="6">化工、能源、环保</option>
+                                <option value="7">建筑、装潢、五金</option>
+                                <option value="8">家居、家电、日用品</option>
+                                <option value="9">服饰、皮革、纺织</option>
+                                <option value="10">玩具、礼品、工艺品</option>
+                                <option value="11">生物、医药、保健</option>
+                                <option value="12">旅游、酒店、餐饮</option>
+                                <option value="13">食品、饮料、酒</option>
+                                <option value="14">首饰、珠宝、美容</option>
+                                <option value="15">影视、娱乐、体育</option>
+                                <option value="16">媒体、广告、出版</option>
+                                <option value="17">印刷、包装、纸业</option>
+                                <option value="18">运输、物流、仓储</option>
+                                <option value="19">金融、保险、审计</option>
+                                <option value="20">投资、连锁、加盟</option>
+                                <option value="21">加工、贸易、进出口</option>
+                                <option value="22">办公、文教、艺术</option>
+                                <option value="23">农、林、牧、渔</option>
+                                <option value="24">公共、安防、智能</option>
+                                <option value="25">综合、跨行业类</option>
+                                <option value="26">其他行业</option>
+
+                            </select>
+                        </div>
+                        <div class="MH_polling">
+                            <label>展会地区:</label>
+                            <div class="polling_2">
+                                <input type="radio" value="1" name="item"  checked="true" />中国境内
+                                <input type="radio" value="2" name="item" />亚洲其他
+                                <input type="radio" value="3" name="item" />非洲
+                                <input type="radio" value="4" name="item" />欧洲<br/>
+                                <input type="radio" value="5" name="item" />美洲
+                                <input type="radio" value="6" name="item" />大洋洲
+
+                            </div> 
+                            <div class="clear"></div>
+                        </div>
+                        <div class="MH_polling">
+                            <label>展会时间:</label>从
+                            <input name="ctl00$ContentPlaceHolder1$ctl00" type="text" style=" width:88px" onfocus="WdatePicker()" class="txtZHKSRQ" />到
+                            <input name="ctl00$ContentPlaceHolder1$ctl01" type="text" style=" width:88px" onfocus="WdatePicker()" class="txtZHJSRQ" />
+                        </div>
+                        <div class="polling_but"> <a class="search" target="_blank"><img src="{IMG_PATH}new/ct2_but_18.gif"  /></a></div>
+                    </div>
+                </div>
+                <script language="javascript" type="text/javascript">
+                    $(".search").click(function () {
+                        window.location = "ZHZLList.aspx?ZHMC=" + encodeURIComponent($(".zhname").val()) + "&ZHDQ=" + $("input[@type=radio][name=item][checked]").val() +"&ZHKSSJ=" + encodeURIComponent($(".txtZHKSRQ").val()) + "&ZHJSRQ=" + encodeURIComponent($(".txtZHJSRQ").val()) + "&ZHHY=" + $(".ddlHY").find("option:selected").val();
+                    });
+                  
+                </script>
+                <!--以上是  ZH_recent-->
+                <div class="A_bit">
+                    <div class="A_bit_nav">
+                        <div class="RIGHT_current RIGHT_check"><a href="#">展会一点通</a></div>
+
+                    </div>
+                    <div class="A_bit_cont">
+                        <div class="but_bit">
+                            <a href="#"><img src="{IMG_PATH}new/BUT_1_06.gif" /></a>
+                        </div>
+                        <div class="but_bit">
+                            <a href="#"><img src="{IMG_PATH}new/BUT_2_06 (2).gif" /></a>
+                        </div>
+                        <div class="but_bit3">
+                            <a href="#"><img src="{IMG_PATH}new/BUT_3_06.gif" /></a>
+                        </div>
+                        <div class="but_bit">
+                            <a href="#"><img src="{IMG_PATH}new/BUT_4_06.gif" /></a>
+                        </div>
+                        <div class="but_bit">
+                            <a href="#"><img src="{IMG_PATH}new/but_5_06.gif"/></a>
+                        </div>
+                        <div class="but_bit3">
+                            <a href="#"><img src="{IMG_PATH}new/BUT_6_06.gif"/></a>
+                        </div>
+                        <div class="but_bit bit_bt">
+                            <a href="#"><img src="{IMG_PATH}new/BUT_7_06.gif"/></a>
+                        </div>
+                        <div class="but_bit bit_bt">
+                            <a href="#"><img src="{IMG_PATH}new/but_8_06.gif" /></a>
+                        </div>
+                        <div class="but_bit4">
+                            <a href="#"><img src="{IMG_PATH}new/but_9_06.gif" /></a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <!--以上是 A_bit-->
+
+                <!--以上是V_introduction-->
+                <div class="A_bit">
+                    <div class="A_bit_nav">
+                        <div class="RIGHT_current RIGHT_check"><a href="#">推荐机构</a></div>
+
+                    </div>
+                    <div class="A_bit_cont">
+                        <ul>
+
+
+                        </ul>
+                        <div class="MID_more"><a target="_blank" href="ZHZXList.aspx?LMID=799">更多>></a></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!--以上是中间内容部分-->
+
+    {template "content","foot1"}
+    </body>
+</html>
